@@ -8,8 +8,8 @@ export default function Home() {
       <section className="relative section-lg gradient-radial">
         <div className="container-content text-center">
           <RevealOnScroll>
-            <h1 className="text-hero text-ink max-w-4xl mx-auto">
-              Your ideas, amplified.
+            <h1 className="text-hero md:text-hero-lg text-ink max-w-3xl mx-auto">
+              AI that's yours for the making.
             </h1>
           </RevealOnScroll>
           
@@ -24,9 +24,6 @@ export default function Home() {
             <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/explore" className="btn-primary">
                 See what's possible
-              </Link>
-              <Link href="/start" className="btn-secondary">
-                Start here
               </Link>
             </div>
           </RevealOnScroll>

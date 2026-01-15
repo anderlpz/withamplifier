@@ -49,7 +49,8 @@ module.exports = {
       },
       fontSize: {
         // Type scale with tracking
-        'hero': ['5rem', { lineHeight: '1.05', letterSpacing: '-0.03em', fontWeight: '600' }],
+        'hero': ['2.75rem', { lineHeight: '1.1', letterSpacing: '-0.02em', fontWeight: '600' }],
+        'hero-lg': ['3.5rem', { lineHeight: '1.08', letterSpacing: '-0.025em', fontWeight: '600' }],
         'display': ['3.5rem', { lineHeight: '1.1', letterSpacing: '-0.025em', fontWeight: '600' }],
         'title': ['2.5rem', { lineHeight: '1.15', letterSpacing: '-0.02em', fontWeight: '600' }],
         'heading': ['1.75rem', { lineHeight: '1.25', letterSpacing: '-0.015em', fontWeight: '500' }],
