@@ -508,8 +508,10 @@ p {
   color: var(--ink-fog);
 }
 
-.section-dark .text-eyebrow {
-  color: var(--text-on-dark-tertiary);
+.section-dark .text-eyebrow,
+.section-dark-gradient .text-eyebrow {
+  color: var(--signal-indigo); /* Was tertiary gray - now branded and legible */
+  opacity: 0.9;
 }
 
 /* Body text */
