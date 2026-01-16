@@ -67,7 +67,6 @@ export default function Home() {
           
           <div className="reveal-stagger grid md:grid-cols-3 gap-6 md:gap-8 max-w-4xl mx-auto">
             <div className="text-center md:text-left">
-              <div className="text-3xl mb-4">🔒</div>
               <h3 className="text-lg font-semibold text-on-dark mb-2">Opaque behavior</h3>
               <p className="text-on-dark-secondary text-sm leading-relaxed">
                 When it does something unexpected, you can't see why. You're left guessing at a black box.
@@ -75,7 +74,6 @@ export default function Home() {
             </div>
             
             <div className="text-center md:text-left">
-              <div className="text-3xl mb-4">🚫</div>
               <h3 className="text-lg font-semibold text-on-dark mb-2">Locked-in choices</h3>
               <p className="text-on-dark-secondary text-sm leading-relaxed">
                 Want a different model? Different tools? You're stuck with what they decided to give you.
@@ -83,7 +81,6 @@ export default function Home() {
             </div>
             
             <div className="text-center md:text-left">
-              <div className="text-3xl mb-4">📦</div>
               <h3 className="text-lg font-semibold text-on-dark mb-2">One-size-fits-none</h3>
               <p className="text-on-dark-secondary text-sm leading-relaxed">
                 Generic instructions. Generic personality. No way to encode how you actually work.
@@ -111,7 +108,6 @@ export default function Home() {
           <div className="reveal-stagger grid md:grid-cols-3 gap-4 md:gap-6 max-w-5xl mx-auto">
             {/* Provider */}
             <div className="feature-tile feature-tile-light p-6 md:p-8">
-              <div className="text-3xl mb-4">⚡</div>
               <h3 className="text-xl font-semibold text-ink mb-3">Providers</h3>
               <p className="text-ink-slate text-sm mb-4">
                 The brain. Claude, GPT-4, Ollama, or run your own local model. Switch between them without changing anything else.
@@ -123,7 +119,6 @@ export default function Home() {
             
             {/* Tools */}
             <div className="feature-tile feature-tile-light p-6 md:p-8">
-              <div className="text-3xl mb-4">🔧</div>
               <h3 className="text-xl font-semibold text-ink mb-3">Tools</h3>
               <p className="text-ink-slate text-sm mb-4">
                 The hands. Filesystem access, bash commands, web search, GitHub integration. Add only what you need.
@@ -135,7 +130,6 @@ export default function Home() {
             
             {/* Behaviors */}
             <div className="feature-tile feature-tile-light p-6 md:p-8">
-              <div className="text-3xl mb-4">🎯</div>
               <h3 className="text-xl font-semibold text-ink mb-3">Behaviors</h3>
               <p className="text-ink-slate text-sm mb-4">
                 The personality. Instructions, expertise, and guardrails that shape how it works. Your workflow, encoded.
@@ -149,10 +143,7 @@ export default function Home() {
           {/* Bundle = Result */}
           <div className="reveal mt-10 md:mt-14 text-center" style={{transitionDelay: '0.4s'}}>
             <div className="inline-block p-6 md:p-8 rounded-2xl bg-signal-soft border border-signal/20">
-              <div className="flex items-center justify-center gap-4 mb-3">
-                <span className="text-2xl">📦</span>
-                <span className="text-xl font-semibold text-ink">Bundle</span>
-              </div>
+              <h3 className="text-xl font-semibold text-ink mb-3">Bundle</h3>
               <p className="text-ink-slate text-sm max-w-md">
                 Combine providers + tools + behaviors into a shareable package. 
                 Install someone else's bundle, or publish your own.
@@ -213,7 +204,7 @@ export default function Home() {
           
           <div className="reveal mt-8 text-center" style={{transitionDelay: '0.3s'}}>
             <Link href="/explore" className="link-apple">
-              Try more examples →
+              Try more examples
             </Link>
           </div>
         </div>
@@ -232,44 +223,32 @@ export default function Home() {
           </div>
           
           <div className="reveal-stagger grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div className="flex gap-4">
-              <div className="text-2xl">🔍</div>
-              <div>
-                <h3 className="text-lg font-semibold text-on-dark mb-2">Debug with confidence</h3>
-                <p className="text-on-dark-secondary text-sm leading-relaxed">
-                  See every prompt, every tool call, every decision. When something goes wrong, you can trace exactly why.
-                </p>
-              </div>
+            <div>
+              <h3 className="text-lg font-semibold text-on-dark mb-2">Debug with confidence</h3>
+              <p className="text-on-dark-secondary text-sm leading-relaxed">
+                See every prompt, every tool call, every decision. When something goes wrong, you can trace exactly why.
+              </p>
             </div>
             
-            <div className="flex gap-4">
-              <div className="text-2xl">🔄</div>
-              <div>
-                <h3 className="text-lg font-semibold text-on-dark mb-2">Iterate without limits</h3>
-                <p className="text-on-dark-secondary text-sm leading-relaxed">
-                  New model comes out? Swap it in. Need a custom tool? Write one. Your investment in learning compounds.
-                </p>
-              </div>
+            <div>
+              <h3 className="text-lg font-semibold text-on-dark mb-2">Iterate without limits</h3>
+              <p className="text-on-dark-secondary text-sm leading-relaxed">
+                New model comes out? Swap it in. Need a custom tool? Write one. Your investment in learning compounds.
+              </p>
             </div>
             
-            <div className="flex gap-4">
-              <div className="text-2xl">🤝</div>
-              <div>
-                <h3 className="text-lg font-semibold text-on-dark mb-2">Share what works</h3>
-                <p className="text-on-dark-secondary text-sm leading-relaxed">
-                  Package your setup as a bundle. Share it with your team. Publish it for others. No vendor lock-in.
-                </p>
-              </div>
+            <div>
+              <h3 className="text-lg font-semibold text-on-dark mb-2">Share what works</h3>
+              <p className="text-on-dark-secondary text-sm leading-relaxed">
+                Package your setup as a bundle. Share it with your team. Publish it for others. No vendor lock-in.
+              </p>
             </div>
             
-            <div className="flex gap-4">
-              <div className="text-2xl">🛡️</div>
-              <div>
-                <h3 className="text-lg font-semibold text-on-dark mb-2">Security you control</h3>
-                <p className="text-on-dark-secondary text-sm leading-relaxed">
-                  Run models locally. Inspect every API call. Add approval gates for sensitive operations. Your data, your rules.
-                </p>
-              </div>
+            <div>
+              <h3 className="text-lg font-semibold text-on-dark mb-2">Security you control</h3>
+              <p className="text-on-dark-secondary text-sm leading-relaxed">
+                Run models locally. Inspect every API call. Add approval gates for sensitive operations. Your data, your rules.
+              </p>
             </div>
           </div>
         </div>
