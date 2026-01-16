@@ -4,152 +4,181 @@ import RevealOnScroll, { RevealStagger } from '@/components/RevealOnScroll'
 export default function BuildPage() {
   return (
     <div className="pt-16">
-      {/* Hero */}
+      {/* Hero - Direct to install */}
       <section className="section gradient-radial">
-        <div className="container-content">
+        <div className="container-reading">
           <RevealOnScroll>
-            <h1 className="text-display text-ink max-w-3xl">
-              Start building
-            </h1>
+            <h1 className="text-display text-ink">Install Amplifier</h1>
           </RevealOnScroll>
           
           <RevealOnScroll delay={100}>
-            <p className="mt-6 text-body-lg text-ink-slate max-w-2xl">
-              Two ways to work with Amplifier. Same capabilities, different interfaces. 
-              Choose what fits your workflow.
-            </p>
+            <div className="mt-8">
+              <code className="code-block block text-lg px-6 py-4">
+                pip install amplifier
+              </code>
+              <p className="mt-4 text-ink-fog text-sm">
+                Requires Python 3.10+
+              </p>
+            </div>
           </RevealOnScroll>
         </div>
       </section>
 
-      {/* Two paths */}
+      {/* Quick start */}
       <section className="section border-t border-canvas-mist">
-        <div className="container-content">
-          <RevealStagger className="grid md:grid-cols-2 gap-8">
-            {/* Forge */}
-            <div className="card">
-              <span className="text-micro font-medium text-ember uppercase tracking-wider">
-                Visual Interface
-              </span>
-              <h2 className="mt-4 text-title text-ink">Forge</h2>
-              <p className="mt-4 text-ink-slate leading-relaxed">
-                The visual interface for Amplifier. Workspace management, guided learning, 
-                community browser—all in a desktop application.
-              </p>
-              
-              <div className="mt-8 space-y-4">
-                <div className="flex items-start gap-4">
-                  <div className="w-1.5 h-1.5 rounded-full bg-ember mt-2.5 flex-shrink-0" />
-                  <span className="text-ink-slate">Visual workspace management</span>
+        <div className="container-reading">
+          <RevealOnScroll>
+            <h2 className="text-title text-ink">Get running in 60 seconds</h2>
+          </RevealOnScroll>
+
+          <RevealOnScroll delay={100}>
+            <div className="mt-10 space-y-6">
+              {/* Step 1 */}
+              <div className="bg-canvas-stone p-6 rounded-gentle">
+                <div className="flex items-center gap-4 mb-4">
+                  <span className="w-10 h-10 rounded-full bg-ink text-canvas text-sm font-semibold flex items-center justify-center">
+                    1
+                  </span>
+                  <span className="text-heading text-ink">Install</span>
                 </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-1.5 h-1.5 rounded-full bg-ember mt-2.5 flex-shrink-0" />
-                  <span className="text-ink-slate">AI-guided learning paths</span>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-1.5 h-1.5 rounded-full bg-ember mt-2.5 flex-shrink-0" />
-                  <span className="text-ink-slate">Community bundle browser</span>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-1.5 h-1.5 rounded-full bg-ember mt-2.5 flex-shrink-0" />
-                  <span className="text-ink-slate">Session history and management</span>
-                </div>
+                <code className="code-block block">pip install amplifier</code>
               </div>
 
-              <div className="mt-8 pt-8 border-t border-canvas-mist">
-                <Link href="#" className="btn-primary">
-                  Download Forge
-                </Link>
-                <p className="mt-3 text-micro text-ink-fog">
-                  Available for macOS, Windows, and Linux
+              {/* Step 2 */}
+              <div className="bg-canvas-stone p-6 rounded-gentle">
+                <div className="flex items-center gap-4 mb-4">
+                  <span className="w-10 h-10 rounded-full bg-ink text-canvas text-sm font-semibold flex items-center justify-center">
+                    2
+                  </span>
+                  <span className="text-heading text-ink">Add a provider</span>
+                </div>
+                <code className="code-block block">amplifier provider add anthropic</code>
+                <p className="mt-4 text-ink-slate text-sm">
+                  You'll need an API key from your provider. Amplifier supports 
+                  Anthropic, OpenAI, Azure OpenAI, and Ollama for local models.
+                </p>
+              </div>
+
+              {/* Step 3 */}
+              <div className="bg-canvas-stone p-6 rounded-gentle">
+                <div className="flex items-center gap-4 mb-4">
+                  <span className="w-10 h-10 rounded-full bg-ink text-canvas text-sm font-semibold flex items-center justify-center">
+                    3
+                  </span>
+                  <span className="text-heading text-ink">Run</span>
+                </div>
+                <code className="code-block block">amplifier run "Document this codebase"</code>
+                <p className="mt-4 text-ink-slate text-sm">
+                  That's it. Amplifier uses the default bundle. Add <code className="text-signal">--bundle</code> to 
+                  use a specific one.
                 </p>
               </div>
             </div>
+          </RevealOnScroll>
+        </div>
+      </section>
 
-            {/* CLI */}
-            <div className="card">
-              <span className="text-micro font-medium text-ink-fog uppercase tracking-wider">
-                Terminal Interface
-              </span>
-              <h2 className="mt-4 text-title text-ink">CLI</h2>
-              <p className="mt-4 text-ink-slate leading-relaxed">
-                The terminal interface. Fast, scriptable, powerful. Full Amplifier 
-                capabilities from your command line.
-              </p>
-              
-              <div className="mt-8 space-y-4">
-                <div className="flex items-start gap-4">
-                  <div className="w-1.5 h-1.5 rounded-full bg-ink-fog mt-2.5 flex-shrink-0" />
-                  <span className="text-ink-slate">Full Amplifier capabilities</span>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-1.5 h-1.5 rounded-full bg-ink-fog mt-2.5 flex-shrink-0" />
-                  <span className="text-ink-slate">Scriptable and automatable</span>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-1.5 h-1.5 rounded-full bg-ink-fog mt-2.5 flex-shrink-0" />
-                  <span className="text-ink-slate">Direct filesystem access</span>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-1.5 h-1.5 rounded-full bg-ink-fog mt-2.5 flex-shrink-0" />
-                  <span className="text-ink-slate">Recipe execution</span>
-                </div>
+      {/* Common commands */}
+      <section className="section bg-canvas-stone">
+        <div className="container-reading">
+          <RevealOnScroll>
+            <h2 className="text-title text-ink">Common commands</h2>
+          </RevealOnScroll>
+
+          <RevealOnScroll delay={100}>
+            <div className="mt-10 space-y-4">
+              <div className="bg-canvas p-5 rounded-gentle border border-canvas-mist">
+                <code className="text-signal text-sm font-mono">amplifier run "your prompt"</code>
+                <p className="mt-2 text-ink-slate text-sm">Run with default bundle</p>
               </div>
 
-              <div className="mt-8 pt-8 border-t border-canvas-mist">
-                <code className="code-block block">
-                  pip install amplifier
-                </code>
-                <p className="mt-3 text-micro text-ink-fog">
-                  Requires Python 3.10+
-                </p>
+              <div className="bg-canvas p-5 rounded-gentle border border-canvas-mist">
+                <code className="text-signal text-sm font-mono">amplifier run --bundle code-reviewer "Review this PR"</code>
+                <p className="mt-2 text-ink-slate text-sm">Run with a specific bundle</p>
               </div>
+
+              <div className="bg-canvas p-5 rounded-gentle border border-canvas-mist">
+                <code className="text-signal text-sm font-mono">amplifier bundle list</code>
+                <p className="mt-2 text-ink-slate text-sm">See available bundles</p>
+              </div>
+
+              <div className="bg-canvas p-5 rounded-gentle border border-canvas-mist">
+                <code className="text-signal text-sm font-mono">amplifier provider list</code>
+                <p className="mt-2 text-ink-slate text-sm">See configured providers</p>
+              </div>
+            </div>
+          </RevealOnScroll>
+        </div>
+      </section>
+
+      {/* Providers */}
+      <section className="section">
+        <div className="container-content">
+          <RevealOnScroll>
+            <h2 className="text-title text-ink">Supported providers</h2>
+            <p className="mt-4 text-ink-slate max-w-2xl">
+              Swap providers without changing your bundles. Each provider is a plug.
+            </p>
+          </RevealOnScroll>
+
+          <RevealStagger className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="bg-canvas-stone p-6 rounded-gentle">
+              <h3 className="text-heading text-ink">Anthropic</h3>
+              <p className="mt-2 text-ink-slate text-sm">Claude 3.5 Sonnet, Opus, Haiku</p>
+              <code className="mt-4 block text-micro text-ink-fog font-mono">
+                amplifier provider add anthropic
+              </code>
+            </div>
+
+            <div className="bg-canvas-stone p-6 rounded-gentle">
+              <h3 className="text-heading text-ink">OpenAI</h3>
+              <p className="mt-2 text-ink-slate text-sm">GPT-4, GPT-4 Turbo, GPT-3.5</p>
+              <code className="mt-4 block text-micro text-ink-fog font-mono">
+                amplifier provider add openai
+              </code>
+            </div>
+
+            <div className="bg-canvas-stone p-6 rounded-gentle">
+              <h3 className="text-heading text-ink">Azure OpenAI</h3>
+              <p className="mt-2 text-ink-slate text-sm">Enterprise Azure deployments</p>
+              <code className="mt-4 block text-micro text-ink-fog font-mono">
+                amplifier provider add azure
+              </code>
+            </div>
+
+            <div className="bg-canvas-stone p-6 rounded-gentle">
+              <h3 className="text-heading text-ink">Ollama</h3>
+              <p className="mt-2 text-ink-slate text-sm">Local models, fully private</p>
+              <code className="mt-4 block text-micro text-ink-fog font-mono">
+                amplifier provider add ollama
+              </code>
             </div>
           </RevealStagger>
         </div>
       </section>
 
-      {/* Quick start */}
-      <section className="section bg-canvas-stone">
+      {/* Coming soon: Forge */}
+      <section className="section border-t border-canvas-mist bg-canvas-stone">
         <div className="container-reading">
           <RevealOnScroll>
-            <h2 className="text-title text-ink">Quick start</h2>
-            <p className="mt-4 text-ink-slate">
-              Get running in minutes with the CLI.
+            <span className="text-micro font-medium text-ink-fog uppercase tracking-wider">
+              Coming soon
+            </span>
+            <h2 className="mt-4 text-title text-ink">Forge</h2>
+            <p className="mt-4 text-ink-slate leading-relaxed">
+              A visual interface for Amplifier. Workspace management, guided learning, 
+              community bundle browser—all in a desktop application.
             </p>
-          </RevealOnScroll>
-
-          <RevealOnScroll delay={100}>
-            <div className="mt-12 space-y-6">
-              <div className="bg-canvas p-6 rounded-gentle border border-canvas-mist">
-                <div className="flex items-center gap-4 mb-4">
-                  <span className="w-8 h-8 rounded-full bg-ember text-white text-sm font-medium flex items-center justify-center">
-                    1
-                  </span>
-                  <span className="text-subheading text-ink">Install</span>
-                </div>
-                <code className="code-block block">pip install amplifier</code>
-              </div>
-
-              <div className="bg-canvas p-6 rounded-gentle border border-canvas-mist">
-                <div className="flex items-center gap-4 mb-4">
-                  <span className="w-8 h-8 rounded-full bg-ember text-white text-sm font-medium flex items-center justify-center">
-                    2
-                  </span>
-                  <span className="text-subheading text-ink">Configure provider</span>
-                </div>
-                <code className="code-block block">amplifier provider add anthropic</code>
-              </div>
-
-              <div className="bg-canvas p-6 rounded-gentle border border-canvas-mist">
-                <div className="flex items-center gap-4 mb-4">
-                  <span className="w-8 h-8 rounded-full bg-ember text-white text-sm font-medium flex items-center justify-center">
-                    3
-                  </span>
-                  <span className="text-subheading text-ink">Run</span>
-                </div>
-                <code className="code-block block">amplifier run "Hello, what can you help me with?"</code>
-              </div>
+            <p className="mt-4 text-ink-slate leading-relaxed">
+              For now, the CLI is the way to use Amplifier. Forge is in development.
+            </p>
+            <div className="mt-8">
+              <Link 
+                href="https://github.com/microsoft/amplifier"
+                className="btn-secondary"
+              >
+                Watch the repo for updates
+              </Link>
             </div>
           </RevealOnScroll>
         </div>
@@ -163,12 +192,20 @@ export default function BuildPage() {
             <p className="mt-4 text-ink-slate max-w-xl mx-auto">
               Full documentation, API reference, and examples on GitHub.
             </p>
-            <Link
-              href="https://github.com/microsoft/amplifier"
-              className="mt-8 btn-secondary inline-flex"
-            >
-              View documentation
-            </Link>
+            <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="https://github.com/microsoft/amplifier"
+                className="btn-primary"
+              >
+                Documentation
+              </Link>
+              <Link
+                href="https://github.com/microsoft/amplifier/discussions"
+                className="btn-secondary"
+              >
+                Ask a question
+              </Link>
+            </div>
           </RevealOnScroll>
         </div>
       </section>

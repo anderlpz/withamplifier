@@ -11,11 +11,11 @@ export default function Footer() {
               with amplifier
             </Link>
             <p className="mt-4 text-ink-fog text-sm leading-relaxed">
-              Your ideas, amplified.
+              AI that's yours for the making.
             </p>
           </div>
 
-          {/* Links */}
+          {/* Learn */}
           <div>
             <h4 className="text-micro font-medium text-ink-fog uppercase tracking-wider mb-4">
               Learn
@@ -23,7 +23,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <Link href="/start" className="text-ink-slate text-sm hover:text-ink transition-colors duration-200">
-                  Getting started
+                  How it works
                 </Link>
               </li>
               <li>
@@ -36,9 +36,15 @@ export default function Footer() {
                   Documentation
                 </Link>
               </li>
+              <li>
+                <Link href="/updates" className="text-ink-slate text-sm hover:text-ink transition-colors duration-200">
+                  Updates
+                </Link>
+              </li>
             </ul>
           </div>
 
+          {/* Build */}
           <div>
             <h4 className="text-micro font-medium text-ink-fog uppercase tracking-wider mb-4">
               Build
@@ -46,12 +52,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <Link href="/build" className="text-ink-slate text-sm hover:text-ink transition-colors duration-200">
-                  Get Forge
-                </Link>
-              </li>
-              <li>
-                <Link href="/build" className="text-ink-slate text-sm hover:text-ink transition-colors duration-200">
-                  CLI reference
+                  Install
                 </Link>
               </li>
               <li>
@@ -59,9 +60,15 @@ export default function Footer() {
                   GitHub
                 </Link>
               </li>
+              <li>
+                <Link href="https://github.com/microsoft/amplifier/blob/main/CONTRIBUTING.md" className="text-ink-slate text-sm hover:text-ink transition-colors duration-200">
+                  Contributing
+                </Link>
+              </li>
             </ul>
           </div>
 
+          {/* Community */}
           <div>
             <h4 className="text-micro font-medium text-ink-fog uppercase tracking-wider mb-4">
               Community
@@ -73,8 +80,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="https://github.com/microsoft/amplifier/blob/main/CONTRIBUTING.md" className="text-ink-slate text-sm hover:text-ink transition-colors duration-200">
-                  Contributing
+                <Link href="https://github.com/microsoft/amplifier/issues" className="text-ink-slate text-sm hover:text-ink transition-colors duration-200">
+                  Report an issue
                 </Link>
               </li>
               <li>
