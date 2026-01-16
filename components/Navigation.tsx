@@ -5,7 +5,6 @@ import { usePathname } from 'next/navigation'
 import { useState, useEffect } from 'react'
 
 const navItems = [
-  { href: '/start', label: 'Start here' },
   { href: '/explore', label: 'Explore' },
   { href: '/build', label: 'Build' },
   { href: '/support', label: 'Support' },

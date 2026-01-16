@@ -724,3 +724,342 @@ a {
     padding: 12px 16px;
   }
 }
+
+/* ============================================
+   100vh Section System
+   ============================================ */
+
+/* Dynamic viewport height with fallbacks */
+.section-full {
+  min-height: 100vh; /* Fallback */
+  min-height: 100dvh; /* Modern browsers */
+  min-height: calc(var(--vh, 1vh) * 100); /* JS fallback */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  /* Safe area padding for iPhone notch */
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* Section with content at top, not centered */
+.section-full-top {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* ============================================
+   Scroll Snap System (Desktop only)
+   ============================================ */
+
+.scroll-snap-container {
+  height: 100dvh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  overscroll-behavior: contain;
+}
+
+.scroll-snap-section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+/* Disable snap on mobile - natural scroll feels better */
+@media (max-width: 768px) {
+  .scroll-snap-container {
+    scroll-snap-type: none;
+    height: auto;
+    overflow: visible;
+  }
+}
+
+/* Re-enable for large screens with sufficient height */
+@media (min-width: 1024px) and (min-height: 700px) {
+  .scroll-snap-container {
+    scroll-snap-type: y mandatory;
+  }
+}
+
+/* ============================================
+   Horizontal Scroll System
+   ============================================ */
+
+.horizontal-scroll {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  scroll-padding-left: 1.5rem;
+  padding: 0.5rem 1.5rem 1rem;
+}
+
+.horizontal-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.horizontal-scroll > * {
+  flex-shrink: 0;
+  scroll-snap-align: start;
+}
+
+/* Center snap on mobile */
+@media (max-width: 640px) {
+  .horizontal-scroll > * {
+    scroll-snap-align: center;
+  }
+}
+
+/* Scrollbar hide utility */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* ============================================
+   Touch Optimization
+   ============================================ */
+
+/* Minimum tap target */
+.tap-target {
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Touch feedback - only on touch devices */
+@media (hover: none) and (pointer: coarse) {
+  .touch-feedback:active {
+    transform: scale(0.98);
+    opacity: 0.9;
+  }
+  
+  /* Disable hover effects on touch */
+  .card:hover {
+    transform: none;
+  }
+}
+
+/* ============================================
+   Responsive Terminal
+   ============================================ */
+
+.terminal-responsive {
+  font-size: 13px;
+  line-height: 1.5;
+  max-height: 60vh;
+}
+
+@media (min-width: 640px) {
+  .terminal-responsive {
+    font-size: 14px;
+    line-height: 1.6;
+    max-height: 70vh;
+  }
+}
+
+/* ============================================
+   Motion Preferences
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .section-full {
+    scroll-snap-type: none !important;
+  }
+  
+  .animate-on-scroll {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  
+  .horizontal-scroll {
+    scroll-snap-type: none;
+  }
+}
+
+/* ============================================
+   Copy Button Component
+   ============================================ */
+
+.copy-button {
+  @apply p-2 rounded transition-colors duration-200;
+  background-color: transparent;
+  color: var(--ink-fog);
+}
+
+.copy-button:hover {
+  background-color: var(--depth-iron);
+  color: #E8E8E6;
+}
+
+.copy-button.copied {
+  color: var(--success);
+}
+
+/* Code block with copy button */
+.code-block-wrapper {
+  @apply relative;
+}
+
+.code-block-wrapper .copy-button {
+  @apply absolute right-3 top-1/2 -translate-y-1/2;
+}
+
+/* ============================================
+   Scroll Indicators (Dots)
+   ============================================ */
+
+.scroll-indicators {
+  @apply flex justify-center gap-2;
+}
+
+.scroll-indicator-dot {
+  @apply w-2 h-2 rounded-full transition-colors duration-200;
+  background-color: var(--canvas-mist);
+}
+
+.scroll-indicator-dot.active {
+  background-color: var(--signal);
+}
+
+/* ============================================
+   Section Backgrounds
+   ============================================ */
+
+.section-dark {
+  background-color: var(--depth-obsidian);
+  color: var(--canvas);
+}
+
+.section-dark h1,
+.section-dark h2,
+.section-dark h3 {
+  color: var(--canvas);
+}
+
+.section-dark p {
+  color: var(--canvas-mist);
+}
+
+/* ============================================
+   Highlight Cards
+   ============================================ */
+
+.highlight-card {
+  @apply p-6 rounded-gentle;
+  @apply transition-all duration-300;
+  background-color: var(--canvas-stone);
+  border: 1px solid transparent;
+}
+
+.highlight-card:hover {
+  background-color: var(--canvas);
+  border-color: var(--canvas-mist);
+  transform: translateY(-2px);
+}
+
+.highlight-card-icon {
+  @apply w-10 h-10 mb-4 flex items-center justify-center;
+  @apply rounded-soft;
+  background-color: var(--signal-soft);
+  color: var(--signal);
+}
+
+/* ============================================
+   Architecture Diagram Styles
+   ============================================ */
+
+.diagram-node {
+  @apply p-4 rounded-soft;
+  @apply transition-all duration-300;
+  background-color: var(--canvas);
+  border: 2px solid var(--canvas-mist);
+}
+
+.diagram-node:hover {
+  border-color: var(--signal);
+  box-shadow: 0 0 0 4px var(--signal-soft);
+}
+
+.diagram-node.active {
+  border-color: var(--signal);
+  background-color: var(--signal-soft);
+}
+
+.diagram-connector {
+  stroke: var(--canvas-mist);
+  stroke-width: 2;
+  fill: none;
+}
+
+.diagram-connector.active {
+  stroke: var(--signal);
+}
+
+/* ============================================
+   Bundle Cards
+   ============================================ */
+
+.bundle-card {
+  @apply p-5 rounded-gentle;
+  @apply transition-all duration-300;
+  background-color: var(--canvas);
+  border: 1px solid var(--canvas-mist);
+  width: 280px;
+}
+
+@media (min-width: 640px) {
+  .bundle-card {
+    width: 300px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .bundle-card {
+    width: 320px;
+  }
+}
+
+.bundle-card:hover {
+  border-color: var(--signal-glow);
+  box-shadow: 0 4px 24px -8px rgba(91, 77, 227, 0.12);
+  transform: translateY(-2px);
+}
+
+.bundle-card-tag {
+  @apply px-2 py-0.5 rounded text-micro font-medium;
+  background-color: var(--signal-soft);
+  color: var(--signal);
+}
+
+/* ============================================
+   Scroll Hint Animation
+   ============================================ */
+
+.scroll-hint {
+  animation: scroll-hint-bounce 2s ease-in-out infinite;
+}
+
+@keyframes scroll-hint-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+
+/* Hide on short screens */
+@media (max-height: 600px) {
+  .scroll-hint {
+    display: none;
+  }
+}
