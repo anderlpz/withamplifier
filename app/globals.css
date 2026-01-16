@@ -14,36 +14,132 @@
    ============================================ */
 
 :root {
-  /* Canvas */
+  /* ============================================
+     APPLE-QUALITY DESIGN TOKENS
+     Based on detailed analysis of Apple product pages
+     ============================================ */
+  
+  /* Canvas - Light backgrounds */
   --canvas: #FAFAF8;
   --canvas-stone: #F5F5F3;
   --canvas-mist: #EAEAE6;
   
-  /* Ink */
-  --ink: #1A1A18;
-  --ink-slate: #4A4A46;
-  --ink-fog: #8A8A86;
+  /* Ink - Text colors with Apple-like hierarchy */
+  --ink: #1d1d1f;           /* Primary text - Apple's exact shade */
+  --ink-slate: #6e6e73;     /* Secondary text */
+  --ink-fog: #86868b;       /* Tertiary text */
+  --ink-subtle: #a1a1a6;    /* Quaternary text */
   
-  /* Signal - Deep Violet Blue */
+  /* Signal - Accent */
   --signal: #5B4DE3;
   --signal-light: #8578F0;
   --signal-dark: #4338B8;
   --signal-soft: rgba(91, 77, 227, 0.08);
   --signal-glow: rgba(91, 77, 227, 0.18);
   
-  /* Depth */
-  --depth-obsidian: #0F0F0E;
-  --depth-charcoal: #2A2A28;
-  --depth-iron: #3A3A38;
+  /* Depth - Dark backgrounds (Apple uses pure black) */
+  --depth-obsidian: #000000;  /* Pure black like Apple */
+  --depth-charcoal: #1d1d1f;  /* Near-black */
+  --depth-iron: #2d2d2d;      /* Elevated dark */
+  --depth-separator: rgba(66, 66, 69, 0.6);
   
-  /* Motion */
+  /* Text on dark - Apple's exact light text colors */
+  --text-on-dark: #f5f5f7;
+  --text-on-dark-secondary: #a1a1a6;
+  --text-on-dark-tertiary: #6e6e73;
+  
+  /* Apple Link Blue */
+  --link-blue: #2997ff;
+  --link-blue-hover: #0077ed;
+  
+  /* Status */
+  --success: #34c759;
+  --error: #ff375f;
+  
+  /* ============================================
+     APPLE MOTION SYSTEM
+     Long durations, dramatic ease-out curves
+     ============================================ */
+  
+  /* Durations - Apple uses LONGER animations */
   --duration-fast: 200ms;
-  --duration-base: 350ms;
-  --duration-slow: 500ms;
-  --duration-slower: 700ms;
-  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
-  --ease-gentle: cubic-bezier(0.25, 0.1, 0.25, 1);
-  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-base: 400ms;
+  --duration-slow: 600ms;
+  --duration-slower: 800ms;
+  --duration-dramatic: 1000ms;
+  
+  /* Apple's exact easing curves */
+  --ease-apple: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --ease-apple-out: cubic-bezier(0.22, 1, 0.36, 1);     /* Dramatic deceleration */
+  --ease-apple-in-out: cubic-bezier(0.42, 0, 0.58, 1);
+  --ease-apple-spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  
+  /* Legacy aliases */
+  --ease-smooth: var(--ease-apple-in-out);
+  --ease-gentle: var(--ease-apple);
+  --ease-out: var(--ease-apple-out);
+  
+  /* ============================================
+     APPLE SPACING SYSTEM
+     Massive, generous, asymmetric
+     ============================================ */
+  
+  /* Container widths */
+  --container-narrow: 680px;   /* Reading content */
+  --container-default: 980px;  /* Apple's standard */
+  --container-wide: 1200px;    /* Extended */
+  --container-hero: 1440px;    /* Full-width heroes */
+  
+  /* Body gutters - scale with viewport */
+  --gutter-sm: 24px;
+  --gutter-md: 40px;
+  --gutter-lg: 70px;
+  --gutter-xl: 90px;
+  
+  /* Section padding - MASSIVE per Apple */
+  --section-padding-sm: 80px;
+  --section-padding-md: 120px;
+  --section-padding-lg: 160px;
+  
+  /* ============================================
+     APPLE TYPOGRAPHY SCALE
+     Extreme contrast, precise tracking
+     ============================================ */
+  
+  /* Font sizes with clamp for fluid scaling */
+  --text-display-xl: clamp(56px, 8vw, 96px);
+  --text-display: clamp(48px, 6vw, 80px);
+  --text-display-sm: clamp(40px, 5vw, 64px);
+  --text-headline: clamp(32px, 4vw, 48px);
+  --text-title: clamp(28px, 3vw, 40px);
+  --text-subtitle: clamp(24px, 2.5vw, 32px);
+  --text-body-lg: clamp(19px, 1.8vw, 24px);
+  --text-body: clamp(17px, 1.5vw, 21px);
+  --text-body-sm: 17px;
+  --text-caption: 14px;
+  --text-micro: 12px;
+  
+  /* Letter spacing - tighter at large sizes */
+  --tracking-display: -0.03em;
+  --tracking-headline: -0.02em;
+  --tracking-body: -0.022em;
+  --tracking-eyebrow: 0.04em;
+  
+  /* Line heights - tighter for headlines */
+  --leading-display: 1.05;
+  --leading-headline: 1.1;
+  --leading-body: 1.47;
+  
+  /* ============================================
+     APPLE BORDER RADII
+     Specific values, not arbitrary
+     ============================================ */
+  
+  --radius-pill: 980px;    /* Buttons, pills */
+  --radius-tile: 28px;     /* Feature tiles */
+  --radius-card: 20px;     /* Standard cards */
+  --radius-button: 12px;   /* Square buttons */
+  --radius-input: 8px;     /* Form inputs */
 }
 
 /* ============================================
@@ -142,33 +238,368 @@ p {
   }
 }
 
-/* Reveal on scroll - CSS-only with intersection observer support */
+/* ============================================
+   APPLE-STYLE ANIMATION SYSTEM
+   Long durations, dramatic ease-out, GPU-accelerated
+   ============================================ */
+
+/* Base reveal - Apple uses 30-40px movement, 0.8s duration */
 .reveal {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity var(--duration-slow) var(--ease-out),
-              transform var(--duration-slow) var(--ease-out);
+  transform: translate3d(0, 40px, 0);
+  transition: 
+    opacity 0.8s var(--ease-apple-out),
+    transform 0.8s var(--ease-apple-out);
+  will-change: transform, opacity;
 }
 
 .reveal.visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: translate3d(0, 0, 0);
 }
 
-/* Staggered reveals */
+/* Scale reveal - for product images */
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.92);
+  transition: 
+    opacity 1s var(--ease-apple-out),
+    transform 1.2s var(--ease-apple-out);
+  will-change: transform, opacity;
+}
+
+.reveal-scale.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Blur reveal - premium feel */
+.reveal-blur {
+  opacity: 0;
+  filter: blur(10px);
+  transform: translate3d(0, 30px, 0);
+  transition: 
+    opacity 0.6s var(--ease-apple),
+    filter 0.8s var(--ease-apple),
+    transform 0.8s var(--ease-apple-out);
+}
+
+.reveal-blur.visible {
+  opacity: 1;
+  filter: blur(0);
+  transform: translate3d(0, 0, 0);
+}
+
+/* Staggered reveals - Apple uses 100ms delays */
 .reveal-stagger > * {
   opacity: 0;
-  transform: translateY(16px);
-  transition: opacity var(--duration-base) var(--ease-out),
-              transform var(--duration-base) var(--ease-out);
+  transform: translate3d(0, 30px, 0);
+  transition: 
+    opacity 0.6s var(--ease-apple-out),
+    transform 0.6s var(--ease-apple-out);
 }
 
-.reveal-stagger.visible > *:nth-child(1) { transition-delay: 0ms; opacity: 1; transform: translateY(0); }
-.reveal-stagger.visible > *:nth-child(2) { transition-delay: 80ms; opacity: 1; transform: translateY(0); }
-.reveal-stagger.visible > *:nth-child(3) { transition-delay: 160ms; opacity: 1; transform: translateY(0); }
-.reveal-stagger.visible > *:nth-child(4) { transition-delay: 240ms; opacity: 1; transform: translateY(0); }
-.reveal-stagger.visible > *:nth-child(5) { transition-delay: 320ms; opacity: 1; transform: translateY(0); }
-.reveal-stagger.visible > *:nth-child(6) { transition-delay: 400ms; opacity: 1; transform: translateY(0); }
+.reveal-stagger.visible > *:nth-child(1) { transition-delay: 0s; }
+.reveal-stagger.visible > *:nth-child(2) { transition-delay: 0.1s; }
+.reveal-stagger.visible > *:nth-child(3) { transition-delay: 0.2s; }
+.reveal-stagger.visible > *:nth-child(4) { transition-delay: 0.3s; }
+.reveal-stagger.visible > *:nth-child(5) { transition-delay: 0.4s; }
+.reveal-stagger.visible > *:nth-child(6) { transition-delay: 0.5s; }
+
+.reveal-stagger.visible > * {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+/* ============================================
+   APPLE-STYLE SECTION SYSTEM
+   Full-height, dramatic, alternating light/dark
+   ============================================ */
+
+/* Hero section - full viewport, centered content */
+.section-hero {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(80px, 12vh, 160px) var(--gutter-md);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Feature section - generous padding, contained width */
+.section-feature {
+  padding: clamp(80px, 12vw, 160px) var(--gutter-md);
+  position: relative;
+}
+
+.section-feature > .container {
+  max-width: var(--container-default);
+  margin: 0 auto;
+}
+
+/* Dark dramatic section - Apple's signature */
+.section-dark {
+  background: var(--depth-obsidian);
+  color: var(--text-on-dark);
+}
+
+.section-dark h1,
+.section-dark h2,
+.section-dark h3 {
+  color: var(--text-on-dark);
+}
+
+.section-dark p {
+  color: var(--text-on-dark-secondary);
+}
+
+/* Dark with gradient depth */
+.section-dark-gradient {
+  background: linear-gradient(
+    180deg,
+    var(--depth-charcoal) 0%,
+    var(--depth-obsidian) 100%
+  );
+  color: var(--text-on-dark);
+}
+
+/* Light section */
+.section-light {
+  background: var(--canvas);
+  color: var(--ink);
+}
+
+/* Stone section - subtle contrast */
+.section-stone {
+  background: var(--canvas-stone);
+}
+
+/* ============================================
+   APPLE-STYLE CONTAINERS
+   Centered, width-constrained, generous gutters
+   ============================================ */
+
+.container-narrow {
+  max-width: var(--container-narrow);
+  margin: 0 auto;
+  padding: 0 var(--gutter-md);
+}
+
+.container-default {
+  max-width: var(--container-default);
+  margin: 0 auto;
+  padding: 0 var(--gutter-md);
+}
+
+.container-wide {
+  max-width: var(--container-wide);
+  margin: 0 auto;
+  padding: 0 var(--gutter-md);
+}
+
+/* ============================================
+   APPLE-STYLE TYPOGRAPHY CLASSES
+   Precise sizes, tracking, and line-heights
+   ============================================ */
+
+/* Display headlines - the massive ones */
+.text-display {
+  font-size: var(--text-display);
+  font-weight: 600;
+  letter-spacing: var(--tracking-display);
+  line-height: var(--leading-display);
+}
+
+.text-display-xl {
+  font-size: var(--text-display-xl);
+  font-weight: 700;
+  letter-spacing: var(--tracking-display);
+  line-height: var(--leading-display);
+}
+
+/* Headlines */
+.text-headline {
+  font-size: var(--text-headline);
+  font-weight: 600;
+  letter-spacing: var(--tracking-headline);
+  line-height: var(--leading-headline);
+}
+
+/* Eyebrow - the whisper above headlines */
+.text-eyebrow {
+  font-size: var(--text-caption);
+  font-weight: 600;
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--ink-fog);
+}
+
+.section-dark .text-eyebrow {
+  color: var(--text-on-dark-tertiary);
+}
+
+/* Body text */
+.text-body-large {
+  font-size: var(--text-body-lg);
+  font-weight: 400;
+  line-height: var(--leading-body);
+  letter-spacing: var(--tracking-body);
+}
+
+/* ============================================
+   APPLE-STYLE FEATURE TILES
+   NO borders, NO shadows on containers
+   ============================================ */
+
+/* Feature tile - the "floating" card Apple uses */
+.feature-tile {
+  position: relative;
+  border-radius: var(--radius-tile);
+  overflow: hidden;
+  /* NO border - EVER */
+  /* NO box-shadow on container - EVER */
+}
+
+.feature-tile-dark {
+  background: linear-gradient(
+    180deg,
+    var(--depth-charcoal) 0%,
+    var(--depth-obsidian) 100%
+  );
+  color: var(--text-on-dark);
+}
+
+.feature-tile-light {
+  background: var(--canvas-stone);
+  color: var(--ink);
+}
+
+.feature-tile-content {
+  padding: clamp(32px, 5vw, 48px);
+}
+
+.feature-tile-eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--ink-fog);
+  margin-bottom: 8px;
+}
+
+.feature-tile-dark .feature-tile-eyebrow {
+  color: var(--text-on-dark-tertiary);
+}
+
+.feature-tile-title {
+  font-size: clamp(28px, 3vw, 40px);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin-bottom: 12px;
+}
+
+.feature-tile-description {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.47;
+  letter-spacing: -0.022em;
+  color: var(--ink-slate);
+  max-width: 380px;
+}
+
+.feature-tile-dark .feature-tile-description {
+  color: var(--text-on-dark-secondary);
+}
+
+/* ============================================
+   APPLE-STYLE LINKS
+   Blue with animated chevron
+   ============================================ */
+
+.link-apple {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: -0.022em;
+  color: var(--link-blue);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.link-apple:hover {
+  text-decoration: underline;
+}
+
+.link-apple::after {
+  content: '›';
+  font-size: 1.3em;
+  transition: transform 0.2s ease;
+}
+
+.link-apple:hover::after {
+  transform: translateX(4px);
+}
+
+/* ============================================
+   APPLE-STYLE BUTTONS
+   Pill shape, minimal hover
+   ============================================ */
+
+.btn-apple {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 12px 24px;
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: -0.022em;
+  color: #fff;
+  background: #0071e3;
+  border: none;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.btn-apple:hover {
+  background: #0077ed;
+}
+
+.btn-apple:active {
+  background: #006edb;
+}
+
+/* Secondary Apple button - outline style */
+.btn-apple-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 12px 24px;
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: -0.022em;
+  color: var(--link-blue);
+  background: transparent;
+  border: 1px solid var(--link-blue);
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-apple-secondary:hover {
+  background: var(--link-blue);
+  color: #fff;
+}
 
 /* ============================================
    Component Utilities
