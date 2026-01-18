@@ -13,13 +13,45 @@ withamplifier.com
 
 ---
 
+## VOICE & TONE
+
+**Primary Voice:** Sam Schillace style — insider confidant who respects your intelligence, acknowledges uncertainty, but wants to make sure you don't miss what's actually happening.
+
+**Characteristics:**
+- Conversational, not corporate
+- Uses "folks" not "users"
+- Hedges with "seems," "likely" — confident but not arrogant
+- Acknowledges messiness and complexity
+- Grounds observations in timelines ("6 months ago... now...")
+- Connects to broader patterns ("this feels like the early web")
+
+**Headline Flow:** Headlines should read as one continuous thought when scanned:
+
+```
+Something is changing.
+↓
+Most tools won't let you see inside.
+↓
+So we made everything swappable.
+↓
+Here's what that looks like.
+↓
+The return compounds.
+↓
+What works spreads.
+↓
+If you're curious, try it.
+```
+
+---
+
 ## PAGE 1: HOME (`/`)
 
 ### Section 1.1: Hero
 | Element | Content |
 |---------|---------|
-| **Headline** | "Yours for the making." |
-| **Subhead** | "An AI agent framework where every piece is visible, swappable, and yours to control. See exactly how it thinks. Change what doesn't fit. Build something that works the way you do." |
+| **Headline** | "Something is changing." |
+| **Subhead** | "The folks building serious things with AI want to see inside, swap pieces, make it theirs. That's what Amplifier is for." |
 | **CTA** | `pip install amplifier` (code block) |
 | **Visual** | Gradient orbs (CSS), warm cream background |
 
@@ -28,23 +60,21 @@ withamplifier.com
 ### Section 1.2: The Problem
 | Element | Content |
 |---------|---------|
-| **Eyebrow** | "The problem with AI tools today" |
-| **Headline** | "You can't see inside." |
+| **Headline** | "Most tools won't let you see inside." |
 | **Layout** | 3-column grid |
 
 **Pain Points:**
-1. **Opaque behavior** - "When it does something unexpected, you can't see why. You're left guessing at a black box."
-2. **Locked-in choices** - "Want a different model? Different tools? You're stuck with what they decided to give you."
-3. **One-size-fits-none** - "Generic instructions. Generic personality. No way to encode how you actually work."
+1. **You can't see why** — "When something goes wrong, you're guessing. No visibility into decisions, prompts, or tool calls."
+2. **You can't change anything** — "Want a different model? Different tools? You're stuck with what they decided to give you."
+3. **You can't make it yours** — "Generic instructions. Generic personality. No way to encode how you actually work."
 
 ---
 
 ### Section 1.3: The Architecture
 | Element | Content |
 |---------|---------|
-| **Eyebrow** | "The Amplifier approach" |
-| **Headline** | "Three building blocks. Infinite combinations." |
-| **Subhead** | "Everything is modular. Mix and match to create exactly the AI assistant you need." |
+| **Headline** | "So we made everything swappable." |
+| **Subhead** | "Providers, tools, and behaviors snap together into bundles. Change one piece without touching the rest." |
 | **Layout** | 3 tiles + 1 centered card |
 
 **Building Blocks:**
@@ -58,11 +88,10 @@ withamplifier.com
 
 ---
 
-### Section 1.4: Demo ("Watch it work")
+### Section 1.4: Demo
 | Element | Content |
 |---------|---------|
-| **Eyebrow** | "In action" |
-| **Headline** | "Watch it work." |
+| **Headline** | "Here's what that looks like." |
 | **Subhead** | "One command loads a bundle, connects to a model, and gets to work." |
 | **Visual** | Terminal simulation |
 | **CTA** | "Try more examples" → /explore |
@@ -96,8 +125,7 @@ $ amplifier run "Review this PR for security issues"
 ### Section 1.5: Why This Matters (Benefits)
 | Element | Content |
 |---------|---------|
-| **Eyebrow** | "Why this matters" |
-| **Headline** | "Control that compounds." |
+| **Headline** | "The return compounds." |
 | **Layout** | 2x2 grid of benefit cards |
 
 **Benefits:**
@@ -114,9 +142,8 @@ $ amplifier run "Review this PR for security issues"
 ### Section 1.6: Ecosystem
 | Element | Content |
 |---------|---------|
-| **Eyebrow** | "The ecosystem" |
-| **Headline** | "Built by many. Better for everyone." |
-| **Body** | "A developer builds a code reviewer bundle for their team. A researcher creates one for paper analysis. A startup packages their internal tools. Each contribution makes the whole ecosystem richer." |
+| **Headline** | "What works spreads." |
+| **Body** | "Package your setup as a bundle. Share it with your team or the community. Use bundles others have built. Each contribution makes the whole ecosystem richer." |
 | **Visual** | Bundle pills: documentation-writer, security-reviewer, code-explorer, test-generator, api-designer, data-analyst |
 | **CTA** | "Explore bundles" → /explore |
 
@@ -125,8 +152,8 @@ $ amplifier run "Review this PR for security issues"
 ### Section 1.7: CTA (Get Started)
 | Element | Content |
 |---------|---------|
-| **Headline** | "Ready to build?" |
-| **Subhead** | "Install Amplifier and run your first bundle in under a minute." |
+| **Headline** | "If you're curious, try it." |
+| **Subhead** | "It takes about a minute to get running." |
 | **Code** | `pip install amplifier` |
 | **Primary CTA** | "Quick Start Guide" → /build |
 | **Secondary CTA** | "View on GitHub" → github.com/microsoft/amplifier |
@@ -139,8 +166,8 @@ $ amplifier run "Review this PR for security issues"
 ### Section 2.1: Hero
 | Element | Content |
 |---------|---------|
-| **Headline** | "The infinite Lego box." |
-| **Subhead** | "Browse bundles built by the team and community. See how they work. Use them, customize them, contribute your own." |
+| **Headline** | "Browse. Use. Customize." |
+| **Subhead** | "Bundles built by the team and community. Pick one that fits, customize it for your workflow, or build your own from scratch." |
 
 ---
 
@@ -188,8 +215,9 @@ $ amplifier run "Review this PR for security issues"
 ### Section 2.4: Built with Amplifier
 | Element | Content |
 |---------|---------|
+| **Eyebrow** | "Showcase" |
 | **Headline** | "Built with Amplifier" |
-| **Subhead** | "Real projects using Amplifier. See what's possible when bundles do real work." |
+| **Subhead** | "Real projects using Amplifier. See what's possible." |
 
 **Showcase Cards:**
 
@@ -207,7 +235,8 @@ $ amplifier run "Review this PR for security issues"
 ### Section 3.1: Hero (Install)
 | Element | Content |
 |---------|---------|
-| **Headline** | "Install Amplifier" |
+| **Headline** | "Get started" |
+| **Subhead** | "Install Amplifier, add a provider, and run your first command." |
 | **Code** | `pip install amplifier` |
 | **Note** | "Requires Python 3.10+" |
 
@@ -216,7 +245,7 @@ $ amplifier run "Review this PR for security issues"
 ### Section 3.2: Quick Start
 | Element | Content |
 |---------|---------|
-| **Headline** | "Get running in 60 seconds" |
+| **Headline** | "Three steps. Under a minute." |
 
 **Steps:**
 
@@ -247,17 +276,19 @@ $ amplifier run "Review this PR for security issues"
 ### Section 3.4: Providers
 | Element | Content |
 |---------|---------|
-| **Headline** | "Supported providers" |
-| **Subhead** | "Swap providers without changing your bundles. Each provider is a plug." |
-| **Layout** | 4-card grid |
+| **Headline** | "Swap providers anytime" |
+| **Subhead** | "Change your model without touching your bundles. Each provider is a plug." |
+| **Layout** | 3-column grid (6 providers) |
 
 **Providers:**
 
 | Provider | Models | Command |
 |----------|--------|---------|
-| Anthropic | Claude 3.5 Sonnet, Opus, Haiku | `amplifier provider add anthropic` |
-| OpenAI | GPT-4, GPT-4 Turbo, GPT-3.5 | `amplifier provider add openai` |
+| Anthropic | Claude Sonnet 4, Opus 4, Haiku | `amplifier provider add anthropic` |
+| OpenAI | GPT-4o, GPT-4 Turbo, o1 | `amplifier provider add openai` |
+| Google Gemini | Gemini Pro, Gemini Flash | `amplifier provider add gemini` |
 | Azure OpenAI | Enterprise Azure deployments | `amplifier provider add azure` |
+| AWS Bedrock | Claude, Llama, Titan on AWS | `amplifier provider add bedrock` |
 | Ollama | Local models, fully private | `amplifier provider add ollama` |
 
 ---
@@ -276,7 +307,7 @@ $ amplifier run "Review this PR for security issues"
 | Element | Content |
 |---------|---------|
 | **Headline** | "Go deeper" |
-| **Subhead** | "Full documentation, API reference, and examples on GitHub." |
+| **Subhead** | "Full documentation, API reference, and examples." |
 | **Primary CTA** | "Documentation" → GitHub |
 | **Secondary CTA** | "Ask a question" → GitHub Discussions |
 
@@ -354,7 +385,7 @@ $ amplifier run "Review this PR for security issues"
 
 | Question | Answer |
 |----------|--------|
-| What providers does Amplifier support? | "Anthropic (Claude), OpenAI (GPT-4), Azure OpenAI, and local models via Ollama. The provider is swappable—change it without rewriting your bundles." |
+| What providers does Amplifier support? | "Anthropic (Claude), OpenAI (GPT-4), Google Gemini, Azure OpenAI, AWS Bedrock, and local models via Ollama. The provider is swappable—change it without rewriting your bundles." |
 | Is Amplifier free? | "Amplifier is open source and free. You pay only for the AI providers you use (like Claude or GPT-4 API costs)." |
 | What's the difference between Forge and CLI? | "Same capabilities, different interface. Forge is visual with guided learning and workspace management. CLI is terminal-based, scriptable, and fast. Choose what fits your workflow." |
 | Can I create my own bundles? | "Yes. Bundles are YAML + markdown. Combine providers, tools, and behaviors to create capabilities specific to your work. Share them back to the community if you like." |
@@ -386,25 +417,23 @@ $ amplifier run "Review this PR for security issues"
 
 ---
 
-## REVIEW NOTES
+## REVIEW CHECKLIST
 
-Use this outline to work through each section systematically. Mark sections as reviewed with status:
-
-- [ ] 1.1 Hero
-- [ ] 1.2 The Problem
-- [ ] 1.3 The Architecture
-- [ ] 1.4 Demo
-- [ ] 1.5 Why This Matters
-- [ ] 1.6 Ecosystem
-- [ ] 1.7 CTA
-- [ ] 2.1 Explore Hero
+- [x] 1.1 Hero — Updated with flowing headline
+- [x] 1.2 The Problem — Updated headline
+- [x] 1.3 The Architecture — Updated headline
+- [x] 1.4 Demo — Updated headline
+- [x] 1.5 Why This Matters — Updated headline
+- [x] 1.6 Ecosystem — Updated headline
+- [x] 1.7 CTA — Updated headline
+- [x] 2.1 Explore Hero — Updated
 - [ ] 2.2 Bundle Browser
 - [ ] 2.3 Demo Area
-- [ ] 2.4 Built with Amplifier
-- [ ] 3.1 Build Hero
-- [ ] 3.2 Quick Start
+- [x] 2.4 Built with Amplifier — Updated
+- [x] 3.1 Build Hero — Updated
+- [x] 3.2 Quick Start — Updated
 - [ ] 3.3 Common Commands
-- [ ] 3.4 Providers
+- [x] 3.4 Providers — Updated with 6 providers
 - [ ] 3.5 Forge Teaser
 - [ ] 3.6 Documentation CTA
 - [ ] 4.1 Updates Hero
@@ -412,5 +441,5 @@ Use this outline to work through each section systematically. Mark sections as r
 - [ ] 4.3 Stay Updated CTA
 - [ ] 5.1 Support Hero
 - [ ] 5.2 Help Resources
-- [ ] 5.3 FAQ
+- [ ] 5.3 FAQ — Updated provider list
 - [ ] 5.4 Still Stuck CTA

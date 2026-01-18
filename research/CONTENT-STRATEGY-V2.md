@@ -4,6 +4,57 @@ Synthesis of learnings from site analyses: Stripe, Linear, Anthropic, Vercel, am
 
 ---
 
+## Voice: The Schillace Style
+
+The site voice is modeled after Sam Schillace's writing — the insider confidant who respects your intelligence, acknowledges uncertainty, but wants to make sure you don't miss what's actually happening.
+
+### Voice Characteristics
+
+| Trait | How It Manifests |
+|-------|------------------|
+| **Insider confidant** | "Something is happening... hidden from most people" |
+| **Measured urgency** | Not hyperbolic, but clearly signaling importance |
+| **Self-aware humility** | "So…that's how it's going. Who cares, right?" |
+| **Empathetic realism** | Acknowledges human cost — "tired, overwhelmed, excited" |
+| **Casual authority** | Uses "folks" not "users", contractions freely |
+
+### Writing Patterns
+
+- **Open with quiet provocation** — something important most people are missing
+- **Acknowledge the messiness** — don't pretend it's simple
+- **Ground in a timeline** — "6 months ago... now..."
+- **Show the tipping point** — when it went from "nice to have" to "game-changing"
+- **Use "folks" and contractions** — warm, not corporate
+- **Bullet the framework** — give people a mental model to take away
+- **End with historical resonance** — "this feels like [major tech shift]"
+- **Hedge with "seems" and "likely"** — confident but not arrogant
+
+### Headline Flow
+
+Headlines should read as one continuous thought when scanned:
+
+```
+Something is changing.
+↓
+Most tools won't let you see inside.
+↓
+So we made everything swappable.
+↓
+Here's what that looks like.
+↓
+The return compounds.
+↓
+What works spreads.
+↓
+If you're curious, try it.
+```
+
+### Reference
+
+See Sam's writing: https://open.substack.com/pub/sundaylettersfromsam
+
+---
+
 ## Core Principle
 
 **withamplifier.com is THE official presence for Amplifier.**
