@@ -37,9 +37,13 @@ export default function Home() {
           HERO - The Promise (with Gemini-style gradient)
           ============================================ */}
       <section className="section-hero relative overflow-hidden">
-        {/* Subtle gradient orbs for depth */}
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 gradient-orb gradient-orb-primary opacity-30" />
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 gradient-orb gradient-orb-warm opacity-20" />
+        {/* AI-generated ambient background */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40"
+          style={{ backgroundImage: 'url(/assets/backgrounds/hero-ambient.png)' }}
+        />
+        {/* Gradient overlay for text legibility */}
+        <div className="absolute inset-0 bg-gradient-to-b from-canvas/60 via-canvas/40 to-canvas/80" />
         
         <div className="text-center container-default relative z-10">
           <h1 className="reveal text-display-xl text-ink font-heading px-2">
