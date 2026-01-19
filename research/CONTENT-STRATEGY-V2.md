@@ -2,11 +2,32 @@
 
 Synthesis of learnings from site analyses: Stripe, Linear, Anthropic, Vercel, amplifier.dev.ai
 
+**Last Updated:** 2026-01-19
+**Status:** CRITICAL REVIEW COMPLETE - See SITE-REVIEW-2026-01-19.md
+
 ---
 
-## Voice: The Schillace Style
+## Critical Issues Identified
+
+**The site currently fails to answer basic questions:**
+
+| Question | Current State | Required State |
+|----------|---------------|----------------|
+| What IS Amplifier? | Never explicitly stated | "Amplifier is an open-source CLI framework for building AI agents" |
+| Who is it for? | Unclear | "Developers who want visibility and control over AI agents" |
+| What can I build? | Vague examples | 3 specific real-world outcomes with proof |
+| Why trust it? | No proof | Social proof, testimonials, real usage |
+| How do I start? | pip install → then what? | Clear guided path |
+
+**See full review:** `research/SITE-REVIEW-2026-01-19.md`
+
+---
+
+## Voice: The Schillace Style (REVISED)
 
 The site voice is modeled after Sam Schillace's writing — the insider confidant who respects your intelligence, acknowledges uncertainty, but wants to make sure you don't miss what's actually happening.
+
+**NOTE:** Voice is good, but content must be FACTUAL first. Inspiring tone without concrete information creates vague marketing, not useful communication.
 
 ### Voice Characteristics
 
@@ -263,3 +284,143 @@ Learn from catalog.json approach - scan GitHub repos and generate:
 2. How much technical depth on the marketing site vs GitHub docs?
 3. Do we need a dedicated "Docs" section separate from Build?
 4. How do we handle versioning as Amplifier evolves?
+
+---
+
+## Critical Fixes Required
+
+### Fix 1: Define What Amplifier IS (Homepage Hero)
+
+**Current:** "AI that's yours for the making"
+**Required:** Definitional statement in first 10 words
+
+**New Hero Structure:**
+```
+H1: "AI that's yours for the making."
+Subhead: "Amplifier is an open-source CLI for building AI agents. 
+         See every decision. Swap any part. Make it yours."
+CTA: pip install amplifier
+```
+
+### Fix 2: Remove or Fix Fake Demos
+
+**Current:** "Watch it work" shows pre-recorded traces labeled as "real execution"
+**Problem:** Misleading framing
+
+**Options (pick one):**
+- A) Add honest label: "Recorded session showing typical execution"
+- B) Remove demo tab, show only config
+- C) Build real interactive sandbox (high effort)
+
+**Recommendation:** Option A for now, Option C as future enhancement
+
+### Fix 3: Make Everything Clickable
+
+Every element that looks interactive must DO something:
+
+| Element | Current | Fix |
+|---------|---------|-----|
+| Provider cards (Build) | Static | Link to provider docs + API key signup |
+| Architecture cards (Home) | Static | Link to detailed explanation |
+| Community bundles (Explore) | Static | Link to repo or show "Coming soon" state |
+
+### Fix 4: Add Social Proof
+
+**Required sections:**
+1. "Used by" logos or statement
+2. 1-2 testimonial quotes
+3. Real project showcase (not "this site")
+
+**Placement:** After "Why it matters" section on homepage
+
+### Fix 5: Fix Support Page
+
+**Current:** 4 cards that all link to GitHub
+**Required:** Unique value per card OR consolidate
+
+**Option A - Differentiate:**
+- Discussions → Keep
+- Issues → Keep  
+- Docs → Link to actual docs (when they exist)
+- Contributing → Keep
+
+**Option B - Consolidate:**
+- "Community" (Discussions + Contributing)
+- "Report Issues" (Bug reports)
+- Remove redundant cards
+
+---
+
+## Page-Level Content Requirements
+
+### Homepage: 5 Questions in 60 Seconds
+
+| Question | Section | Content Required |
+|----------|---------|------------------|
+| What is it? | Hero | "Amplifier is an open-source CLI for building AI agents" |
+| Why should I care? | Problem | 3 pain points (exists, needs sharpening) |
+| How does it work? | Architecture | Providers + Tools + Behaviors = Bundle (exists) |
+| Does it actually work? | Demo + Proof | Real example + social proof (MISSING) |
+| How do I start? | CTA | Clear next step (exists) |
+
+### Explore: Show What's Possible
+
+| Requirement | Status | Notes |
+|-------------|--------|-------|
+| Bundle browser | Exists | Works |
+| Real demos | Needs fix | Currently fake |
+| Community section | Needs fix | Not clickable |
+| Showcase | Needs expansion | Only 2 items, one is self-referential |
+
+### Build: Enable Success
+
+| Requirement | Status | Notes |
+|-------------|--------|-------|
+| Install steps | Good | Works well |
+| Provider setup | Needs fix | Cards need links |
+| Command reference | Good | Exists |
+| Forge teaser | Remove/minimize | Vaporware shouldn't dominate |
+| "Go deeper" | Needs fix | Should link to real docs |
+
+### Support: Resolve Problems
+
+| Requirement | Status | Notes |
+|-------------|--------|-------|
+| Quick links | Needs fix | Too many GitHub links |
+| FAQ | Good | Works, could expand |
+| Troubleshooting | Missing | Should add common issues |
+
+---
+
+## Implementation Priority
+
+### P0 - Do Now (Blocking)
+1. Rewrite homepage hero with definitional statement
+2. Fix "Watch it work" labeling
+3. Add social proof section placeholder
+
+### P1 - Do Soon (Important)
+4. Make provider cards clickable
+5. Fix community bundles state
+6. Reduce Forge section prominence
+
+### P2 - Do Eventually (Nice to Have)
+7. Expand FAQ
+8. Add troubleshooting guides
+9. Build real interactive playground
+
+---
+
+## Success Metrics
+
+**Before fixes:**
+- User understands what Amplifier is: 40%
+- User knows next step: 60%
+- User trusts claims: 20%
+- User can try something: 0% (demos are fake)
+
+**After fixes:**
+- User understands what Amplifier is: 95%
+- User knows next step: 90%
+- User trusts claims: 70%
+- User can try something: 50% (honest about limitations)

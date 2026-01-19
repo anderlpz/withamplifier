@@ -1,5 +1,22 @@
 # withamplifier.com Content Outline
 
+**Last Updated:** 2026-01-19
+**Status:** REVISED based on critical site review
+
+---
+
+## Critical Update: Content Failures Identified
+
+The site fails to answer basic questions. Each page section below now includes:
+- **[OK]** - Content exists and works
+- **[FIX]** - Content exists but needs revision
+- **[MISSING]** - Content doesn't exist but should
+- **[REMOVE]** - Content exists but shouldn't
+
+See `SITE-REVIEW-2026-01-19.md` for full analysis.
+
+---
+
 ## Site Structure
 
 ```
@@ -443,3 +460,105 @@ $ amplifier run "Review this PR for security issues"
 - [ ] 5.2 Help Resources
 - [ ] 5.3 FAQ — Updated provider list
 - [ ] 5.4 Still Stuck CTA
+
+---
+
+## CRITICAL UPDATES REQUIRED (2026-01-19 Review)
+
+Based on site review, the following sections need revision:
+
+### P0 - Must Fix Immediately
+
+#### 1.1 Hero - Add Definition
+**Problem:** Never says what Amplifier IS
+**Current subhead:** "See how it thinks. Swap what you want. Build something that works the way you do."
+**Revised subhead:** "Amplifier is an open-source CLI for building AI agents. See every decision. Swap any part. Make it yours."
+
+#### 2.3 Demo Area - Fix Misleading Label
+**Problem:** "Watch it work" implies real AI but shows pre-recorded traces
+**Fix:** Add label: "Recorded session demonstrating typical execution"
+
+#### NEW: Social Proof Section (after 1.5)
+**Problem:** No proof anyone uses Amplifier
+**Add:** "Used by" section with 2-3 testimonials or logos
+
+### P1 - Fix Soon
+
+#### 2.2 Community Bundles - Make Interactive
+**Problem:** Cards are not clickable, dead end
+**Fix:** Link to GitHub repos or show "Coming soon" state with explanation
+
+#### 3.4 Provider Cards - Add Links
+**Problem:** Shows 6 providers but no path to get API keys
+**Fix:** Each card links to:
+- Provider's API key signup page
+- Setup guide on Amplifier docs
+
+#### 3.5 Forge Teaser - Reduce Prominence
+**Problem:** Vaporware shouldn't dominate Build page
+**Fix:** Move to small note at bottom or remove entirely
+
+### P2 - Fix Eventually
+
+#### 5.2 Help Resources - Differentiate
+**Problem:** All 4 cards link to GitHub
+**Fix:** Create unique value per card or consolidate to 2 cards
+
+#### 3.6 Documentation CTA - Fix Link
+**Problem:** "Documentation" links to GitHub README, not actual docs
+**Fix:** Build /docs section or remove button until docs exist
+
+---
+
+## Content Gaps Summary
+
+| Gap | Priority | Section | Fix |
+|-----|----------|---------|-----|
+| No definition of what Amplifier IS | P0 | 1.1 | Add to subhead |
+| Fake demos labeled as real | P0 | 2.3 | Add honest label |
+| No social proof | P0 | NEW | Add section |
+| Dead-end community bundles | P1 | 2.2 | Make clickable |
+| Provider cards not linked | P1 | 3.4 | Add links |
+| Forge section too prominent | P1 | 3.5 | Reduce/remove |
+| Redundant support links | P2 | 5.2 | Consolidate |
+| No actual documentation | P2 | 3.6 | Build or remove |
+
+---
+
+## Revised Homepage Headline Flow
+
+Old flow (narrative, vague):
+```
+Something is changing.
+↓
+Most tools won't let you see inside.
+↓
+So we made everything swappable.
+↓
+Here's what that looks like.
+↓
+The return compounds.
+↓
+What works spreads.
+↓
+If you're curious, try it.
+```
+
+New flow (declarative, specific):
+```
+AI that's yours for the making.
+↓
+Amplifier is an open-source CLI for building AI agents.
+↓
+Most AI tools are black boxes.
+↓
+Everything is a swappable piece.
+↓
+One command. Real work.
+↓
+Control that compounds.
+↓
+Share what works. Use what others share.
+↓
+Start in under a minute.
+```
