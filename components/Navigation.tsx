@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 
 const navItems = [
   { href: '/explore', label: 'Explore' },
@@ -13,6 +13,49 @@ const navItems = [
 export default function Navigation() {
   const pathname = usePathname()
   const [isOpen, setIsOpen] = useState(false)
+  const [isOverDark, setIsOverDark] = useState(false)
+  
+  // Detect if nav is over a dark section
+  const checkBackground = useCallback(() => {
+    // Sample point at center of nav bar
+    const navHeight = 64
+    const sampleY = navHeight / 2
+    const sampleX = window.innerWidth / 2
+    
+    // Get element at sample point (temporarily hide nav to sample what's behind)
+    const nav = document.querySelector('header')
+    if (nav) {
+      const originalPointerEvents = nav.style.pointerEvents
+      nav.style.pointerEvents = 'none'
+      const elementBehind = document.elementFromPoint(sampleX, sampleY)
+      nav.style.pointerEvents = originalPointerEvents
+      
+      if (elementBehind) {
+        // Walk up to find section with dark class
+        let current: Element | null = elementBehind
+        while (current && current !== document.body) {
+          if (current.classList.contains('section-dark') || 
+              current.classList.contains('section-dark-gradient')) {
+            setIsOverDark(true)
+            return
+          }
+          current = current.parentElement
+        }
+      }
+    }
+    setIsOverDark(false)
+  }, [])
+  
+  // Check on scroll and resize
+  useEffect(() => {
+    checkBackground()
+    window.addEventListener('scroll', checkBackground, { passive: true })
+    window.addEventListener('resize', checkBackground, { passive: true })
+    return () => {
+      window.removeEventListener('scroll', checkBackground)
+      window.removeEventListener('resize', checkBackground)
+    }
+  }, [checkBackground])
   
   // Close menu on route change
   useEffect(() => {
@@ -65,12 +108,17 @@ export default function Navigation() {
         }} />
       </div>
       
-      {/* Nav bar background - semi-transparent overlay */}
-      <div className="absolute inset-x-0 top-0 h-16 bg-canvas/60 border-b border-canvas-mist/30" />
-      <nav className="relative max-w-wide mx-auto px-6 md:px-12 h-16 flex items-center justify-between">
+      {/* Nav content - no background, text adapts to section behind */}
+      <nav className={`relative max-w-wide mx-auto px-6 md:px-12 h-16 flex items-center justify-between transition-colors duration-300 ${
+        isOverDark ? 'text-white' : 'text-ink'
+      }`}>
         <Link 
           href="/" 
-          className="text-ink font-semibold tracking-tight hover:text-signal transition-colors duration-300"
+          className={`font-semibold tracking-tight transition-colors duration-300 ${
+            isOverDark 
+              ? 'text-white hover:text-white/80' 
+              : 'text-ink hover:text-signal'
+          }`}
         >
           Amplifier
         </Link>
@@ -83,8 +131,12 @@ export default function Navigation() {
                 href={item.href}
                 className={`px-4 py-2 text-[15px] font-medium rounded-soft transition-all duration-300 ${
                   pathname === item.href
-                    ? 'text-signal bg-signal-soft'
-                    : 'text-ink-slate hover:text-ink hover:bg-canvas-stone'
+                    ? isOverDark 
+                      ? 'text-white bg-white/20' 
+                      : 'text-signal bg-signal-soft'
+                    : isOverDark
+                      ? 'text-white/80 hover:text-white hover:bg-white/10'
+                      : 'text-ink-slate hover:text-ink hover:bg-canvas-stone'
                 }`}
               >
                 {item.label}
@@ -96,25 +148,27 @@ export default function Navigation() {
         {/* Mobile hamburger */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden relative w-10 h-10 flex items-center justify-center rounded-soft hover:bg-canvas-stone transition-colors"
+          className={`md:hidden relative w-10 h-10 flex items-center justify-center rounded-soft transition-colors ${
+            isOverDark ? 'hover:bg-white/10' : 'hover:bg-canvas-stone'
+          }`}
           aria-label={isOpen ? 'Close menu' : 'Open menu'}
           aria-expanded={isOpen}
         >
           <div className="w-5 h-4 relative flex flex-col justify-between">
             <span 
-              className={`block h-0.5 bg-ink rounded-full transition-all duration-300 origin-center ${
-                isOpen ? 'rotate-45 translate-y-[7px]' : ''
-              }`} 
+              className={`block h-0.5 rounded-full transition-all duration-300 origin-center ${
+                isOverDark ? 'bg-white' : 'bg-ink'
+              } ${isOpen ? 'rotate-45 translate-y-[7px]' : ''}`} 
             />
             <span 
-              className={`block h-0.5 bg-ink rounded-full transition-all duration-300 ${
-                isOpen ? 'opacity-0 scale-0' : ''
-              }`} 
+              className={`block h-0.5 rounded-full transition-all duration-300 ${
+                isOverDark ? 'bg-white' : 'bg-ink'
+              } ${isOpen ? 'opacity-0 scale-0' : ''}`} 
             />
             <span 
-              className={`block h-0.5 bg-ink rounded-full transition-all duration-300 origin-center ${
-                isOpen ? '-rotate-45 -translate-y-[7px]' : ''
-              }`} 
+              className={`block h-0.5 rounded-full transition-all duration-300 origin-center ${
+                isOverDark ? 'bg-white' : 'bg-ink'
+              } ${isOpen ? '-rotate-45 -translate-y-[7px]' : ''}`} 
             />
           </div>
         </button>
