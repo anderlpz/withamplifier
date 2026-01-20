@@ -69,7 +69,8 @@ export default function Home() {
         <div className="container-default">
           <div className="text-center mb-12 md:mb-16">
             <h2 className="reveal text-headline text-on-dark">
-              Most AI tools don't let you see how they work.
+              Most AI tools don't let you see<br className="hidden sm:inline" />{" "}
+              how they work.
             </h2>
           </div>
           
@@ -77,21 +78,21 @@ export default function Home() {
             <div className="text-center md:text-left">
               <h3 className="text-lg font-semibold text-on-dark mb-2">You can't read it</h3>
               <p className="text-on-dark-secondary text-sm leading-relaxed">
-                The prompts, the logic, the rules it follows—hidden. When it breaks, you guess why.
+                It hallucinates. It ignores your instructions. Why? You'll never know—the prompts are hidden.
               </p>
             </div>
             
             <div className="text-center md:text-left">
               <h3 className="text-lg font-semibold text-on-dark mb-2">You can't change it</h3>
               <p className="text-on-dark-secondary text-sm leading-relaxed">
-                Their model, their tools, their decisions. Want to swap the model or add a capability? You can't.
+                A better model comes out. A tool you need exists. Too bad—you're locked to their choices.
               </p>
             </div>
             
             <div className="text-center md:text-left">
               <h3 className="text-lg font-semibold text-on-dark mb-2">You can't share it</h3>
               <p className="text-on-dark-secondary text-sm leading-relaxed">
-                Your setup, your learnings, your workflow—locked in their system. Can't hand it to a teammate as a file.
+                You spent weeks perfecting your setup. Your teammate starts from zero.
               </p>
             </div>
           </div>
@@ -297,10 +298,10 @@ You are a security expert reviewing code changes.
             <div className="lg:w-[38%] xl:w-[35%] lg:flex-shrink-0">
               <div className="text-center lg:text-left mb-12 lg:mb-0">
                 <h2 className="reveal text-headline text-on-dark">
-                  AI that plans before it acts, validates as it goes, and shows you why.
+                  Control that compounds.
                 </h2>
                 <p className="reveal mt-4 text-on-dark-secondary max-w-xl lg:max-w-none" style={{transitionDelay: '0.1s'}}>
-                  Amplifier agents think before they build. They track their own progress, check their work continuously, and coordinate like a team. You see every decision, every step, every reason.
+                  Every decision logged. Every tool call visible. Every behavior changeable. The more you use it, the more it becomes yours.
                 </p>
               </div>
             </div>
@@ -309,30 +310,30 @@ You are a security expert reviewing code changes.
             <div className="lg:flex-1">
               <div className="reveal-stagger grid sm:grid-cols-2 gap-4 md:gap-5 lg:gap-6">
                 <div className="benefit-card">
-                  <h3 className="text-xl md:text-[22px] font-semibold text-on-dark mb-3 tracking-tight">Debug with confidence</h3>
+                  <h3 className="text-xl md:text-[22px] font-semibold text-on-dark mb-3 tracking-tight">Debug in minutes, not hours</h3>
                   <p className="text-on-dark-muted text-[15px] md:text-base leading-relaxed">
-                    See every prompt, every tool call, every decision. When something goes wrong, you can trace exactly why.
+                    Every prompt, every tool call, every decision—logged. When it breaks, trace the exact line that failed.
                   </p>
                 </div>
                 
                 <div className="benefit-card">
-                  <h3 className="text-xl md:text-[22px] font-semibold text-on-dark mb-3 tracking-tight">Iterate without limits</h3>
+                  <h3 className="text-xl md:text-[22px] font-semibold text-on-dark mb-3 tracking-tight">Swap anything, break nothing</h3>
                   <p className="text-on-dark-muted text-[15px] md:text-base leading-relaxed">
-                    New model comes out? Swap it in. Need a custom tool? Write one. Your investment in learning compounds.
+                    New model? Change one line. Custom tool? Drop it in. Your setup evolves as fast as AI does.
                   </p>
                 </div>
                 
                 <div className="benefit-card">
-                  <h3 className="text-xl md:text-[22px] font-semibold text-on-dark mb-3 tracking-tight">Share what works</h3>
+                  <h3 className="text-xl md:text-[22px] font-semibold text-on-dark mb-3 tracking-tight">Share it like code</h3>
                   <p className="text-on-dark-muted text-[15px] md:text-base leading-relaxed">
-                    Package your setup as a bundle. Share it with your team. Publish it for others. No vendor lock-in.
+                    Your setup is a file. Commit it. Review it. Hand it to a teammate. No screenshots, no wikis—just code.
                   </p>
                 </div>
                 
                 <div className="benefit-card">
-                  <h3 className="text-xl md:text-[22px] font-semibold text-on-dark mb-3 tracking-tight">Security you control</h3>
+                  <h3 className="text-xl md:text-[22px] font-semibold text-on-dark mb-3 tracking-tight">Your data stays yours</h3>
                   <p className="text-on-dark-muted text-[15px] md:text-base leading-relaxed">
-                    Run models locally. Inspect every API call. Add approval gates for sensitive operations. Your data, your rules.
+                    Run models locally. Inspect every API call. Add approval gates. Nothing leaves your machine without your say.
                   </p>
                 </div>
               </div>
@@ -352,12 +353,12 @@ You are a security expert reviewing code changes.
             <div className="lg:w-[40%] xl:w-[38%] lg:flex-shrink-0">
               <div className="text-center lg:text-left">
                 <h2 className="reveal text-headline text-ink">
-                  What you build can be shared and scaled—while staying personal for everyone who uses it.
+                  Install a bundle.<br className="hidden sm:inline" />{" "}
+                  Publish your own.
                 </h2>
                 
                 <p className="reveal mt-4 text-body-large text-ink-slate max-w-xl lg:max-w-none" style={{transitionDelay: '0.1s'}}>
-                  Package what works into a bundle. Share it with your team or publish it for everyone. 
-                  Each person gets the same foundation with room to make it their own.
+                  Start with someone else's setup. Make it yours. Share what works with your team—or the world.
                 </p>
                 
                 <div className="reveal mt-8" style={{transitionDelay: '0.2s'}}>
@@ -405,11 +406,11 @@ You are a security expert reviewing code changes.
       <section className="section-feature section-dark">
         <div className="container-narrow text-center">
           <h2 className="reveal text-headline text-on-dark">
-            Get started now.
+            Your first agent in 60 seconds.
           </h2>
           
           <p className="reveal mt-4 text-on-dark-secondary max-w-lg mx-auto" style={{transitionDelay: '0.1s'}}>
-            Install Amplifier, connect a model, run your first command. Takes about a minute.
+            Install. Connect a model. Run a command. You'll have a working agent before you finish your coffee.
           </p>
           
           <div className="reveal mt-8" style={{transitionDelay: '0.15s'}}>
