@@ -39,7 +39,7 @@ export default function Navigation() {
           href="/" 
           className="text-ink font-semibold tracking-tight hover:text-signal transition-colors duration-300"
         >
-          with amplifier
+          Amplifier
         </Link>
 
         {/* Desktop nav */}

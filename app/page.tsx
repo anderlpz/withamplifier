@@ -47,11 +47,11 @@ export default function Home() {
         
         <div className="text-center container-default relative z-10">
           <h1 className="reveal text-display-xl text-ink font-heading px-2">
-            AI that's yours for the making.
+            Build AI Your Way
           </h1>
           
           <p className="reveal mt-6 md:mt-8 text-body-large text-ink max-w-2xl mx-auto px-4" style={{transitionDelay: '0.1s'}}>
-            The open source foundation that makes AI yours for the making.
+            Amplifier is the open-source framework for people who want full control over how their AI agents work. Clear, visible, and designed to grow with your vision.
           </p>
           
           <div className="reveal mt-8 md:mt-10" style={{transitionDelay: '0.2s'}}>
