@@ -653,21 +653,27 @@ p {
    ============================================ */
 
 .container-narrow {
+  width: 100%;
   max-width: var(--container-narrow);
   margin: 0 auto;
   padding: 0 var(--gutter-sm);
+  box-sizing: border-box;
 }
 
 .container-default {
+  width: 100%;
   max-width: var(--container-default);
   margin: 0 auto;
   padding: 0 var(--gutter-sm);
+  box-sizing: border-box;
 }
 
 .container-wide {
+  width: 100%;
   max-width: var(--container-wide);
   margin: 0 auto;
   padding: 0 var(--gutter-sm);
+  box-sizing: border-box;
 }
 
 @media (min-width: 768px) {
