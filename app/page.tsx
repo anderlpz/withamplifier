@@ -50,8 +50,8 @@ export default function Home() {
             AI that's yours for the making.
           </h1>
           
-          <p className="reveal mt-6 md:mt-8 text-body-large text-ink-slate max-w-2xl mx-auto px-4" style={{transitionDelay: '0.1s'}}>
-            See how it thinks. Swap what you want. Build something that works the way you do.
+          <p className="reveal mt-6 md:mt-8 text-body-large text-ink max-w-2xl mx-auto px-4" style={{transitionDelay: '0.1s'}}>
+            The open source foundation that makes AI yours for the making.
           </p>
           
           <div className="reveal mt-8 md:mt-10" style={{transitionDelay: '0.2s'}}>
