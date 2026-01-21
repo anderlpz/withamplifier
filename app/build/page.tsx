@@ -13,7 +13,7 @@ export default function BuildPage() {
           
           <RevealOnScroll delay={100}>
             <p className="mt-4 text-body-lg text-ink-slate max-w-xl">
-              Install Amplifier, add a provider, and run your first command.
+              Install Amplifier, connect any model, and run your first command.
             </p>
             <div className="mt-8">
               <code className="code-block block text-lg px-6 py-4">
@@ -57,8 +57,8 @@ export default function BuildPage() {
                 </div>
                 <code className="code-block block">amplifier provider add anthropic</code>
                 <p className="mt-4 text-ink-slate text-sm">
-                  You'll need an API key from your provider. Amplifier supports 
-                  Anthropic, OpenAI, Azure OpenAI, and Ollama for local models.
+                  You'll need an API key. Amplifier supports Claude, GPT-4, Gemini, 
+                  Azure, AWS Bedrock, and local models via Ollama.
                 </p>
               </div>
 
@@ -109,18 +109,24 @@ export default function BuildPage() {
                 <code className="text-signal text-sm font-mono">amplifier provider list</code>
                 <p className="mt-2 text-ink-slate text-sm">See configured providers</p>
               </div>
+
+              <div className="bg-canvas p-5 rounded-gentle border border-canvas-mist">
+                <code className="text-signal text-sm font-mono">amplifier config set provider openai</code>
+                <p className="mt-2 text-ink-slate text-sm">Switch to a different model</p>
+              </div>
             </div>
           </RevealOnScroll>
         </div>
       </section>
 
-      {/* Providers */}
+      {/* Providers - emphasize "any model" */}
       <section className="section">
         <div className="container-content">
           <RevealOnScroll>
-            <h2 className="text-title text-ink">Swap providers anytime</h2>
+            <h2 className="text-title text-ink">Use any model.</h2>
             <p className="mt-4 text-ink-slate max-w-2xl">
-              Change your model without touching your bundles. Each provider is a plug.
+              Switch providers without changing anything else. Your bundles, tools, and 
+              behaviors work with every model.
             </p>
           </RevealOnScroll>
 
@@ -176,8 +182,132 @@ export default function BuildPage() {
         </div>
       </section>
 
-      {/* Coming soon: Forge */}
+      {/* Platform components - NEW */}
       <section className="section border-t border-canvas-mist bg-canvas-stone">
+        <div className="container-content">
+          <RevealOnScroll>
+            <h2 className="text-title text-ink">Build with the full platform.</h2>
+            <p className="mt-4 text-ink-slate max-w-2xl">
+              Amplifier is more than bundles. Combine providers, tools, agents, 
+              behaviors, and recipes to build exactly what you need.
+            </p>
+          </RevealOnScroll>
+
+          <RevealStagger className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="bg-canvas p-6 rounded-gentle border border-canvas-mist">
+              <div className="w-10 h-10 rounded-lg bg-signal-soft flex items-center justify-center mb-4">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-signal">
+                  <path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"></path>
+                </svg>
+              </div>
+              <h3 className="text-heading text-ink">Tools</h3>
+              <p className="mt-2 text-ink-slate text-sm leading-relaxed">
+                Give your agent capabilities. File access, bash, web search, grep, 
+                or build your own custom tools.
+              </p>
+              <code className="mt-4 block text-micro text-ink-fog font-mono">
+                tools: [filesystem, bash, grep]
+              </code>
+            </div>
+
+            <div className="bg-canvas p-6 rounded-gentle border border-canvas-mist">
+              <div className="w-10 h-10 rounded-lg bg-signal-soft flex items-center justify-center mb-4">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-signal">
+                  <circle cx="5" cy="6" r="2"></circle>
+                  <circle cx="12" cy="12" r="2"></circle>
+                  <circle cx="19" cy="6" r="2"></circle>
+                  <circle cx="12" cy="18" r="2"></circle>
+                  <path d="M6.5 7.5L10.5 10.5"></path>
+                  <path d="M17.5 7.5L13.5 10.5"></path>
+                  <path d="M12 14v2"></path>
+                </svg>
+              </div>
+              <h3 className="text-heading text-ink">Behaviors</h3>
+              <p className="mt-2 text-ink-slate text-sm leading-relaxed">
+                Reusable instruction sets. Security-focused, test-driven, 
+                structured-output. Compose them freely.
+              </p>
+              <code className="mt-4 block text-micro text-ink-fog font-mono">
+                behaviors: [security-focused]
+              </code>
+            </div>
+
+            <div className="bg-canvas p-6 rounded-gentle border border-canvas-mist">
+              <div className="w-10 h-10 rounded-lg bg-signal-soft flex items-center justify-center mb-4">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-signal">
+                  <circle cx="12" cy="8" r="5"></circle>
+                  <path d="M20 21a8 8 0 00-16 0"></path>
+                </svg>
+              </div>
+              <h3 className="text-heading text-ink">Agents</h3>
+              <p className="mt-2 text-ink-slate text-sm leading-relaxed">
+                Specialized personas. Explorers, architects, reviewers, analysts. 
+                Each tuned for specific tasks.
+              </p>
+              <code className="mt-4 block text-micro text-ink-fog font-mono">
+                agents: [explorer, zen-architect]
+              </code>
+            </div>
+
+            <div className="bg-canvas p-6 rounded-gentle border border-canvas-mist">
+              <div className="w-10 h-10 rounded-lg bg-signal-soft flex items-center justify-center mb-4">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-signal">
+                  <path d="M4 19.5v-15A2.5 2.5 0 016.5 2H20v20H6.5a2.5 2.5 0 010-5H20"></path>
+                  <path d="M8 7h6"></path>
+                  <path d="M8 11h8"></path>
+                </svg>
+              </div>
+              <h3 className="text-heading text-ink">Recipes</h3>
+              <p className="mt-2 text-ink-slate text-sm leading-relaxed">
+                Multi-step workflows. Chain agents, add approval gates, 
+                resume after interruption.
+              </p>
+              <code className="mt-4 block text-micro text-ink-fog font-mono">
+                amplifier recipe run deploy-review
+              </code>
+            </div>
+
+            <div className="bg-canvas p-6 rounded-gentle border border-canvas-mist">
+              <div className="w-10 h-10 rounded-lg bg-signal-soft flex items-center justify-center mb-4">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-signal">
+                  <path d="M12 3L20 7.5V16.5L12 21L4 16.5V7.5L12 3z"></path>
+                  <path d="M12 12L20 7.5"></path>
+                  <path d="M12 12V21"></path>
+                  <path d="M12 12L4 7.5"></path>
+                </svg>
+              </div>
+              <h3 className="text-heading text-ink">Bundles</h3>
+              <p className="mt-2 text-ink-slate text-sm leading-relaxed">
+                Package everything together. One file that captures your 
+                entire agent configuration.
+              </p>
+              <code className="mt-4 block text-micro text-ink-fog font-mono">
+                amplifier run --bundle security
+              </code>
+            </div>
+
+            <div className="bg-canvas p-6 rounded-gentle border border-canvas-mist">
+              <div className="w-10 h-10 rounded-lg bg-signal-soft flex items-center justify-center mb-4">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-signal">
+                  <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
+                  <circle cx="12" cy="12" r="3"></circle>
+                </svg>
+              </div>
+              <h3 className="text-heading text-ink">Hooks</h3>
+              <p className="mt-2 text-ink-slate text-sm leading-relaxed">
+                Observe and extend. Logging, approval gates, redaction, 
+                notifications. Full visibility.
+              </p>
+              <code className="mt-4 block text-micro text-ink-fog font-mono">
+                hooks: [logging, approval]
+              </code>
+            </div>
+          </RevealStagger>
+        </div>
+      </section>
+
+      {/* Coming soon: Forge */}
+      <section className="section border-t border-canvas-mist">
         <div className="container-reading">
           <RevealOnScroll>
             <span className="text-micro font-medium text-ink-fog uppercase tracking-wider">
@@ -186,7 +316,7 @@ export default function BuildPage() {
             <h2 className="mt-4 text-title text-ink">Forge</h2>
             <p className="mt-4 text-ink-slate leading-relaxed">
               A visual interface for Amplifier. Workspace management, guided learning, 
-              community bundle browser—all in a desktop application.
+              community bundle browser. All in a desktop application.
             </p>
             <p className="mt-4 text-ink-slate leading-relaxed">
               For now, the CLI is the way to use Amplifier. Forge is in development.
@@ -204,7 +334,7 @@ export default function BuildPage() {
       </section>
 
       {/* Documentation */}
-      <section className="section">
+      <section className="section bg-canvas-stone">
         <div className="container-content text-center">
           <RevealOnScroll>
             <h2 className="text-title text-ink">Go deeper</h2>

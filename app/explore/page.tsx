@@ -133,20 +133,85 @@ export default function ExplorePage() {
         <div className="container-content">
           <RevealOnScroll>
             <h1 className="text-display text-ink max-w-3xl">
-              Browse. Use. Customize.
+              Start with what works.
             </h1>
           </RevealOnScroll>
           
           <RevealOnScroll delay={100}>
             <p className="mt-6 text-body-lg text-ink-slate max-w-2xl">
-              Bundles built by the team and community. Pick one that fits, 
-              customize it for your workflow, or build your own from scratch.
+              Browse bundles, tools, and agents built by the team and community. 
+              Use them as-is, customize them, or learn how they work.
             </p>
           </RevealOnScroll>
         </div>
       </section>
 
-      {/* Main content */}
+      {/* Platform overview - NEW */}
+      <section className="section border-t border-canvas-mist bg-canvas-stone">
+        <div className="container-content">
+          <RevealOnScroll>
+            <h2 className="text-title text-ink">Explore by type</h2>
+            <p className="mt-4 text-ink-slate max-w-2xl">
+              Amplifier has more than bundles. Browse the building blocks.
+            </p>
+          </RevealOnScroll>
+
+          <RevealStagger className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="bg-canvas p-5 rounded-gentle border border-canvas-mist">
+              <div className="w-10 h-10 rounded-lg bg-signal-soft flex items-center justify-center mb-3">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-signal">
+                  <path d="M12 3L20 7.5V16.5L12 21L4 16.5V7.5L12 3z"></path>
+                  <path d="M12 12L20 7.5"></path>
+                  <path d="M12 12V21"></path>
+                  <path d="M12 12L4 7.5"></path>
+                </svg>
+              </div>
+              <h3 className="text-subheading text-ink">Bundles</h3>
+              <p className="mt-1 text-ink-slate text-sm">Complete agent configurations</p>
+              <span className="mt-3 inline-block text-signal text-sm font-medium">12 available</span>
+            </div>
+
+            <div className="bg-canvas p-5 rounded-gentle border border-canvas-mist">
+              <div className="w-10 h-10 rounded-lg bg-signal-soft flex items-center justify-center mb-3">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-signal">
+                  <path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"></path>
+                </svg>
+              </div>
+              <h3 className="text-subheading text-ink">Tools</h3>
+              <p className="mt-1 text-ink-slate text-sm">Capabilities for agents</p>
+              <span className="mt-3 inline-block text-signal text-sm font-medium">25+ tools</span>
+            </div>
+
+            <div className="bg-canvas p-5 rounded-gentle border border-canvas-mist">
+              <div className="w-10 h-10 rounded-lg bg-signal-soft flex items-center justify-center mb-3">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-signal">
+                  <circle cx="12" cy="8" r="5"></circle>
+                  <path d="M20 21a8 8 0 00-16 0"></path>
+                </svg>
+              </div>
+              <h3 className="text-subheading text-ink">Agents</h3>
+              <p className="mt-1 text-ink-slate text-sm">Specialized personas</p>
+              <span className="mt-3 inline-block text-signal text-sm font-medium">8 agents</span>
+            </div>
+
+            <div className="bg-canvas p-5 rounded-gentle border border-canvas-mist">
+              <div className="w-10 h-10 rounded-lg bg-signal-soft flex items-center justify-center mb-3">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-signal">
+                  <path d="M12 22v-5"></path>
+                  <path d="M9 8V2"></path>
+                  <path d="M15 8V2"></path>
+                  <path d="M18 8v4a6 6 0 01-12 0V8h12z"></path>
+                </svg>
+              </div>
+              <h3 className="text-subheading text-ink">Providers</h3>
+              <p className="mt-1 text-ink-slate text-sm">Any model you want</p>
+              <span className="mt-3 inline-block text-signal text-sm font-medium">6 providers</span>
+            </div>
+          </RevealStagger>
+        </div>
+      </section>
+
+      {/* Main content - Bundle browser */}
       <section className="section border-t border-canvas-mist">
         <div className="container-wide">
           <div className="grid lg:grid-cols-[350px_1fr] gap-12">
@@ -221,7 +286,7 @@ export default function ExplorePage() {
                   href="https://github.com/microsoft/amplifier/blob/main/CONTRIBUTING.md"
                   className="mt-4 inline-block text-signal text-sm font-medium link-underline"
                 >
-                  How to contribute →
+                  How to contribute
                 </Link>
               </div>
             </div>
@@ -352,6 +417,27 @@ export default function ExplorePage() {
         </div>
       </section>
 
+      {/* Model flexibility callout - NEW */}
+      <section className="section border-t border-canvas-mist bg-ink">
+        <div className="container-content text-center">
+          <RevealOnScroll>
+            <h2 className="text-title text-on-dark">Works with any model.</h2>
+            <p className="mt-4 text-on-dark-secondary max-w-xl mx-auto">
+              Every bundle works with every provider. Claude today, GPT-4 tomorrow, 
+              Llama next week. Change one line, keep everything else.
+            </p>
+            <div className="mt-8 flex flex-wrap justify-center gap-4">
+              <span className="px-4 py-2 bg-white/10 rounded-full text-on-dark text-sm">Anthropic</span>
+              <span className="px-4 py-2 bg-white/10 rounded-full text-on-dark text-sm">OpenAI</span>
+              <span className="px-4 py-2 bg-white/10 rounded-full text-on-dark text-sm">Google</span>
+              <span className="px-4 py-2 bg-white/10 rounded-full text-on-dark text-sm">Azure</span>
+              <span className="px-4 py-2 bg-white/10 rounded-full text-on-dark text-sm">AWS</span>
+              <span className="px-4 py-2 bg-white/10 rounded-full text-on-dark text-sm">Ollama</span>
+            </div>
+          </RevealOnScroll>
+        </div>
+      </section>
+
       {/* Built with Amplifier */}
       <section className="section border-t border-canvas-mist bg-canvas-stone">
         <div className="container-content">
@@ -377,7 +463,7 @@ export default function ExplorePage() {
                 href="https://github.com/microsoft/amplifier"
                 className="mt-4 inline-block text-signal text-sm font-medium link-underline"
               >
-                View on GitHub →
+                View on GitHub
               </Link>
             </div>
 
@@ -387,7 +473,7 @@ export default function ExplorePage() {
               </span>
               <h3 className="mt-3 text-heading text-ink">This site</h3>
               <p className="mt-2 text-ink-slate text-sm leading-relaxed">
-                withamplifier.com was built with Amplifier bundles—content 
+                withamplifier.com was built with Amplifier bundles. Content 
                 strategy, code generation, design decisions all assisted by 
                 the framework.
               </p>
@@ -395,7 +481,7 @@ export default function ExplorePage() {
                 href="https://github.com/anderlpz/withamplifier"
                 className="mt-4 inline-block text-signal text-sm font-medium link-underline"
               >
-                View source →
+                View source
               </Link>
             </div>
           </RevealStagger>
