@@ -46,14 +46,28 @@ export default function Navigation() {
     setIsOverDark(false)
   }, [])
   
-  // Check on scroll and resize
+  // Throttle scroll handler for performance (especially on mobile)
   useEffect(() => {
+    let ticking = false
+    let lastKnownScrollY = 0
+    
+    const throttledCheck = () => {
+      lastKnownScrollY = window.scrollY
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          checkBackground()
+          ticking = false
+        })
+        ticking = true
+      }
+    }
+    
     checkBackground()
-    window.addEventListener('scroll', checkBackground, { passive: true })
-    window.addEventListener('resize', checkBackground, { passive: true })
+    window.addEventListener('scroll', throttledCheck, { passive: true })
+    window.addEventListener('resize', throttledCheck, { passive: true })
     return () => {
-      window.removeEventListener('scroll', checkBackground)
-      window.removeEventListener('resize', checkBackground)
+      window.removeEventListener('scroll', throttledCheck)
+      window.removeEventListener('resize', throttledCheck)
     }
   }, [checkBackground])
   
@@ -76,31 +90,43 @@ export default function Navigation() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
-      {/* Progressive blur - starts strong at top, fades to nothing */}
+      {/* Progressive blur - simplified on mobile for performance */}
+      {/* Mobile: single layer with lighter blur. Desktop: full progressive blur */}
       <div className="absolute inset-x-0 top-0 h-32 pointer-events-none">
+        {/* Mobile-optimized single blur layer (hidden on desktop) */}
+        <div className="md:hidden absolute inset-0" style={{ 
+          backdropFilter: 'blur(8px)', 
+          WebkitBackdropFilter: 'blur(8px)', 
+          maskImage: 'linear-gradient(to bottom, black 0%, black 40%, transparent 70%)', 
+          WebkitMaskImage: 'linear-gradient(to bottom, black 0%, black 40%, transparent 70%)',
+          // Promote to own layer for smoother scrolling
+          transform: 'translateZ(0)',
+        }} />
+        
+        {/* Desktop: Full progressive blur (hidden on mobile) */}
         {/* Layer 1 - strongest blur at very top */}
-        <div className="absolute inset-0" style={{ 
+        <div className="hidden md:block absolute inset-0" style={{ 
           backdropFilter: 'blur(12px)', 
           WebkitBackdropFilter: 'blur(12px)', 
           maskImage: 'linear-gradient(to bottom, black 0%, black 30%, transparent 50%)', 
           WebkitMaskImage: 'linear-gradient(to bottom, black 0%, black 30%, transparent 50%)' 
         }} />
         {/* Layer 2 - medium blur */}
-        <div className="absolute inset-0" style={{ 
+        <div className="hidden md:block absolute inset-0" style={{ 
           backdropFilter: 'blur(8px)', 
           WebkitBackdropFilter: 'blur(8px)', 
           maskImage: 'linear-gradient(to bottom, transparent 25%, black 40%, black 50%, transparent 70%)', 
           WebkitMaskImage: 'linear-gradient(to bottom, transparent 25%, black 40%, black 50%, transparent 70%)' 
         }} />
         {/* Layer 3 - light blur fading out */}
-        <div className="absolute inset-0" style={{ 
+        <div className="hidden md:block absolute inset-0" style={{ 
           backdropFilter: 'blur(4px)', 
           WebkitBackdropFilter: 'blur(4px)', 
           maskImage: 'linear-gradient(to bottom, transparent 45%, black 60%, transparent 85%)', 
           WebkitMaskImage: 'linear-gradient(to bottom, transparent 45%, black 60%, transparent 85%)' 
         }} />
         {/* Layer 4 - subtle blur at edge */}
-        <div className="absolute inset-0" style={{ 
+        <div className="hidden md:block absolute inset-0" style={{ 
           backdropFilter: 'blur(2px)', 
           WebkitBackdropFilter: 'blur(2px)', 
           maskImage: 'linear-gradient(to bottom, transparent 60%, black 75%, transparent 100%)', 

@@ -145,8 +145,13 @@ export function EmergenceField({
     ]
   }, [])
   
-  // Animation loop
-  const animate = useCallback(() => {
+  // Track frame timing for throttling on low-power devices
+  const lastFrameTimeRef = useRef(0)
+  const targetFPS = typeof window !== 'undefined' && window.innerWidth < 768 ? 30 : 60
+  const frameInterval = 1000 / targetFPS
+  
+  // Animation loop with frame throttling for mobile
+  const animate = useCallback((currentTime: number = 0) => {
     const canvas = canvasRef.current
     const ctx = canvas?.getContext('2d')
     const noise = noiseRef.current
@@ -155,6 +160,14 @@ export function EmergenceField({
       animationRef.current = requestAnimationFrame(animate)
       return
     }
+    
+    // Throttle frame rate on mobile to reduce GPU load
+    const elapsed = currentTime - lastFrameTimeRef.current
+    if (elapsed < frameInterval) {
+      animationRef.current = requestAnimationFrame(animate)
+      return
+    }
+    lastFrameTimeRef.current = currentTime - (elapsed % frameInterval)
     
     const width = canvas.width
     const height = canvas.height
@@ -254,6 +267,10 @@ export function EmergenceField({
     }
   }, [animate, handleResize, initializeOrbs])
   
+  // Reduce blur on mobile for performance - blur is GPU intensive
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768
+  const effectiveBlur = isMobile ? Math.min(blur, 40) : blur // Cap at 40px on mobile
+  
   return (
     <div 
       className={`absolute inset-0 overflow-hidden ${className}`}
@@ -264,9 +281,11 @@ export function EmergenceField({
         className="w-full h-full"
         style={{
           opacity,
-          filter: `blur(${blur}px)`,
-          transform: 'scale(1.2)', // Prevent blur edge artifacts
+          filter: `blur(${effectiveBlur}px)`,
+          transform: 'scale(1.2) translateZ(0)', // translateZ(0) forces GPU compositing
           transformOrigin: 'center center',
+          // Hint to browser this will animate
+          willChange: 'transform',
         }}
       />
       {/* Subtle noise texture overlay for depth */}

@@ -159,7 +159,20 @@
    ============================================ */
 
 html {
+  /* Only enable smooth scroll for programmatic/anchor navigation, not user scroll */
+  /* scroll-behavior: smooth causes jank on mobile - disabled globally */
+  -webkit-tap-highlight-color: transparent; /* Cleaner tap feedback on iOS */
+}
+
+/* Enable smooth scroll only for anchor links within the page */
+html:focus-within {
   scroll-behavior: smooth;
+}
+
+/* Prevent horizontal overflow globally */
+html, body {
+  overflow-x: hidden;
+  overscroll-behavior-x: none;
 }
 
 body {
@@ -262,7 +275,16 @@ p {
   transition: 
     opacity 0.8s var(--ease-apple-out),
     transform 0.8s var(--ease-apple-out);
+  /* will-change moved to active state only - saves GPU memory on mobile */
+}
+
+/* Only promote to GPU layer when animation is imminent */
+.reveal:not(.visible) {
   will-change: transform, opacity;
+}
+
+.reveal.visible {
+  will-change: auto; /* Release GPU layer after animation */
 }
 
 .reveal.visible {
@@ -277,28 +299,45 @@ p {
   transition: 
     opacity 1s var(--ease-apple-out),
     transform 1.2s var(--ease-apple-out);
+}
+
+.reveal-scale:not(.visible) {
   will-change: transform, opacity;
 }
 
 .reveal-scale.visible {
   opacity: 1;
   transform: scale(1);
+  will-change: auto;
 }
 
 /* Blur reveal - premium feel */
+/* CAUTION: filter blur is expensive on mobile - use sparingly */
 .reveal-blur {
   opacity: 0;
-  filter: blur(10px);
   transform: translate3d(0, 30px, 0);
   transition: 
     opacity 0.6s var(--ease-apple),
-    filter 0.8s var(--ease-apple),
     transform 0.8s var(--ease-apple-out);
+}
+
+/* Only apply blur filter on devices that can handle it */
+@media (min-width: 768px) {
+  .reveal-blur {
+    filter: blur(10px);
+    transition: 
+      opacity 0.6s var(--ease-apple),
+      filter 0.8s var(--ease-apple),
+      transform 0.8s var(--ease-apple-out);
+  }
+  
+  .reveal-blur.visible {
+    filter: blur(0);
+  }
 }
 
 .reveal-blur.visible {
   opacity: 1;
-  filter: blur(0);
   transform: translate3d(0, 0, 0);
 }
 
@@ -1677,8 +1716,23 @@ a {
 }
 
 .scroll-indicator-dot {
+  /* Visual size is 8px but touch target is 44px for accessibility */
   @apply w-2 h-2 rounded-full transition-colors duration-200;
   background-color: var(--canvas-mist);
+  /* Expand touch target without changing visual size */
+  position: relative;
+  cursor: pointer;
+}
+
+.scroll-indicator-dot::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 44px;
+  height: 44px;
+  /* Touch target is invisible but interactive */
 }
 
 .scroll-indicator-dot.active {
