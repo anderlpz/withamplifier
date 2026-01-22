@@ -46,7 +46,7 @@ export default function Home() {
         
         <div className="text-center container-default relative z-10">
           <h1 className="reveal text-display-xl text-ink font-heading px-2">
-            Build your way<br />with Amplifier
+            Build AI Your Way<br />With Amplifier
           </h1>
           
           <p className="reveal mt-6 md:mt-8 text-body-large text-ink max-w-2xl mx-auto px-4" style={{transitionDelay: '0.1s', textWrap: 'balance'}}>
