@@ -15,7 +15,7 @@ export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [isOverDark, setIsOverDark] = useState(false)
   
-  // Detect if nav is over a dark section
+  // Detect if nav is over a dark section using data-theme attribute
   const checkBackground = useCallback(() => {
     // Sample point at center of nav bar
     const navHeight = 64
@@ -31,12 +31,15 @@ export default function Navigation() {
       nav.style.pointerEvents = originalPointerEvents
       
       if (elementBehind) {
-        // Walk up to find section with dark class
+        // Walk up to find section with data-theme attribute
         let current: Element | null = elementBehind
         while (current && current !== document.body) {
-          if (current.classList.contains('section-dark') || 
-              current.classList.contains('section-dark-gradient')) {
+          const theme = current.getAttribute('data-theme')
+          if (theme === 'dark') {
             setIsOverDark(true)
+            return
+          } else if (theme === 'light') {
+            setIsOverDark(false)
             return
           }
           current = current.parentElement

@@ -150,7 +150,9 @@ export default function ChladniWebGL() {
     const height = window.innerHeight
     const aspect = width / height
 
-    console.log(`[ChladniWebGL] Canvas size: ${width}x${height}`)
+    console.log(`[ChladniWebGL] Window size: ${width}x${height}`)
+    console.log(`[ChladniWebGL] Container element:`, containerRef.current)
+    console.log(`[ChladniWebGL] Container computed style:`, window.getComputedStyle(containerRef.current))
 
     const scene = new THREE.Scene()
     const camera = new THREE.OrthographicCamera(-aspect, aspect, 1, -1, 0.1, 10)
@@ -166,6 +168,9 @@ export default function ChladniWebGL() {
     containerRef.current.appendChild(renderer.domElement)
 
     console.log('[ChladniWebGL] Canvas element added to DOM')
+    console.log('[ChladniWebGL] Canvas actual size:', renderer.domElement.width, 'x', renderer.domElement.height)
+    console.log('[ChladniWebGL] Canvas style:', renderer.domElement.style.cssText)
+    console.log('[ChladniWebGL] Canvas position in viewport:', renderer.domElement.getBoundingClientRect())
 
     const isMobile = width < 768
     const particleCount = isMobile ? 5000 : 10000
@@ -478,8 +483,11 @@ export default function ChladniWebGL() {
   return (
     <div 
       ref={containerRef} 
-      className="fixed inset-0 pointer-events-none z-0"
-      style={{ backgroundColor: 'transparent' }}
+      className="fixed inset-0 pointer-events-none"
+      style={{ 
+        backgroundColor: 'transparent',
+        zIndex: 1
+      }}
     />
   )
 }

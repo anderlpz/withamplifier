@@ -39,9 +39,9 @@ export default function Home() {
       
       {/* ============================================
           SECTION 1: HERO - The Promise
+          Light, open, welcoming
           ============================================ */}
-      <section data-section="hero" className="section-hero relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-canvas/40 via-transparent to-canvas/60" />
+      <section data-section="hero" data-theme="light" className="section-light-glow relative overflow-hidden">
         
         <div className="text-center container-default relative z-10">
           <h1 className="reveal text-display-xl text-ink font-heading px-2">
@@ -59,38 +59,40 @@ export default function Home() {
       </section>
 
       {/* ============================================
-          SECTION 2: THE PROBLEM - AI tools aren't understandable
-          Dark section with scattered particles (black box metaphor)
+          SECTION 2: THE PROBLEM - Trapped in black boxes
+          BLACK section - should feel constraining, unclear, dark
+          Ends with the problem, not the solution
           ============================================ */}
-      <section data-section="problem" className="section-feature section-dark">
+      <section data-section="problem" data-theme="dark" className="section-feature bg-[#0A0A0A]">
         <div className="container-narrow text-center">
           <h2 className="reveal text-headline text-on-dark">
-            Today, AI tools aren't built in a way that's understandable by humans.
+            Most AI tools are black boxes.
           </h2>
           <p className="reveal mt-4 text-body-large text-on-dark-secondary max-w-2xl mx-auto" style={{transitionDelay: '0.1s'}}>
-            You can speak to them in plain language. They respond. They work. But you don't understand what's happening behind the scenes.
+            They work. They respond. But you don't understand what's happening behind the scenes.
           </p>
           <p className="reveal mt-6 text-body-large text-on-dark-secondary max-w-2xl mx-auto" style={{transitionDelay: '0.2s'}}>
-            They lock you to one model. Hide how they work. Keep your setup trapped in their system. When something breaks, you guess why. When something better comes along, you start over.
-          </p>
-          <p className="reveal mt-6 text-body-large text-on-dark max-w-2xl mx-auto" style={{transitionDelay: '0.3s'}}>
-            Amplifier is different. Open. Visible. Yours.
+            They lock you to one model. Hide how they work. Keep your setup trapped in their system. When something breaks, you're guessing. When something better comes along, you start over.
           </p>
         </div>
       </section>
 
       {/* ============================================
-          SECTION 3: DIFFERENTIATION - What makes it unique
+          SECTION 3: DIFFERENTIATION - The Answer / Breaking Free
+          Light gradient - ray of light emerging from darkness
+          Explicit callback to Problem section's "Open. Visible. Yours."
           ============================================ */}
-      <section data-section="differentiation" className="section-feature section-dark">
+      <section data-section="differentiation" data-theme="light" className="section-feature section-gradient-flow">
         <div className="container-default">
           <div className="text-center mb-12 md:mb-16">
             <h2 className="reveal text-headline text-on-dark">
-              One runtime. Any model.<br className="hidden sm:inline" />{" "}
-              Full control.
+              Here's how Amplifier is different.
             </h2>
+            <p className="reveal mt-3 text-display-sm text-on-dark max-w-2xl mx-auto" style={{transitionDelay: '0.05s'}}>
+              Open. Visible. Yours.
+            </p>
             <p className="reveal mt-4 text-on-dark-secondary max-w-2xl mx-auto" style={{transitionDelay: '0.1s'}}>
-              Amplifier is a different kind of AI tool. You see everything. You can change anything. And it works with whatever model you choose.
+              You see everything. You can change anything. And it works with whatever model you choose.
             </p>
           </div>
           
@@ -142,9 +144,9 @@ export default function Home() {
 
       {/* ============================================
           SECTION 4: THE PLATFORM - Everything you get
-          Shows breadth: Providers, Tools, Agents, Recipes
+          Light, clear, organized - shows breadth and completeness
           ============================================ */}
-      <section data-section="platform" className="section-feature section-gradient-flow">
+      <section data-section="platform" data-theme="light" className="section-feature section-light-glow">
         <div className="container-wide">
           <div className="text-center mb-12 md:mb-16">
             <h2 className="reveal text-headline text-ink">
@@ -240,9 +242,9 @@ export default function Home() {
 
       {/* ============================================
           SECTION 5: HOW IT WORKS - Demo
-          Shows model flexibility and visibility
+          Neutral stone - grounded, practical, real
           ============================================ */}
-      <section data-section="demo" className="section-feature section-stone">
+      <section data-section="demo" data-theme="light" className="section-feature section-stone">
         <div className="container-wide">
           <div className="flex flex-col lg:flex-row lg:items-center lg:gap-12 xl:gap-20">
             {/* Text column */}
@@ -321,8 +323,9 @@ $ amplifier provider use openai  # Switch to GPT-4
 
       {/* ============================================
           SECTION 6: THE BUNDLE PATTERN - One file, compounding benefits
+          Light - clean, elegant, simple beauty
           ============================================ */}
-      <section data-section="bundles" className="section-feature section-light-glow">
+      <section data-section="bundles" data-theme="light" className="section-feature section-light-glow">
         <div className="container-wide">
           <div className="flex flex-col lg:flex-row lg:items-center lg:gap-12 xl:gap-20">
             {/* Text column */}
@@ -418,8 +421,9 @@ You review code for vulnerabilities.
 
       {/* ============================================
           SECTION 7: ECOSYSTEM - Community bundles
+          Light gradient - abundant, connected, network
           ============================================ */}
-      <section data-section="ecosystem" className="section-feature section-gradient-flow">
+      <section data-section="ecosystem" data-theme="light" className="section-feature section-gradient-flow">
         <div className="container-wide">
           <div className="flex flex-col lg:flex-row lg:items-center lg:gap-16 xl:gap-24">
             <div className="lg:w-[40%] xl:w-[38%] lg:flex-shrink-0">
@@ -467,9 +471,10 @@ You review code for vulnerabilities.
       </section>
 
       {/* ============================================
-          SECTION 10: CTA
+          SECTION 8: CTA - Call to action
+          Dark - focused, decisive (but not black like Problem)
           ============================================ */}
-      <section data-section="cta" className="section-feature section-dark">
+      <section data-section="cta" data-theme="dark" className="section-feature section-dark">
         <div className="container-narrow text-center">
           <h2 className="reveal text-headline text-on-dark">
             Your first agent in 60 seconds.

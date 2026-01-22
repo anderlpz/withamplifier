@@ -397,6 +397,17 @@ p {
   padding: 60px var(--gutter-sm);
   position: relative;
   overflow-x: hidden; /* Prevent horizontal scroll bleed */
+  z-index: 2; /* Above particles (z-index: 1) */
+}
+
+/* Ensure all content inside sections appears above particles */
+.section-feature > *,
+.section-dark > *,
+.section-light-glow > *,
+.section-stone > *,
+.section-gradient-flow > * {
+  position: relative;
+  z-index: 3;
 }
 
 @media (min-width: 768px) {
@@ -412,8 +423,10 @@ p {
 
 /* Dark section - softer than pure black */
 .section-dark {
-  background: var(--depth-obsidian);
+  background: rgba(10, 10, 10, 0.85); /* Semi-transparent to show particles */
   color: var(--text-on-dark);
+  position: relative;
+  z-index: 2; /* Above particles (z-index: 1) but content inside gets z-index: 3 */
 }
 
 .section-dark h1,
@@ -483,13 +496,17 @@ p {
 .section-light-glow {
   background: 
     radial-gradient(ellipse 60% 40% at 50% 100%, var(--gradient-start) 0%, transparent 70%),
-    var(--canvas);
+    rgba(255, 255, 255, 0.8); /* Semi-transparent to show particles */
   color: var(--ink);
+  position: relative;
+  z-index: 2;
 }
 
 /* Stone section - warm subtle contrast */
 .section-stone {
-  background: var(--canvas-stone);
+  background: rgba(249, 248, 246, 0.8); /* Semi-transparent to show particles */
+  position: relative;
+  z-index: 2;
 }
 
 /* Gradient flow section - Gemini's signature directional energy */
@@ -497,7 +514,9 @@ p {
   background: 
     linear-gradient(135deg, var(--gradient-start) 0%, transparent 40%),
     linear-gradient(225deg, var(--gradient-end) 0%, transparent 40%),
-    var(--canvas);
+    rgba(255, 255, 255, 0.8); /* Semi-transparent to show particles */
+  position: relative;
+  z-index: 2;
 }
 
 /* ============================================
