@@ -5,7 +5,7 @@ import { useEffect } from 'react'
 import { useViewportHeight } from '@/hooks/useViewportHeight'
 import { CodeBlock } from '@/components/CopyButton'
 import { EmergenceField } from '@/components/EmergenceField'
-import ChladniBackground from '@/components/ChladniBackground'
+import ChladniWebGL from '@/components/ChladniWebGL'
 
 export default function Home() {
   useViewportHeight()
@@ -36,7 +36,7 @@ export default function Home() {
   return (
     <div className="pt-16">
       {/* Chladni pattern background - runs throughout site */}
-      <ChladniBackground />
+      <ChladniWebGL />
       
       {/* ============================================
           SECTION 1: HERO - The Promise
@@ -51,7 +51,7 @@ export default function Home() {
         
         <div className="text-center container-default relative z-10">
           <h1 className="reveal text-display-xl text-ink font-heading px-2">
-            With Amplifier, you can build AI your way.
+            Build your way<br />with Amplifier
           </h1>
           
           <p className="reveal mt-6 md:mt-8 text-body-large text-ink max-w-2xl mx-auto px-4" style={{transitionDelay: '0.1s'}}>
