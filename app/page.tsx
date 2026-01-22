@@ -65,8 +65,28 @@ export default function Home() {
       </section>
 
       {/* ============================================
-          SECTION 2: DIFFERENTIATION - What makes it unique
-          NOT problem-first. Lead with what's different.
+          SECTION 2: THE PROBLEM - AI tools aren't understandable
+          Dark section with scattered particles (black box metaphor)
+          ============================================ */}
+      <section data-section="problem" className="section-feature section-dark">
+        <div className="container-narrow text-center">
+          <h2 className="reveal text-headline text-on-dark">
+            Today, AI tools aren't built in a way that's understandable by humans.
+          </h2>
+          <p className="reveal mt-4 text-body-large text-on-dark-secondary max-w-2xl mx-auto" style={{transitionDelay: '0.1s'}}>
+            You can speak to them in plain language. They respond. They work. But you don't understand what's happening behind the scenes.
+          </p>
+          <p className="reveal mt-6 text-body-large text-on-dark-secondary max-w-2xl mx-auto" style={{transitionDelay: '0.2s'}}>
+            They lock you to one model. Hide how they work. Keep your setup trapped in their system. When something breaks, you guess why. When something better comes along, you start over.
+          </p>
+          <p className="reveal mt-6 text-body-large text-on-dark max-w-2xl mx-auto" style={{transitionDelay: '0.3s'}}>
+            Amplifier is different. Open. Visible. Yours.
+          </p>
+        </div>
+      </section>
+
+      {/* ============================================
+          SECTION 3: DIFFERENTIATION - What makes it unique
           ============================================ */}
       <section data-section="differentiation" className="section-feature section-dark">
         <div className="container-default">
@@ -127,7 +147,7 @@ export default function Home() {
       </section>
 
       {/* ============================================
-          SECTION 3: THE PLATFORM - Everything you get
+          SECTION 4: THE PLATFORM - Everything you get
           Shows breadth: Providers, Tools, Agents, Recipes
           ============================================ */}
       <section data-section="platform" className="section-feature section-gradient-flow">
@@ -225,7 +245,7 @@ export default function Home() {
       </section>
 
       {/* ============================================
-          SECTION 4: HOW IT WORKS - Demo
+          SECTION 5: HOW IT WORKS - Demo
           Shows model flexibility and visibility
           ============================================ */}
       <section data-section="demo" className="section-feature section-stone">
@@ -306,7 +326,7 @@ $ amplifier provider use openai  # Switch to GPT-4
       </section>
 
       {/* ============================================
-          SECTION 5: BUNDLES - One powerful pattern
+          SECTION 6: BUNDLES - One powerful pattern
           Demoted from star to feature
           ============================================ */}
       <section data-section="bundles" className="section-feature section-light-glow">
@@ -399,7 +419,7 @@ You review code for vulnerabilities.
       </section>
 
       {/* ============================================
-          SECTION 6: IMPACT - Control that compounds
+          SECTION 7: IMPACT - Control that compounds
           ============================================ */}
       <section data-section="impact" className="section-feature section-dark-gradient">
         <div className="container-wide">
@@ -451,7 +471,7 @@ You review code for vulnerabilities.
       </section>
 
       {/* ============================================
-          SECTION 7: WHY THIS MATTERS - Brief contrast
+          SECTION 8: WHY THIS MATTERS - Brief contrast
           Not problem-first, but acknowledges the alternative
           ============================================ */}
       <section data-section="contrast" className="section-feature section-stone">
@@ -469,7 +489,7 @@ You review code for vulnerabilities.
       </section>
 
       {/* ============================================
-          SECTION 8: ECOSYSTEM - Community bundles
+          SECTION 9: ECOSYSTEM - Community bundles
           ============================================ */}
       <section data-section="ecosystem" className="section-feature section-gradient-flow">
         <div className="container-wide">
@@ -519,7 +539,7 @@ You review code for vulnerabilities.
       </section>
 
       {/* ============================================
-          SECTION 9: CTA
+          SECTION 10: CTA
           ============================================ */}
       <section data-section="cta" className="section-feature section-dark">
         <div className="container-narrow text-center">
