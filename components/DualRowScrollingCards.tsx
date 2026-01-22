@@ -26,13 +26,27 @@ export default function DualRowScrollingCards({ cards }: DualRowScrollingCardsPr
       
       const rect = sectionRef.current.getBoundingClientRect()
       const windowHeight = window.innerHeight
-      
       const sectionTop = rect.top
       const sectionHeight = rect.height
       
+      // Only start tracking when section enters the viewport
+      // Progress = 0 when section top is at bottom of viewport
+      // Progress = 1 when section bottom reaches top of viewport
       if (sectionTop < windowHeight && sectionTop + sectionHeight > 0) {
-        const progress = (windowHeight - sectionTop) / (windowHeight + sectionHeight)
-        setScrollProgress(Math.max(0, Math.min(1, progress)))
+        // Start from 0 when section top hits 80% down the viewport
+        const triggerPoint = windowHeight * 0.8
+        
+        if (sectionTop < triggerPoint) {
+          // Calculate progress only after trigger point
+          const scrollDistance = triggerPoint - sectionTop
+          const totalDistance = sectionHeight + (windowHeight * 0.8)
+          const progress = scrollDistance / totalDistance
+          
+          setScrollProgress(Math.max(0, Math.min(1, progress)))
+        } else {
+          // Before trigger point, progress is 0
+          setScrollProgress(0)
+        }
       }
     }
     
