@@ -428,7 +428,7 @@ You review code for vulnerabilities.
         <div className="container-wide">
           <div className="text-center mb-12 lg:mb-16">
             <h2 className="reveal text-headline text-ink">
-              Built by different minds. Ready for yours.
+              Built by different minds.<br />Ready for yours.
             </h2>
             
             <p className="reveal mt-4 text-body-large text-ink-slate max-w-2xl mx-auto" style={{transitionDelay: '0.1s', textWrap: 'balance'}}>
