@@ -8,8 +8,8 @@ interface BundleCard {
   description: string
   author: string
   authorAvatar: string
-  stars: number
-  validated?: boolean
+  repoUrl: string
+  badge?: 'validated' | 'experimental' | 'popular'
 }
 
 interface DualRowScrollingCardsProps {
@@ -27,21 +27,16 @@ export default function DualRowScrollingCards({ cards }: DualRowScrollingCardsPr
       const rect = sectionRef.current.getBoundingClientRect()
       const windowHeight = window.innerHeight
       
-      // Calculate progress as section moves through viewport
-      // 0 = just entering viewport from bottom
-      // 1 = just leaving viewport from top
       const sectionTop = rect.top
       const sectionHeight = rect.height
       
-      // Start tracking when section enters viewport
       if (sectionTop < windowHeight && sectionTop + sectionHeight > 0) {
-        // Progress from 0 to 1 as section scrolls through viewport
         const progress = (windowHeight - sectionTop) / (windowHeight + sectionHeight)
         setScrollProgress(Math.max(0, Math.min(1, progress)))
       }
     }
     
-    handleScroll() // Initial calculation
+    handleScroll()
     window.addEventListener('scroll', handleScroll, { passive: true })
     window.addEventListener('resize', handleScroll, { passive: true })
     
@@ -51,105 +46,115 @@ export default function DualRowScrollingCards({ cards }: DualRowScrollingCardsPr
     }
   }, [])
   
-  // Split cards into two rows
-  const midpoint = Math.ceil(cards.length / 2)
-  const topRowCards = cards.slice(0, midpoint)
-  const bottomRowCards = cards.slice(midpoint)
+  // Duplicate cards multiple times for abundance
+  const expandedCards = [...cards, ...cards, ...cards]
+  const midpoint = Math.ceil(expandedCards.length / 2)
+  const topRowCards = expandedCards.slice(0, midpoint)
+  const bottomRowCards = expandedCards.slice(midpoint)
   
-  // Calculate transform based on scroll progress
-  // Top row: moves left to right (positive translation)
-  // Bottom row: moves right to left (negative translation)
-  const maxTranslation = 400 // Maximum pixels to translate
+  const maxTranslation = 400
   const topRowTransform = scrollProgress * maxTranslation
   const bottomRowTransform = -scrollProgress * maxTranslation
   
   return (
-    <div ref={sectionRef} className="space-y-3 lg:space-y-4 overflow-hidden">
+    <div ref={sectionRef} className="space-y-3 lg:space-y-4">
       {/* Top Row - Scrolls Left to Right */}
       <div 
-        className="flex gap-3 lg:gap-4 will-change-transform transition-transform duration-100 ease-linear"
+        className="relative overflow-hidden"
         style={{ 
-          transform: `translateX(${topRowTransform}px)`,
-          maskImage: 'linear-gradient(to right, transparent, black 5%, black 95%, transparent)',
-          WebkitMaskImage: 'linear-gradient(to right, transparent, black 5%, black 95%, transparent)'
+          maskImage: 'linear-gradient(to right, transparent, black 8%, black 92%, transparent)',
+          WebkitMaskImage: 'linear-gradient(to right, transparent, black 8%, black 92%, transparent)'
         }}
       >
-        {/* Duplicate cards for seamless appearance at edges */}
-        {[...topRowCards, ...topRowCards].map((card, i) => (
-          <BundleCard key={`top-${card.name}-${i}`} card={card} />
-        ))}
+        <div 
+          className="flex gap-3 lg:gap-4 will-change-transform transition-transform duration-100 ease-linear"
+          style={{ transform: `translateX(${topRowTransform}px)` }}
+        >
+          {topRowCards.map((card, i) => (
+            <BundleCard key={`top-${card.name}-${i}`} card={card} />
+          ))}
+        </div>
       </div>
       
       {/* Bottom Row - Scrolls Right to Left */}
       <div 
-        className="flex gap-3 lg:gap-4 will-change-transform transition-transform duration-100 ease-linear"
+        className="relative overflow-hidden"
         style={{ 
-          transform: `translateX(${bottomRowTransform}px)`,
-          maskImage: 'linear-gradient(to right, transparent, black 5%, black 95%, transparent)',
-          WebkitMaskImage: 'linear-gradient(to right, transparent, black 5%, black 95%, transparent)'
+          maskImage: 'linear-gradient(to right, transparent, black 8%, black 92%, transparent)',
+          WebkitMaskImage: 'linear-gradient(to right, transparent, black 8%, black 92%, transparent)'
         }}
       >
-        {/* Duplicate cards for seamless appearance at edges */}
-        {[...bottomRowCards, ...bottomRowCards].map((card, i) => (
-          <BundleCard key={`bottom-${card.name}-${i}`} card={card} />
-        ))}
+        <div 
+          className="flex gap-3 lg:gap-4 will-change-transform transition-transform duration-100 ease-linear"
+          style={{ transform: `translateX(${bottomRowTransform}px)` }}
+        >
+          {bottomRowCards.map((card, i) => (
+            <BundleCard key={`bottom-${card.name}-${i}`} card={card} />
+          ))}
+        </div>
       </div>
     </div>
   )
 }
 
 function BundleCard({ card }: { card: BundleCard }) {
+  const iconMap: Record<string, JSX.Element> = {
+    agent: (
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+        <circle cx="9" cy="7" r="4" />
+        <path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
+      </svg>
+    ),
+    tool: (
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+      </svg>
+    ),
+    bundle: (
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <rect x="2" y="3" width="20" height="14" rx="2" />
+        <line x1="8" y1="21" x2="16" y2="21" />
+        <line x1="12" y1="17" x2="12" y2="21" />
+      </svg>
+    )
+  }
+  
   return (
-    <div className="flex-shrink-0 w-72 lg:w-80 p-4 lg:p-5 rounded-xl bg-canvas border border-canvas-mist shadow-soft-sm hover:shadow-soft hover:border-signal-glow transition-all duration-300 cursor-pointer">
-      {/* Header with name and type */}
-      <div className="flex justify-between items-start gap-3 mb-3">
-        <h3 className="font-mono text-sm text-ink font-medium truncate flex-1">
-          {card.name}
-        </h3>
-        <span className="flex-shrink-0 px-2 py-1 bg-canvas-stone rounded text-[10px] text-ink-fog uppercase tracking-wider">
-          {card.type}
+    <a 
+      href={card.repoUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="community-card"
+    >
+      <div className="community-card__header">
+        <span className={`community-card__icon community-card__icon--${card.type}`}>
+          {iconMap[card.type] || iconMap.bundle}
         </span>
+        {card.badge && (
+          <div className="community-card__badges">
+            <span className={`community-card__badge community-card__badge--${card.badge}`}>
+              {card.badge.charAt(0).toUpperCase() + card.badge.slice(1)}
+            </span>
+          </div>
+        )}
       </div>
       
-      {/* Description */}
-      <p className="text-xs text-ink-slate leading-relaxed mb-3" style={{
-        display: '-webkit-box',
-        WebkitLineClamp: 2,
-        WebkitBoxOrient: 'vertical',
-        overflow: 'hidden'
-      }}>
-        {card.description}
-      </p>
+      <h3 className="community-card__name">{card.name}</h3>
+      <p className="community-card__description">{card.description}</p>
       
-      {/* Validation badge */}
-      {card.validated && (
-        <div className="mb-3">
-          <span className="inline-flex items-center gap-1 px-2 py-1 bg-success/10 text-success rounded text-[10px] font-medium">
-            <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-            </svg>
-            Validated
-          </span>
-        </div>
-      )}
-      
-      {/* Metadata with avatar */}
-      <div className="flex justify-between items-center pt-3 border-t border-canvas-mist text-[11px]">
-        <div className="flex items-center gap-2">
+      <div className="community-card__footer">
+        <div className="community-card__author">
           <img 
-            src={card.authorAvatar} 
             alt={card.author}
-            className="w-5 h-5 rounded-full border border-canvas-mist"
+            className="community-card__avatar"
+            loading="lazy"
+            src={card.authorAvatar}
           />
-          <span className="text-signal font-medium">@{card.author}</span>
+          <span className="community-card__author-name">@{card.author}</span>
         </div>
-        <div className="flex items-center gap-1 text-ink-fog">
-          <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
-            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-          </svg>
-          {card.stars}
-        </div>
+        <span className="community-card__action">View →</span>
       </div>
-    </div>
+    </a>
   )
 }

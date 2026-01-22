@@ -175,15 +175,18 @@ export default function ChladniWebGL() {
     const isMobile = width < 768
     const particleCount = isMobile ? 5000 : 10000
     console.log(`[ChladniWebGL] Creating ${particleCount} particles`)
+    console.log(`[ChladniWebGL] Aspect ratio: ${aspect}, Camera bounds: x=[${-aspect}, ${aspect}], y=[-1, 1]`)
 
     const geometry = new THREE.BufferGeometry()
     const positions = new Float32Array(particleCount * 3)
     const velocities = new Float32Array(particleCount * 3)
 
-    // Random initial positions
+    // Random initial positions - match camera aspect ratio for full viewport coverage
     for (let i = 0; i < particleCount; i++) {
       const i3 = i * 3
-      positions[i3] = (Math.random() - 0.5) * 2
+      // X range matches camera width: -aspect to +aspect
+      positions[i3] = (Math.random() - 0.5) * 2 * aspect
+      // Y range matches camera height: -1 to +1
       positions[i3 + 1] = (Math.random() - 0.5) * 2
       positions[i3 + 2] = 0
       velocities[i3] = 0

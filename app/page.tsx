@@ -445,94 +445,112 @@ You review code for vulnerabilities.
           <div className="reveal" style={{transitionDelay: '0.3s'}}>
             <DualRowScrollingCards cards={[
               {
-                name: 'security-reviewer',
+                name: 'Security Reviewer',
                 type: 'agent',
                 description: 'Comprehensive security analysis for vulnerabilities, secrets, and common attack vectors',
                 author: 'microsoft',
                 authorAvatar: 'https://avatars.githubusercontent.com/u/6154722?s=80',
-                stars: 847,
-                validated: true
+                repoUrl: 'https://github.com/microsoft/amplifier-agent-security-reviewer',
+                badge: 'validated'
               },
               {
-                name: 'documentation-writer',
+                name: 'Documentation Writer',
                 type: 'agent',
                 description: 'Generate comprehensive documentation from code with examples and API references',
                 author: 'amplifier-community',
                 authorAvatar: 'https://avatars.githubusercontent.com/u/97165289?s=80',
-                stars: 623,
-                validated: true
+                repoUrl: 'https://github.com/amplifier-community/documentation-writer',
+                badge: 'validated'
               },
               {
-                name: 'code-explorer',
+                name: 'Code Explorer',
                 type: 'tool',
                 description: 'Navigate large codebases with semantic search and intelligent code understanding',
                 author: 'robotdad',
-                authorAvatar: 'https://avatars.githubusercontent.com/u/1234567?s=80',
-                stars: 512,
-                validated: false
+                authorAvatar: 'https://github.com/robotdad.png?size=40',
+                repoUrl: 'https://github.com/robotdad/amplifier-tool-code-explorer',
+                badge: 'popular'
               },
               {
-                name: 'test-generator',
+                name: 'Test Generator',
                 type: 'agent',
                 description: 'Write comprehensive test suites with edge cases and coverage analysis',
                 author: 'amplifier-labs',
                 authorAvatar: 'https://avatars.githubusercontent.com/u/87654321?s=80',
-                stars: 489,
-                validated: true
+                repoUrl: 'https://github.com/amplifier-labs/test-generator',
+                badge: 'validated'
               },
               {
-                name: 'api-designer',
+                name: 'API Designer',
                 type: 'bundle',
                 description: 'Design RESTful APIs with OpenAPI specs, validation, and best practices',
                 author: 'apicraft',
                 authorAvatar: 'https://avatars.githubusercontent.com/u/23456789?s=80',
-                stars: 356,
-                validated: false
+                repoUrl: 'https://github.com/apicraft/amplifier-bundle-api-designer',
+                badge: 'experimental'
               },
               {
-                name: 'data-analyst',
+                name: 'Data Analyst',
                 type: 'agent',
                 description: 'Analyze datasets with statistical insights, visualizations, and recommendations',
                 author: 'dataflow',
                 authorAvatar: 'https://avatars.githubusercontent.com/u/34567890?s=80',
-                stars: 298,
-                validated: true
+                repoUrl: 'https://github.com/dataflow/amplifier-agent-data-analyst',
+                badge: 'validated'
               },
               {
-                name: 'code-reviewer',
+                name: 'Voice Assistant',
+                type: 'bundle',
+                description: 'Desktop voice assistant with native speech-to-speech via OpenAI Realtime API',
+                author: 'robotdad',
+                authorAvatar: 'https://github.com/robotdad.png?size=40',
+                repoUrl: 'https://github.com/robotdad/amplifier-voice-assistant',
+                badge: 'experimental'
+              },
+              {
+                name: 'Code Reviewer',
                 type: 'agent',
                 description: 'Automated code reviews focusing on best practices, performance, and maintainability',
                 author: 'microsoft',
                 authorAvatar: 'https://avatars.githubusercontent.com/u/6154722?s=80',
-                stars: 734,
-                validated: true
+                repoUrl: 'https://github.com/microsoft/amplifier-agent-code-reviewer',
+                badge: 'validated'
               },
               {
-                name: 'refactoring-assistant',
+                name: 'Refactoring Assistant',
                 type: 'agent',
                 description: 'Intelligent refactoring suggestions with automated code transformations',
                 author: 'amplifier-community',
                 authorAvatar: 'https://avatars.githubusercontent.com/u/97165289?s=80',
-                stars: 421,
-                validated: false
+                repoUrl: 'https://github.com/amplifier-community/refactoring-assistant',
+                badge: 'popular'
               },
               {
-                name: 'sql-optimizer',
+                name: 'SQL Optimizer',
                 type: 'tool',
                 description: 'Analyze and optimize SQL queries for performance and best practices',
                 author: 'dbtools',
                 authorAvatar: 'https://avatars.githubusercontent.com/u/45678901?s=80',
-                stars: 267,
-                validated: true
+                repoUrl: 'https://github.com/dbtools/amplifier-tool-sql-optimizer',
+                badge: 'validated'
               },
               {
-                name: 'ui-component-builder',
+                name: 'UI Component Builder',
                 type: 'bundle',
                 description: 'Generate accessible, responsive UI components with modern frameworks',
                 author: 'frontend-guild',
                 authorAvatar: 'https://avatars.githubusercontent.com/u/56789012?s=80',
-                stars: 543,
-                validated: false
+                repoUrl: 'https://github.com/frontend-guild/ui-component-builder',
+                badge: 'popular'
+              },
+              {
+                name: 'Infrastructure Advisor',
+                type: 'agent',
+                description: 'Cloud architecture recommendations and infrastructure optimization strategies',
+                author: 'cloud-native',
+                authorAvatar: 'https://avatars.githubusercontent.com/u/12345678?s=80',
+                repoUrl: 'https://github.com/cloud-native/infrastructure-advisor',
+                badge: 'validated'
               }
             ]} />
           </div>
