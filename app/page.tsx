@@ -428,16 +428,16 @@ You review code for vulnerabilities.
         <div className="container-wide">
           <div className="text-center mb-12 lg:mb-16">
             <h2 className="reveal text-headline text-ink">
-              Start with what works.
+              Built by different minds. Ready for yours.
             </h2>
             
             <p className="reveal mt-4 text-body-large text-ink-slate max-w-2xl mx-auto" style={{transitionDelay: '0.1s', textWrap: 'balance'}}>
-              Install a bundle from the community. Make it yours. Share what you&nbsp;build.
+              Every bundle carries someone's approach to solving problems. Install theirs. Add your perspective. When you share back, you're teaching others a new way to think. The more perspectives, the smarter the&nbsp;community.
             </p>
             
             <div className="reveal mt-8" style={{transitionDelay: '0.2s'}}>
               <Link href="/explore" className="btn-apple">
-                Explore bundles
+                Explore community
               </Link>
             </div>
           </div>
