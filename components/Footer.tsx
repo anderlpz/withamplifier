@@ -8,10 +8,10 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-1">
             <Link href="/" className="text-ink font-semibold tracking-tight">
-              with amplifier
+              Amplifier
             </Link>
             <p className="mt-4 text-ink-fog text-sm leading-relaxed">
-              AI that's yours for the making.
+              Build AI Your Way.
             </p>
           </div>
 
