@@ -561,11 +561,7 @@ You review code for vulnerabilities.
             Ready to build?
           </h2>
           
-          <p className="reveal mt-4 text-body-large text-on-dark-secondary max-w-lg mx-auto" style={{transitionDelay: '0.1s', textWrap: 'balance'}}>
-            Install Amplifier, connect to any model provider, and run your first command. You'll have a working agent faster than you'd expect. The hard part isn't getting started - it's deciding what to build&nbsp;first.
-          </p>
-          
-          <div className="reveal mt-8" style={{transitionDelay: '0.15s'}}>
+          <div className="reveal mt-8" style={{transitionDelay: '0.1s'}}>
             <CodeBlock code="uv tool install git+https://github.com/microsoft/amplifier" className="max-w-lg mx-auto" />
           </div>
           
