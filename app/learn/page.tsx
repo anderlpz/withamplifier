@@ -19,6 +19,14 @@ const decks: Deck[] = [
     href: `${DECKS_BASE_URL}/what-is-amplifier.html`,
   },
   {
+    id: 'how-amplifier-thinks',
+    title: 'How Amplifier Thinks',
+    description: 'The agent loop explained: Think, Act, Observe. Understand what happens when you give Amplifier a&nbsp;task.',
+    category: 'intro',
+    href: `${DECKS_BASE_URL}/how-amplifier-thinks.html`,
+    isNew: true,
+  },
+  {
     id: 'getting-started',
     title: 'Getting Started Guide',
     description: 'Step-by-step walkthrough to install Amplifier, configure your first provider, and run your first&nbsp;command.',
