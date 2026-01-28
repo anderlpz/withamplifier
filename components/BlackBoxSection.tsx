@@ -10,7 +10,7 @@ const LINES = [
   "When something breaks, you're guessing. When something better comes along, you start over.",
 ]
 
-// Scroll thresholds that TRIGGER each line (0-1)
+// Scroll thresholds that TRIGGER each line (0-1 of scroll progress)
 const TRIGGERS = {
   headline: 0.05,
   line1: 0.25,
@@ -34,53 +34,21 @@ function useReducedMotion() {
   return reducedMotion
 }
 
-// Easing for headline
+// Easing functions
 function easeOutCubic(t: number): number {
   return 1 - Math.pow(1 - t, 3)
-}
-
-// Simple fade-in line - triggers once, fades in smoothly
-function FadeInLine({ 
-  text, 
-  triggered,
-  className = '' 
-}: { 
-  text: string
-  triggered: boolean
-  className?: string 
-}) {
-  const [hasTriggered, setHasTriggered] = useState(false)
-  
-  useEffect(() => {
-    if (triggered && !hasTriggered) {
-      setHasTriggered(true)
-    }
-  }, [triggered, hasTriggered])
-  
-  return (
-    <p 
-      className={className}
-      style={{ 
-        opacity: hasTriggered ? 0.75 : 0,
-        transform: `translateY(${hasTriggered ? 0 : 12}px)`,
-        transition: 'opacity 400ms ease-out, transform 400ms ease-out',
-        textWrap: 'balance',
-      }}
-    >
-      {text}
-    </p>
-  )
 }
 
 export function BlackBoxSection() {
   const reducedMotion = useReducedMotion()
   const sectionRef = useRef<HTMLElement>(null)
-  const [progress, setProgress] = useState(0)
+  const [entryProgress, setEntryProgress] = useState(0) // 0 = not entered, 1 = fully entered
+  const [scrollProgress, setScrollProgress] = useState(0) // 0-1 through the section
   const [isActive, setIsActive] = useState(false)
   const [isPast, setIsPast] = useState(false)
   const rafRef = useRef<number | null>(null)
 
-  // Track what's been triggered
+  // Track what's been triggered (persists once triggered)
   const [triggered, setTriggered] = useState({
     headline: false,
     line1: false,
@@ -96,23 +64,32 @@ export function BlackBoxSection() {
     const viewportHeight = window.innerHeight
     const sectionHeight = rect.height
     
+    // Entry progress: from when section enters viewport to when it fills it
+    // Starts when section top is at viewport bottom, ends when section top is at viewport top
+    const entryDistance = viewportHeight // distance from "section enters" to "section fills"
+    const distanceFromEntry = viewportHeight - rect.top // how far we've scrolled since section entered
+    const newEntryProgress = Math.max(0, Math.min(1, distanceFromEntry / entryDistance))
+    
+    // Scroll progress: how far through the section (0 = just filled viewport, 1 = about to leave)
     const scrollableDistance = sectionHeight - viewportHeight
     const scrolledPast = -rect.top
+    const newScrollProgress = Math.max(0, Math.min(1, scrolledPast / scrollableDistance))
     
-    const newProgress = Math.max(0, Math.min(1, scrolledPast / scrollableDistance))
+    // Active = section fills viewport (top at or above 0, bottom at or below viewport)
     const nowActive = rect.top <= 0 && rect.bottom >= viewportHeight
     const nowPast = rect.bottom < viewportHeight
     
-    setProgress(newProgress)
+    setEntryProgress(newEntryProgress)
+    setScrollProgress(newScrollProgress)
     setIsActive(nowActive)
     setIsPast(nowPast)
     
-    // Check triggers
+    // Check triggers based on scroll progress
     setTriggered(prev => ({
-      headline: prev.headline || newProgress >= TRIGGERS.headline,
-      line1: prev.line1 || newProgress >= TRIGGERS.line1,
-      line2: prev.line2 || newProgress >= TRIGGERS.line2,
-      line3: prev.line3 || newProgress >= TRIGGERS.line3,
+      headline: prev.headline || newScrollProgress >= TRIGGERS.headline,
+      line1: prev.line1 || newScrollProgress >= TRIGGERS.line1,
+      line2: prev.line2 || newScrollProgress >= TRIGGERS.line2,
+      line3: prev.line3 || newScrollProgress >= TRIGGERS.line3,
     }))
   }, [])
 
@@ -133,11 +110,26 @@ export function BlackBoxSection() {
     }
   }, [updateProgress])
 
-  // Headline opacity (clamped at 1 once fully revealed)
+  // Background opacity fades in during entry
+  const bgOpacity = easeOutCubic(entryProgress) * 0.85
+
+  // Headline fades in after trigger
   const headlineOpacity = triggered.headline 
-    ? Math.min(1, easeOutCubic(Math.min(1, (progress - TRIGGERS.headline) / 0.15)))
+    ? Math.min(1, easeOutCubic(Math.min(1, (scrollProgress - TRIGGERS.headline) / 0.15)))
     : 0
   const headlineY = (1 - headlineOpacity) * 30
+
+  // Line opacities - fade in after their triggers
+  const getLineOpacity = (trigger: number, triggered: boolean) => {
+    if (!triggered) return 0
+    return Math.min(0.75, easeOutCubic(Math.min(1, (scrollProgress - trigger) / 0.15)) * 0.75)
+  }
+  
+  const getLineY = (trigger: number, triggered: boolean) => {
+    if (!triggered) return 12
+    const progress = Math.min(1, (scrollProgress - trigger) / 0.15)
+    return (1 - easeOutCubic(progress)) * 12
+  }
 
   // Reduced motion: show all content immediately
   if (reducedMotion) {
@@ -160,7 +152,7 @@ export function BlackBoxSection() {
     )
   }
 
-  // Content block
+  // Content block with animated text
   const contentBlock = (
     <div className="container-narrow text-center px-6">
       <h2
@@ -173,34 +165,52 @@ export function BlackBoxSection() {
         {HEADLINE}
       </h2>
       
-      <FadeInLine
-        text={LINES[0]}
-        triggered={triggered.line1}
+      <p 
         className="mt-6 text-body-large text-on-dark-secondary max-w-2xl mx-auto"
-      />
-      <FadeInLine
-        text={LINES[1]}
-        triggered={triggered.line2}
+        style={{ 
+          opacity: getLineOpacity(TRIGGERS.line1, triggered.line1),
+          transform: `translateY(${getLineY(TRIGGERS.line1, triggered.line1)}px)`,
+          textWrap: 'balance',
+        }}
+      >
+        {LINES[0]}
+      </p>
+      <p 
         className="mt-5 text-body-large text-on-dark-secondary max-w-2xl mx-auto"
-      />
-      <FadeInLine
-        text={LINES[2]}
-        triggered={triggered.line3}
+        style={{ 
+          opacity: getLineOpacity(TRIGGERS.line2, triggered.line2),
+          transform: `translateY(${getLineY(TRIGGERS.line2, triggered.line2)}px)`,
+          textWrap: 'balance',
+        }}
+      >
+        {LINES[1]}
+      </p>
+      <p 
         className="mt-5 text-body-large text-on-dark-secondary max-w-2xl mx-auto"
-      />
+        style={{ 
+          opacity: getLineOpacity(TRIGGERS.line3, triggered.line3),
+          transform: `translateY(${getLineY(TRIGGERS.line3, triggered.line3)}px)`,
+          textWrap: 'balance',
+        }}
+      >
+        {LINES[2]}
+      </p>
     </div>
   )
 
   return (
     <>
-      {/* Tall section - transparent to let particles through */}
+      {/* Tall section with fading background */}
       <section
         ref={sectionRef}
         id="problem"
         data-section="problem"
         data-theme="dark"
         className="relative"
-        style={{ height: '400vh' }}
+        style={{ 
+          height: '400vh',
+          background: `rgba(10, 10, 10, ${bgOpacity})`,
+        }}
       >
         {/* Static content at bottom - only visible AFTER scrolling past */}
         {isPast && (
@@ -210,9 +220,10 @@ export function BlackBoxSection() {
         )}
       </section>
       
-      {/* Fixed overlay - visible ONLY while actively scrolling through */}
+      {/* Fixed overlay - visible while actively scrolling through */}
       {isActive && (
         <div 
+          data-theme="dark"
           className="fixed inset-0 z-40 flex items-center justify-center bg-[rgba(10,10,10,0.85)]"
         >
           {contentBlock}
@@ -220,12 +231,12 @@ export function BlackBoxSection() {
           {/* Progress bar */}
           <div 
             className="absolute bottom-0 left-0 h-[2px] bg-signal/60"
-            style={{ width: `${progress * 100}%` }}
+            style={{ width: `${scrollProgress * 100}%` }}
           />
           
           {/* Debug */}
           <div className="absolute top-4 left-4 text-xs text-white/50 font-mono">
-            {(progress * 100).toFixed(0)}%
+            {(scrollProgress * 100).toFixed(0)}%
           </div>
         </div>
       )}

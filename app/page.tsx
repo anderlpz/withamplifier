@@ -6,6 +6,7 @@ import { useEffect } from 'react'
 import { useViewportHeight } from '@/hooks/useViewportHeight'
 import { CodeBlock } from '@/components/CopyButton'
 import ScrollParticleBackground from '@/components/ScrollParticleBackground'
+import { BlackBoxSection } from '@/components/BlackBoxSection'
 
 export default function Home() {
   useViewportHeight()
@@ -61,22 +62,9 @@ export default function Home() {
 
       {/* ============================================
           SECTION 2: THE PROBLEM - Trapped in black boxes
-          BLACK section - should feel constraining, unclear, dark
-          Ends with the problem, not the solution
+          Scroll-captured cinematic experience
           ============================================ */}
-      <section id="problem" data-section="problem" data-theme="dark" className="section-feature bg-[rgba(10,10,10,0.85)]">
-        <div className="container-narrow text-center">
-          <h2 className="reveal text-headline text-on-dark">
-            Most AI tools are black boxes.
-          </h2>
-          <p className="reveal mt-4 text-body-large text-on-dark-secondary max-w-2xl mx-auto" style={{transitionDelay: '0.1s', textWrap: 'balance'}}>
-            They work. They respond. But you don't understand what's happening behind the&nbsp;scenes.
-          </p>
-          <p className="reveal mt-6 text-body-large text-on-dark-secondary max-w-2xl mx-auto" style={{transitionDelay: '0.2s', textWrap: 'balance'}}>
-            They lock you to one model. Hide how they work. Keep your setup trapped in their system. When something breaks, you're guessing. When something better comes along, you start&nbsp;over.
-          </p>
-        </div>
-      </section>
+      <BlackBoxSection />
 
       {/* ============================================
           SECTION 3: DIFFERENTIATION - The Answer / Breaking Free
@@ -86,10 +74,10 @@ export default function Home() {
       <section id="differentiation" data-section="differentiation" data-theme="light" className="section-feature section-gradient-flow">
         <div className="container-default">
           <div className="text-center mb-12 md:mb-16">
-            <h2 className="reveal text-headline text-on-dark">
+            <h2 className="reveal text-headline text-ink">
               Amplifier is open by design.
             </h2>
-            <p className="reveal mt-4 text-body-large text-on-dark-secondary max-w-2xl mx-auto" style={{transitionDelay: '0.1s', textWrap: 'balance'}}>
+            <p className="reveal mt-4 text-body-large text-ink-slate max-w-2xl mx-auto" style={{transitionDelay: '0.1s', textWrap: 'balance'}}>
               Transparent components you can inspect, modify, and recombine. When the system is designed for builders instead of consumers, you get tools that work the way you&nbsp;think.
             </p>
           </div>
@@ -105,8 +93,8 @@ export default function Home() {
                   <path d="m4.93 19.07 4.24-4.24m5.66-5.66 4.24-4.24"></path>
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold text-on-dark mb-2">Use any model</h3>
-              <p className="text-on-dark-secondary text-sm leading-relaxed">
+              <h3 className="text-lg font-semibold text-ink mb-2">Use any model</h3>
+              <p className="text-ink-slate text-sm leading-relaxed">
                 Claude, GPT-4, Gemini, Llama, or your own. Switch with one line. No lock-in, ever.
               </p>
             </div>
@@ -118,8 +106,8 @@ export default function Home() {
                   <circle cx="12" cy="12" r="3"></circle>
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold text-on-dark mb-2">See everything</h3>
-              <p className="text-on-dark-secondary text-sm leading-relaxed">
+              <h3 className="text-lg font-semibold text-ink mb-2">See everything</h3>
+              <p className="text-ink-slate text-sm leading-relaxed">
                 Every prompt, every decision, every tool call. Nothing hidden. Debug in minutes, not hours.
               </p>
             </div>
@@ -131,8 +119,8 @@ export default function Home() {
                   <path d="m9 12 2 2 4-4"></path>
                 </svg>
               </div>
-              <h3 className="text-lg font-semibold text-on-dark mb-2">Own your setup</h3>
-              <p className="text-on-dark-secondary text-sm leading-relaxed">
+              <h3 className="text-lg font-semibold text-ink mb-2">Own your setup</h3>
+              <p className="text-ink-slate text-sm leading-relaxed">
                 Take it anywhere. Modify anything. No vendor lock-in, no hidden dependencies.
               </p>
             </div>
