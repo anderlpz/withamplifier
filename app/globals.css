@@ -1790,7 +1790,7 @@ a {
    ============================================ */
 
 .section-dark {
-  background-color: var(--depth-obsidian);
+  background-color: rgba(10, 10, 10, 0.90); /* Semi-transparent to show particles */
   color: var(--canvas);
 }
 
