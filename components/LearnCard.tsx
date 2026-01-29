@@ -45,8 +45,6 @@ export default function LearnCard({ deck }: { deck: Deck }) {
   return (
     <Link
       href={deck.href}
-      target="_blank"
-      rel="noopener noreferrer"
       className="community-card group"
       style={{ width: 'auto', minWidth: '280px' }}
     >

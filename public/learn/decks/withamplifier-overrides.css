@@ -133,17 +133,107 @@ a:hover {
   color: var(--color-text);
 }
 
-/* Back link styling */
+/* Back link styling - fixed top-left position */
 .back-link,
 .more-stories {
+  position: fixed;
+  top: 20px;
+  left: 24px;
   color: var(--color-text-muted, rgba(255, 255, 255, 0.5));
   font-size: var(--fs-caption, 14px);
-  transition: color 0.2s ease;
+  font-weight: 500;
+  transition: color 0.2s ease, transform 0.2s ease;
+  z-index: 100;
+  text-decoration: none;
 }
 
 .back-link:hover,
 .more-stories:hover {
   color: var(--color-accent);
+  transform: translateX(-2px);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   SLIDE TRANSITIONS
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* Page load fade-in */
+body {
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Slide transitions */
+.slide {
+  opacity: 0;
+  transform: translateX(20px);
+  transition: opacity 0.35s ease-out, transform 0.35s ease-out;
+}
+
+.slide.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Stagger content within slides for polish */
+.slide.active .headline,
+.slide.active .medium-headline,
+.slide.active .section-label {
+  animation: slideUp 0.4s ease-out backwards;
+}
+
+.slide.active .subhead,
+.slide.active .card-text,
+.slide.active p {
+  animation: slideUp 0.4s ease-out 0.1s backwards;
+}
+
+.slide.active .card,
+.slide.active .diagram-box,
+.slide.active .feature-grid > * {
+  animation: slideUp 0.4s ease-out 0.15s backwards;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Reduced motion: respect user preference */
+@media (prefers-reduced-motion: reduce) {
+  body,
+  .slide,
+  .slide.active .headline,
+  .slide.active .medium-headline,
+  .slide.active .section-label,
+  .slide.active .subhead,
+  .slide.active .card-text,
+  .slide.active p,
+  .slide.active .card,
+  .slide.active .diagram-box,
+  .slide.active .feature-grid > * {
+    animation: none;
+    transition: none;
+  }
+  
+  .slide {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 /* Smooth scrolling for better UX */
