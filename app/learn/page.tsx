@@ -237,7 +237,7 @@ export default function LearnPage() {
       </section>
 
       {/* Filter bar */}
-      <section className="sticky top-16 bg-canvas/80 backdrop-blur-md z-40">
+      <section className="sticky top-16 z-40">
         <div className="container-wide py-3 sm:py-4">
           {/* Gradient fade hints for horizontal scroll on mobile */}
           <div className="relative">
