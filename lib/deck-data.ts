@@ -96,6 +96,13 @@ export const decks: Deck[] = [
     href: '/learn/decks/deliberate-development-deck.html',
   },
   {
+    id: 'design-intelligence-enhanced',
+    title: 'Design Intelligence Enhanced',
+    description: '',
+    category: 'platform',
+    href: '/learn/decks/design-intelligence-enhanced.html',
+  },
+  {
     id: 'diagrams-tool-deck',
     title: 'Diagrams Tool',
     description: '',
@@ -244,4 +251,4 @@ export const decks: Deck[] = [
   }
 ]
 
-export const lastSynced = '2026-01-30T12:33:15.096Z'
+export const lastSynced = '2026-01-30T18:29:43.411Z'
