@@ -468,12 +468,122 @@
         .chat-input-area button:hover:not(:disabled) { filter: brightness(1.1); }
         .chat-input-area button:disabled { opacity: 0.5; cursor: not-allowed; }
 
+        /* =================================================================
+           MOBILE RESPONSIVE FIXES
+           Ensures no collisions between fixed elements at 375px+
+           ================================================================= */
         @media (max-width: 768px) {
+            /* Workflow vertical layout */
             .workflow { flex-direction: column; }
             .workflow-arrow { transform: rotate(90deg); }
-            .more-stories { top: auto; bottom: 90px; left: 16px; }
-            .chat-btn { bottom: 20px; left: 16px; }
-            .chat-panel { bottom: 88px; left: 16px; width: calc(100vw - 32px); height: calc(100vh - 120px); }
+            
+            /* Slide content padding - ensure content clears all fixed elements
+               Top: 72px (back button ~44px + 16px top + 12px buffer)
+               Bottom: 150px (nav at 92px + ~40px height + 18px buffer) */
+            .slide {
+                padding: 72px 20px 150px;
+            }
+            
+            /* Back button - KEEP AT TOP on mobile (natural position, avoids bottom crowding)
+               Touch target: 44px minimum height via min-height + padding */
+            .more-stories { 
+                top: 16px;
+                left: 16px;
+                bottom: auto; /* Reset the bottom positioning */
+                min-height: 44px;
+                display: flex;
+                align-items: center;
+            }
+            
+            /* Navigation dots - RAISE above chat button zone
+               Chat button top edge: 20px + 56px = 76px from bottom
+               Nav positioned at 92px = 16px clearance above chat button */
+            .nav {
+                bottom: 92px;
+            }
+            
+            /* Slide counter - align with nav level, safe right position */
+            .slide-counter {
+                bottom: 100px;
+                right: 16px;
+            }
+            
+            /* Chat button - bottom left corner
+               Already 56x56px (exceeds 44px touch target minimum) */
+            .chat-btn { 
+                bottom: 20px; 
+                left: 16px;
+            }
+            
+            /* Chat panel - full width with proper positioning above chat button */
+            .chat-panel { 
+                bottom: 92px;
+                left: 16px;
+                right: 16px;
+                width: auto;
+                height: calc(100dvh - 140px);
+                max-height: 70vh; /* Prevent overly tall panel on landscape */
+            }
+        }
+        
+        /* Extra small screens (iPhone SE, small Android) */
+        @media (max-width: 375px) {
+            .slide {
+                padding: 68px 16px 150px;
+            }
+            
+            /* Compact nav slightly */
+            .nav {
+                padding: 8px 12px;
+                gap: 8px;
+            }
+            
+            .nav-dot {
+                width: 8px;
+                height: 8px;
+            }
+            
+            /* Hide slide counter on very small screens to reduce clutter */
+            .slide-counter {
+                display: none;
+            }
+        }
+        
+        /* Safe area support for notched iPhones */
+        @supports (padding: env(safe-area-inset-bottom)) {
+            @media (max-width: 768px) {
+                .slide {
+                    padding-top: calc(72px + env(safe-area-inset-top, 0px));
+                    padding-bottom: calc(150px + env(safe-area-inset-bottom, 0px));
+                    padding-left: calc(20px + env(safe-area-inset-left, 0px));
+                    padding-right: calc(20px + env(safe-area-inset-right, 0px));
+                }
+                
+                .more-stories {
+                    top: calc(16px + env(safe-area-inset-top, 0px));
+                    left: calc(16px + env(safe-area-inset-left, 0px));
+                }
+                
+                .nav {
+                    bottom: calc(92px + env(safe-area-inset-bottom, 0px));
+                }
+                
+                .slide-counter {
+                    bottom: calc(100px + env(safe-area-inset-bottom, 0px));
+                    right: calc(16px + env(safe-area-inset-right, 0px));
+                }
+                
+                .chat-btn {
+                    bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+                    left: calc(16px + env(safe-area-inset-left, 0px));
+                }
+                
+                .chat-panel {
+                    bottom: calc(92px + env(safe-area-inset-bottom, 0px));
+                    left: calc(16px + env(safe-area-inset-left, 0px));
+                    right: calc(16px + env(safe-area-inset-right, 0px));
+                }
+            }
         }
     </style>
 </head>
