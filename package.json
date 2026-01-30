@@ -5,9 +5,11 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "sync-decks": "node scripts/generate-deck-metadata.js"
   },
   "dependencies": {
+    "@mlc-ai/web-llm": "^0.2.80",
     "@types/three": "^0.182.0",
     "next": "^14.0.0",
     "react": "^18.2.0",

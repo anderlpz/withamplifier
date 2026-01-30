@@ -1,0 +1,57 @@
+name: Sync Decks from Amplifier Stories
+
+on:
+  schedule:
+    # Run every 6 hours
+    - cron: '0 */6 * * *'
+  workflow_dispatch: # Allow manual trigger
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout withamplifier
+        uses: actions/checkout@v4
+
+      - name: Checkout amplifier-stories
+        uses: actions/checkout@v4
+        with:
+          repository: ramparte/amplifier-stories
+          path: amplifier-stories
+          sparse-checkout: docs
+
+      - name: Sync deck files
+        run: |
+          # Copy all HTML files except index.html
+          for file in amplifier-stories/docs/*.html; do
+            filename=$(basename "$file")
+            if [ "$filename" != "index.html" ]; then
+              cp "$file" public/learn/decks/
+              echo "Synced: $filename"
+            fi
+          done
+
+      - name: Generate deck metadata
+        run: |
+          node scripts/generate-deck-metadata.js
+
+      - name: Check for changes
+        id: changes
+        run: |
+          git add -A
+          if git diff --staged --quiet; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: sync decks from amplifier-stories"
+          git push
