@@ -8,41 +8,7 @@ import { getGitHubStats } from '@/lib/github'
 
 export const metadata: Metadata = {
   title: 'Amplifier',
-  description: 'Build AI Your Way. Your AI agent is a file you can read, write, and share.',
-  keywords: ['AI', 'agents', 'LLM', 'open source', 'Microsoft', 'developer tools'],
-  authors: [{ name: 'Microsoft' }],
-  openGraph: {
-    title: 'Amplifier',
-    description: 'Build AI Your Way. Your AI agent is a file you can read, write, and share.',
-    url: 'https://withamplifier.com',
-    siteName: 'Amplifier',
-    images: [
-      {
-        url: 'https://withamplifier.com/og-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'Amplifier - Build AI Your Way',
-      },
-    ],
-    locale: 'en_US',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Amplifier',
-    description: 'Build AI Your Way. Your AI agent is a file you can read, write, and share.',
-    images: ['https://withamplifier.com/og-image.png'],
-  },
-  icons: {
-    icon: [
-      { url: '/favicon.ico', sizes: 'any' },
-      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
-      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
-    ],
-    apple: '/apple-touch-icon.png',
-  },
-  manifest: '/site.webmanifest',
-  themeColor: '#5B4DE3',
+  description: 'AI that\'s yours for the making.',
 }
 
 export default async function RootLayout({
