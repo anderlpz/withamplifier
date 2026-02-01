@@ -50,39 +50,37 @@
         }
 
         .headline {
-            font-size: clamp(36px, 10vw, 72px);
+            font-size: clamp(36px, 8vw, 64px);
             font-weight: 700;
-            letter-spacing: -2px;
             line-height: 1.1;
             margin-bottom: clamp(16px, 3vw, 24px);
         }
 
         .medium-headline {
-            font-size: clamp(28px, 6vw, 48px);
-            font-weight: 600;
-            letter-spacing: -1px;
+            font-size: clamp(28px, 5vw, 42px);
+            font-weight: 700;
             line-height: 1.2;
-            margin-bottom: 24px;
+            margin-bottom: clamp(20px, 4vw, 32px);
         }
 
         .subhead {
             font-size: clamp(18px, 3vw, 24px);
-            font-weight: 400;
-            color: rgba(255,255,255,0.6);
+            color: rgba(255,255,255,0.7);
+            line-height: 1.4;
             max-width: 800px;
         }
 
         .small-text {
-            font-size: clamp(12px, 2vw, 14px);
-            color: rgba(255,255,255,0.4);
+            font-size: clamp(13px, 2vw, 15px);
+            color: rgba(255,255,255,0.5);
         }
 
         /* Cards */
         .card {
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: clamp(12px, 2vw, 16px);
-            padding: clamp(20px, 4vw, 28px);
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: clamp(10px, 1.5vw, 12px);
+            padding: clamp(18px, 3vw, 24px);
         }
 
         .card-title {
@@ -94,8 +92,18 @@
 
         .card-text {
             font-size: clamp(14px, 2vw, 16px);
+            color: rgba(255,255,255,0.7);
             line-height: 1.6;
-            color: rgba(255,255,255,0.8);
+        }
+
+        .highlight-box {
+            background: rgba(255,45,85,0.1);
+            border: 1px solid rgba(255,45,85,0.3);
+            border-radius: 12px;
+            padding: clamp(18px, 3vw, 24px);
+            margin-top: clamp(24px, 4vw, 32px);
+            font-size: clamp(15px, 2.2vw, 17px);
+            line-height: 1.6;
         }
 
         .thirds {
@@ -199,54 +207,39 @@
             color: #FF9F0A;
         }
 
-        /* Anti-pattern table */
+        /* Comparison table */
         .comparison-table {
             width: 100%;
             margin-top: clamp(24px, 4vw, 32px);
             border-collapse: collapse;
         }
 
-        .comparison-table th,
-        .comparison-table td {
-            padding: clamp(12px, 2vw, 16px) clamp(14px, 2.5vw, 20px);
-            text-align: left;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-        }
-
         .comparison-table th {
-            font-size: clamp(11px, 1.8vw, 13px);
+            font-size: clamp(15px, 2.2vw, 17px);
             font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: rgba(255,255,255,0.5);
+            text-align: left;
+            padding: clamp(12px, 2vw, 16px);
+            border-bottom: 2px solid rgba(255,45,85,0.3);
         }
 
         .comparison-table td {
             font-size: clamp(14px, 2vw, 16px);
+            padding: clamp(14px, 2.5vw, 16px) clamp(12px, 2vw, 16px);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
         }
 
         .bad-pattern {
-            color: #FF453A;
+            color: rgba(255,255,255,0.5);
+            text-decoration: line-through;
         }
 
         .good-pattern {
-            color: #30D158;
-        }
-
-        /* Highlight box */
-        .highlight-box {
-            background: rgba(255,45,85,0.1);
-            border: 1px solid rgba(255,45,85,0.3);
-            border-radius: clamp(10px, 1.5vw, 12px);
-            padding: clamp(16px, 2.5vw, 20px) clamp(20px, 3.5vw, 28px);
-            margin-top: clamp(24px, 4vw, 32px);
-            font-size: clamp(15px, 2.2vw, 18px);
-            line-height: 1.5;
+            color: rgba(255,255,255,0.9);
         }
 
         /* Quote */
         .quote {
-            font-size: clamp(22px, 5vw, 32px);
+            font-size: clamp(20px, 3.5vw, 28px);
             font-style: italic;
             color: rgba(255,255,255,0.8);
             max-width: 800px;
@@ -400,7 +393,52 @@
             padding: clamp(6px, 1vw, 8px) clamp(10px, 1.5vw, 12px);
             border-radius: 6px;
         }
-            /* More stories link */
+
+        /* Tier diagram */
+        .tier-stack {
+            display: flex;
+            flex-direction: column;
+            gap: clamp(12px, 2vw, 16px);
+            margin-top: clamp(24px, 4vw, 32px);
+            max-width: 700px;
+            width: 100%;
+        }
+
+        .tier {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: clamp(10px, 1.5vw, 12px);
+            padding: clamp(16px, 3vw, 20px);
+        }
+
+        .tier-label {
+            font-size: clamp(12px, 1.8vw, 14px);
+            color: #FF2D55;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .tier-title {
+            font-size: clamp(18px, 2.5vw, 20px);
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .tier-desc {
+            font-size: clamp(13px, 1.8vw, 14px);
+            color: rgba(255,255,255,0.6);
+            line-height: 1.5;
+        }
+
+        .tier-tokens {
+            font-size: clamp(12px, 1.6vw, 13px);
+            color: rgba(255,255,255,0.4);
+            margin-top: 8px;
+        }
+
+        /* More stories link */
         .more-stories {
             position: fixed;
             bottom: 10px;
@@ -422,7 +460,7 @@
         <div class="section-label">Development Philosophy</div>
         <h1 class="headline">Deliberate Development</h1>
         <p class="subhead">A mindful, decomposition-first approach to building software with AI assistance</p>
-        <div class="small-text" style="margin-top: 40px;">January 2026</div>
+        <div class="small-text" style="margin-top: 40px;">January 2026 • Updated Architecture</div>
     </div>
 
     <!-- Slide 2: The Problem -->
@@ -464,7 +502,7 @@
     <!-- Slide 4: Core Principles -->
     <div class="slide">
         <div class="section-label">Core Principles</div>
-        <h2 class="medium-headline">Five tenets of deliberate development</h2>
+        <h2 class="medium-headline">Six tenets of deliberate development</h2>
         
         <div class="halves">
             <div>
@@ -505,11 +543,143 @@
                         <p>"What else could benefit from this?" Look for the broader opportunity.</p>
                     </div>
                 </div>
+                <div class="principle">
+                    <div class="principle-number">6</div>
+                    <div class="principle-content">
+                        <h3>Systematic Research</h3>
+                        <p>Brainstorm FIRST with multiple agents, research SECOND. Iterate deeply.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- Slide 5: The Workflow -->
+    <!-- Slide 5: Approachability Challenge (NEW) -->
+    <div class="slide">
+        <div class="section-label">The Discoverability Problem</div>
+        <h2 class="medium-headline">Great methodology, hidden from users</h2>
+        
+        <div class="highlight-box" style="margin-top: 0;">
+            <strong>Challenge:</strong> Users don't know deliberate development exists unless they manually discover and compose the bundle.
+        </div>
+
+        <div class="thirds">
+            <div class="card">
+                <div class="card-title">❌ Old Approach</div>
+                <div class="card-text">Load full bundle → 12KB+ docs in every session → heavy context consumption → users opt out</div>
+            </div>
+            <div class="card">
+                <div class="card-title">⚠️ Problem</div>
+                <div class="card-text">Hidden capability means users rebuild the patterns themselves or develop bad habits</div>
+            </div>
+            <div class="card">
+                <div class="card-title">✅ Solution</div>
+                <div class="card-text">Three-tier discovery strategy → awareness without weight → delegate when needed</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 6: Three-Tier Architecture (NEW) -->
+    <div class="slide">
+        <div class="section-label">Architecture</div>
+        <h2 class="medium-headline">Three-tier discovery strategy</h2>
+        
+        <div class="tier-stack">
+            <div class="tier">
+                <div class="tier-label">TIER 1: Discovery</div>
+                <div class="tier-title">Awareness Pointer (Default)</div>
+                <div class="tier-desc">Thin context file (~150 tokens) composed into default bundles. Users know the methodology exists and when to use it.</div>
+                <div class="tier-tokens">Token cost: ~150 (every session)</div>
+            </div>
+            
+            <div class="tier">
+                <div class="tier-label">TIER 2: Delegation</div>
+                <div class="tier-title">Context Sink Agents (On Demand)</div>
+                <div class="tier-desc">Heavy philosophy docs (12KB+) load ONLY when agents are delegated. "Use deliberate-planner" → loads full context.</div>
+                <div class="tier-tokens">Token cost: ~12,000 (agent context only)</div>
+            </div>
+            
+            <div class="tier">
+                <div class="tier-label">TIER 3: Orchestration</div>
+                <div class="tier-title">Explicit Recipes (User Requested)</div>
+                <div class="tier-desc">Full workflow orchestration when user asks. "Run deliberate-design recipe" → complete multi-agent workflow.</div>
+                <div class="tier-tokens">Token cost: Variable (explicit invocation)</div>
+            </div>
+        </div>
+
+        <div class="highlight-box">
+            Result: Users discover the methodology with minimal overhead, heavy docs load only when needed.
+        </div>
+    </div>
+
+    <!-- Slide 7: Composition Patterns (NEW) -->
+    <div class="slide">
+        <div class="section-label">Integration</div>
+        <h2 class="medium-headline">Four composition patterns</h2>
+        
+        <div class="halves">
+            <div class="card">
+                <div class="card-title">1. Light Discovery (Default)</div>
+                <div class="card-text">
+                    Include awareness pointer in default bundles<br><br>
+                    <span style="color: #FF2D55;">includes:</span> deliberate-development:behaviors/deliberate-awareness
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-title">2. Full Methodology (Opt-In)</div>
+                <div class="card-text">
+                    Users who want complete capability<br><br>
+                    <span style="color: #FF2D55;">includes:</span> deliberate-development
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-title">3. Specific Capabilities</div>
+                <div class="card-text">
+                    Cherry-pick agents or behaviors<br><br>
+                    <span style="color: #FF2D55;">includes:</span> deliberate-development:behaviors/planning-mode
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-title">4. Standalone Bundle</div>
+                <div class="card-text">
+                    Complete bundle with foundation<br><br>
+                    <span style="color: #FF2D55;">--bundle</span> .../with-foundation.yaml
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 8: Validation Results (NEW) -->
+    <div class="slide">
+        <div class="section-label">Quality Assurance</div>
+        <h2 class="medium-headline">Validated architecture</h2>
+        
+        <div class="velocity-grid">
+            <div class="velocity-stat">
+                <div class="velocity-number">✓</div>
+                <div class="velocity-label">Bundle Validation</div>
+            </div>
+            <div class="velocity-stat">
+                <div class="velocity-number">✓</div>
+                <div class="velocity-label">Foundation Expert</div>
+            </div>
+            <div class="velocity-stat">
+                <div class="velocity-number">0</div>
+                <div class="velocity-label">Gotchas Found</div>
+            </div>
+        </div>
+
+        <div class="highlight-box">
+            <strong>Bundle validation recipe verdict:</strong> PASS WITH WARNINGS<br><br>
+            ✓ All conventions followed correctly<br>
+            ✓ No gotchas detected<br>
+            ✓ Excellent agent descriptions<br>
+            ✓ Proper context organization<br>
+            ✓ Architecture confirmed sound by foundation expert
+        </div>
+    </div>
+
+    <!-- Slide 9: The Workflow -->
     <div class="slide">
         <div class="section-label">The Workflow</div>
         <h2 class="medium-headline">The deliberate development cycle</h2>
@@ -566,7 +736,7 @@
         </div>
     </div>
 
-    <!-- Slide 6: The Tools -->
+    <!-- Slide 10: The Tools -->
     <div class="slide">
         <div class="section-label">The Tools</div>
         <h2 class="medium-headline">Agents and recipes for deliberate workflows</h2>
@@ -583,6 +753,16 @@
                 <div class="tool-usage">"Use deliberate-implementer to build this spec"</div>
             </div>
             <div class="tool-card">
+                <div class="tool-name">deliberate-reviewer</div>
+                <div class="tool-desc">Structural prevention, root cause analysis, anti-pattern detection.</div>
+                <div class="tool-usage">"Use deliberate-reviewer to assess this code"</div>
+            </div>
+            <div class="tool-card">
+                <div class="tool-name">deliberate-debugger</div>
+                <div class="tool-desc">Hypothesis-driven debugging, systematic issue resolution.</div>
+                <div class="tool-usage">"Use deliberate-debugger for this timeout"</div>
+            </div>
+            <div class="tool-card">
                 <div class="tool-name">deliberate-design recipe</div>
                 <div class="tool-desc">Full workflow: decompose → explore → generalize → specify → implement</div>
                 <div class="tool-usage">"Run deliberate-design for: add caching layer"</div>
@@ -595,7 +775,7 @@
         </div>
     </div>
 
-    <!-- Slide 7: Recipe Example -->
+    <!-- Slide 11: Recipe Example -->
     <div class="slide">
         <div class="section-label">In Practice</div>
         <h2 class="medium-headline">The deliberate-design recipe in action</h2>
@@ -620,7 +800,7 @@
         </div>
     </div>
 
-    <!-- Slide 8: Anti-Patterns -->
+    <!-- Slide 12: Anti-Patterns -->
     <div class="slide">
         <div class="section-label">Anti-Patterns</div>
         <h2 class="medium-headline">What deliberate development prevents</h2>
@@ -661,7 +841,7 @@
         </table>
     </div>
 
-    <!-- Slide 9: Philosophy Quote -->
+    <!-- Slide 13: Philosophy Quote -->
     <div class="slide center">
         <div class="section-label">The Mindset</div>
         
@@ -676,7 +856,7 @@
         </div>
     </div>
 
-    <!-- Slide 10: Integration -->
+    <!-- Slide 14: Integration -->
     <div class="slide">
         <div class="section-label">Ecosystem Integration</div>
         <h2 class="medium-headline">Works alongside foundation agents</h2>
@@ -709,49 +889,23 @@
         </div>
     </div>
 
-    <!-- Slide 11: Velocity -->
-    <div class="slide center">
-        <h2 class="medium-headline">Development velocity</h2>
-        <p class="subhead">Built with deliberate development principles</p>
-        
-        <div class="velocity-grid">
-            <div class="velocity-stat">
-                <div class="velocity-number">1</div>
-                <div class="velocity-label">Repository</div>
-            </div>
-            <div class="velocity-stat">
-                <div class="velocity-number">3</div>
-                <div class="velocity-label">Agents</div>
-            </div>
-            <div class="velocity-stat">
-                <div class="velocity-number">3</div>
-                <div class="velocity-label">Recipes</div>
-            </div>
-            <div class="velocity-stat">
-                <div class="velocity-number">2</div>
-                <div class="velocity-label">Days</div>
-            </div>
-        </div>
-        
-        <div class="small-text" style="margin-top: 40px;">
-            github.com/ramparte/amplifier-toolkit/bundles/deliberate-development
-        </div>
-    </div>
-
-    <!-- Slide 12: Get Started -->
+    <!-- Slide 15: Get Started -->
     <div class="slide center">
         <div class="section-label">Get Started</div>
         <h2 class="headline">Try deliberate development</h2>
         
         <div class="code-block" style="text-align: left; max-width: 700px; margin-top: 40px;">
 <span class="code-comment"># Add the bundle</span>
-amplifier bundle add git+https://github.com/ramparte/amplifier-toolkit@main
+amplifier bundle add git+https://github.com/ramparte/amplifier-bundle-deliberate-development@main
 
 <span class="code-comment"># Start deliberate planning</span>
 <span class="code-string">"Use deliberate-planner to analyze this feature"</span>
 
 <span class="code-comment"># Or run the full workflow</span>
-<span class="code-string">"Run deliberate-design for: [your feature]"</span></div>
+<span class="code-string">"Run deliberate-design for: [your feature]"</span>
+
+<span class="code-comment"># For default discovery (recommended)</span>
+<span class="code-string">includes: deliberate-development:behaviors/deliberate-awareness</span></div>
         
         <p class="subhead" style="margin-top: 40px;">
             Stop rushing. Start deliberating.

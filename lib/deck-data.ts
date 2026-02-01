@@ -110,6 +110,13 @@ export const decks: Deck[] = [
     href: '/learn/decks/design-intelligence-enhanced.html',
   },
   {
+    id: 'devex',
+    title: 'Developer Experience',
+    description: '',
+    category: 'platform',
+    href: '/learn/decks/devex.html',
+  },
+  {
     id: 'diagrams-tool-deck',
     title: 'Diagrams Tool',
     description: '',
@@ -131,6 +138,20 @@ export const decks: Deck[] = [
     href: '/learn/decks/ecosystem-audit-deck.html',
   },
   {
+    id: 'enterprise',
+    title: 'Enterprise',
+    description: '',
+    category: 'enterprise',
+    href: '/learn/decks/enterprise.html',
+  },
+  {
+    id: 'features',
+    title: 'Features',
+    description: '',
+    category: 'platform',
+    href: '/learn/decks/features.html',
+  },
+  {
     id: 'four-prompts-to-serverless-ai',
     title: 'Four Prompts to Serverless AI | Amplifier Story',
     description: '',
@@ -145,6 +166,13 @@ export const decks: Deck[] = [
     href: '/learn/decks/getting-started-guide.html',
   },
   {
+    id: 'getting-started',
+    title: 'Getting Started',
+    description: '',
+    category: 'intro',
+    href: '/learn/decks/getting-started.html',
+  },
+  {
     id: 'github-actions-tool-deck',
     title: 'GitHub Actions Tool',
     description: '',
@@ -157,6 +185,13 @@ export const decks: Deck[] = [
     description: '',
     category: 'intro',
     href: '/learn/decks/how-amplifier-thinks.html',
+  },
+  {
+    id: 'index-old',
+    title: 'Amplifier Stories',
+    description: '',
+    category: 'platform',
+    href: '/learn/decks/index-old.html',
   },
   {
     id: 'lazy-module-activation-deck',
@@ -194,6 +229,13 @@ export const decks: Deck[] = [
     href: '/learn/decks/notifications-deck.html',
   },
   {
+    id: 'recipe-efficiency-week',
+    title: 'Recipe Efficiency Optimization - Week of Jan 27, 2026',
+    description: '',
+    category: 'platform',
+    href: '/learn/decks/recipe-efficiency-week.html',
+  },
+  {
     id: 'recipes-workflows',
     title: 'Recipes & Workflows',
     description: '',
@@ -215,6 +257,13 @@ export const decks: Deck[] = [
     href: '/learn/decks/shadow-environments-deck.html',
   },
   {
+    id: 'showcase',
+    title: 'Showcase',
+    description: '',
+    category: 'showcase',
+    href: '/learn/decks/showcase.html',
+  },
+  {
     id: 'smoke-test-bundle-deck',
     title: 'Amplifier Smoke Test - Safety Check, Not Debugger',
     description: '',
@@ -229,11 +278,39 @@ export const decks: Deck[] = [
     href: '/learn/decks/stories-bundle-overview.html',
   },
   {
+    id: 'story-making-llms-reliable',
+    title: 'Making LLMs Reliable Through Code',
+    description: '',
+    category: 'platform',
+    href: '/learn/decks/story-making-llms-reliable.html',
+  },
+  {
+    id: 'story-proving-parallel-execution',
+    title: 'Proving Parallel Execution with Timestamps',
+    description: 'How we verified concurrent agent execution through sub-second timestamp correlation',
+    category: 'platform',
+    href: '/learn/decks/story-proving-parallel-execution.html',
+  },
+  {
+    id: 'story-three-branches-one-recipe',
+    title: 'Three Branches, One Recipe',
+    description: '',
+    category: 'platform',
+    href: '/learn/decks/story-three-branches-one-recipe.html',
+  },
+  {
     id: 'superpowers-deck',
     title: 'Superpowers Bundle - TDD-Driven Development for Amplifier',
     description: '',
     category: 'platform',
     href: '/learn/decks/superpowers-deck.html',
+  },
+  {
+    id: 'tools',
+    title: 'Developer Tools',
+    description: '',
+    category: 'tool',
+    href: '/learn/decks/tools.html',
   },
   {
     id: 'vibecoding-deck',
@@ -258,4 +335,4 @@ export const decks: Deck[] = [
   }
 ]
 
-export const lastSynced = '2026-01-31T18:19:25.175Z'
+export const lastSynced = '2026-02-01T01:23:07.841Z'
