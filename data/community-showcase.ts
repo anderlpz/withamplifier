@@ -11,7 +11,7 @@
 
 export interface ShowcaseItem {
   name: string;
-  type: 'bundle' | 'app' | 'provider' | 'tool'; // TODO: Add 'hook' type once icon is designed
+  type: 'bundle' | 'app' | 'provider' | 'tool' | 'hook';
   description: string;
   author: string;
   authorAvatar: string;
@@ -238,7 +238,7 @@ export const showcaseItems: ShowcaseItem[] = [
   },
   {
     name: 'Event Broadcast',
-    type: 'tool', // TODO: Change to 'hook' once icon is designed
+    type: 'hook',
     description: 'Transport-agnostic event broadcasting for streaming UI applications',
     author: 'michaeljabbour',
     authorAvatar: ghAvatar('michaeljabbour'),
@@ -246,7 +246,7 @@ export const showcaseItems: ShowcaseItem[] = [
   },
   {
     name: 'Explanatory Mode',
-    type: 'tool', // TODO: Change to 'hook' once icon is designed
+    type: 'hook',
     description: 'Inject explanatory output style with educational Insight blocks',
     author: 'michaeljabbour',
     authorAvatar: ghAvatar('michaeljabbour'),
