@@ -342,16 +342,11 @@ bundle:
   name: security-reviewer
   version: 1.0.0
 
+includes:
+  - bundle: git+https://github.com/microsoft/amplifier-foundation@main
+
 providers:
-  - anthropic           # Or openai, google, ollama...
-
-tools:
-  - filesystem          # Read code
-  - search              # Find patterns
-  - bash                # Run security tools
-
-behaviors:
-  - secure-by-default   # Security-first mindset
+  - module: provider-anthropic   # Or openai, ollama...
 ---
 
 # Security Reviewer
@@ -365,7 +360,7 @@ You review code for vulnerabilities.
                   </div>
                 </div>
                 <p className="mt-4 text-center lg:text-left text-ink-fog text-sm">
-                  42 lines. That's the entire setup.
+                  19 lines. Tools, hooks, orchestrator — all inherited.
                 </p>
               </div>
             </div>
