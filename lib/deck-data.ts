@@ -141,6 +141,13 @@ export const decks: Deck[] = [
     href: '/stories/decks/amplifier-vscode-extension.html',
   },
   {
+    id: 'app-integration-guide-deck',
+    title: 'Amplifier Application Integration Guide',
+    description: 'From "I understand bundles" to "I\'ve built a production app with Amplifier"',
+    category: 'intro',
+    href: '/stories/decks/app-integration-guide-deck.html',
+  },
+  {
     id: 'architecture',
     title: 'Architecture &amp; Philosophy',
     description: 'The design principles, technical architecture, and philosophical foundations that make Amplifier fundamentally different. For engineers who want to understand not just what, but why.',
@@ -639,4 +646,4 @@ export const decks: Deck[] = [
   }
 ]
 
-export const lastSynced = '2026-02-27T00:15:26.396Z'
+export const lastSynced = '2026-02-27T00:31:32.396Z'
