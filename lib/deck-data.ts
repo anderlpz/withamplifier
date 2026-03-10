@@ -512,6 +512,13 @@ export const decks: Deck[] = [
     href: '/stories/decks/notifications-deck.html',
   },
   {
+    id: 'parallax-discovery',
+    title: 'Parallax Discovery — Multi-Agent Deep Investigation',
+    description: 'Multi-Agent Deep Investigation for Complex Systems',
+    category: 'platform',
+    href: '/stories/decks/parallax-discovery.html',
+  },
+  {
     id: 'polyglot-amplifier-deck',
     title: 'Polyglot Amplifier — From Python to Rust (and Beyond)',
     description: 'How a language-agnostic LSP architecture turned a Python tool into a polyglot code intelligence platform.',
@@ -758,4 +765,4 @@ export const decks: Deck[] = [
   }
 ]
 
-export const lastSynced = '2026-03-10T12:37:39.625Z'
+export const lastSynced = '2026-03-10T15:43:33.704Z'
