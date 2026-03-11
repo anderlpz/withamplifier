@@ -127,6 +127,13 @@ export const decks: Deck[] = [
     href: '/stories/decks/amplifier-in-action.html',
   },
   {
+    id: 'amplifier-meets-the-desktop',
+    title: 'Amplifier Meets the Desktop: A Python Sidecar Story',
+    description: 'From PyInstaller binaries to portable Python distributions',
+    category: 'showcase',
+    href: '/stories/decks/amplifier-meets-the-desktop.html',
+  },
+  {
     id: 'amplifier-modes-deck',
     title: 'Amplifier Modes',
     description: 'Runtime behavior overlays that modify how the assistant operates &mdash; through context injection, tool moderation, and visual feedback',
@@ -779,4 +786,4 @@ export const decks: Deck[] = [
   }
 ]
 
-export const lastSynced = '2026-03-11T22:06:50.532Z'
+export const lastSynced = '2026-03-11T22:07:13.710Z'
