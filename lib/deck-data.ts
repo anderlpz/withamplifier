@@ -666,6 +666,13 @@ export const decks: Deck[] = [
     href: '/stories/decks/story-spawn-events.html',
   },
   {
+    id: 'story-the-seventh-layer',
+    title: 'The Seventh Layer — Cognitive Routing in Agent Pipelines',
+    description: '',
+    category: 'platform',
+    href: '/stories/decks/story-the-seventh-layer.html',
+  },
+  {
     id: 'story-three-branches-one-recipe',
     title: 'Three Branches, One Recipe — Amplifier Stories',
     description: 'Merging parallel development into a unified recipe system',
@@ -772,4 +779,4 @@ export const decks: Deck[] = [
   }
 ]
 
-export const lastSynced = '2026-03-11T18:41:31.702Z'
+export const lastSynced = '2026-03-11T22:06:50.532Z'
