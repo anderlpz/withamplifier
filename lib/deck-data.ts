@@ -442,6 +442,13 @@ export const decks: Deck[] = [
     href: '/stories/decks/four-prompts-to-serverless-ai.html',
   },
   {
+    id: 'from-bland-to-brilliant.slides',
+    title: 'From Bland to Brilliant',
+    description: '',
+    category: 'platform',
+    href: '/stories/decks/from-bland-to-brilliant.slides.html',
+  },
+  {
     id: 'getting-started-guide',
     title: 'Getting Started with Amplifier',
     description: 'From install to productive in 5 minutes',
@@ -905,4 +912,4 @@ export const decks: Deck[] = [
   }
 ]
 
-export const lastSynced = '2026-03-11T22:21:11.829Z'
+export const lastSynced = '2026-03-11T23:51:45.078Z'
