@@ -85,6 +85,13 @@ export const decks: Deck[] = [
     href: '/stories/decks/20260227-nano-banana-pro-visual-intelligence-for-ai-sessions.html',
   },
   {
+    id: '20260305-engram-lite-persistent-memory-for-ai-agents',
+    title: 'engram-lite: Persistent Memory for AI Agents',
+    description: 'Persistent, vector-backed memory for Claude Code&nbsp;and&nbsp;Amplifier agents. Local SQLite. Dual-route retrieval. Silent by&nbsp;design.',
+    category: 'platform',
+    href: '/stories/decks/20260305-engram-lite-persistent-memory-for-ai-agents.html',
+  },
+  {
     id: '400-tabs-to-100',
     title: '400 Tabs to 100: How Amplifier Manages Your Browser',
     description: 'How Amplifier manages your browser &mdash; without anyone telling it how',
@@ -926,4 +933,4 @@ export const decks: Deck[] = [
   }
 ]
 
-export const lastSynced = '2026-03-13T16:17:05.592Z'
+export const lastSynced = '2026-03-13T16:20:46.888Z'
