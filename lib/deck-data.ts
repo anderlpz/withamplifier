@@ -806,6 +806,13 @@ export const decks: Deck[] = [
     href: '/stories/decks/superpowers-deck.html',
   },
   {
+    id: 'superpowers-v2-announcement',
+    title: 'Superpowers v2 — Major Methodology Refresh',
+    description: 'Major Methodology Refresh',
+    category: 'devex',
+    href: '/stories/decks/superpowers-v2-announcement.html',
+  },
+  {
     id: 'teaching-ai-taste-case-study',
     title: 'Teaching AI to Have Taste — An Amplifier Case Study',
     description: 'How a brainstorm session turned a passive design archive into a self-improving intelligence system &mdash; in one afternoon.',
@@ -912,4 +919,4 @@ export const decks: Deck[] = [
   }
 ]
 
-export const lastSynced = '2026-03-13T12:36:03.348Z'
+export const lastSynced = '2026-03-13T15:47:07.097Z'
