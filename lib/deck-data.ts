@@ -295,6 +295,13 @@ export const decks: Deck[] = [
     href: '/stories/decks/browser-bundles-announcement.html',
   },
   {
+    id: 'builder-coach-metacognitive-coaching',
+    title: 'Becoming a Better AI Builder &mdash; One Session at a Time',
+    description: 'Metacognitive coaching for AI builders &mdash; a system that evaluates the person who built it',
+    category: 'platform',
+    href: '/stories/decks/builder-coach-metacognitive-coaching.html',
+  },
+  {
     id: 'bundle-orchestration-deck',
     title: 'Bundle Orchestration — How Amplifier Bundles Compose and Load',
     description: 'How Amplifier bundles compose, merge, and load — the engine that makes layered agent systems possible',
@@ -919,4 +926,4 @@ export const decks: Deck[] = [
   }
 ]
 
-export const lastSynced = '2026-03-13T15:47:07.097Z'
+export const lastSynced = '2026-03-13T16:17:05.592Z'
