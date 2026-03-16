@@ -193,6 +193,18 @@ function parseDecks() {
     
     const isNew = isNewDeck(slug, history, overrides, expirationDays)
     
+    // Determine published date: filename prefix > firstSeen from git history
+    let publishedDate = null
+    const datePrefix = slug.match(/^(\d{4}-\d{2}-\d{2})/)
+    const compactDatePrefix = slug.match(/^(\d{4})(\d{2})(\d{2})/)
+    if (datePrefix) {
+      publishedDate = `${datePrefix[1]}T00:00:00.000Z`
+    } else if (compactDatePrefix) {
+      publishedDate = `${compactDatePrefix[1]}-${compactDatePrefix[2]}-${compactDatePrefix[3]}T00:00:00.000Z`
+    } else if (history.firstSeen[slug]) {
+      publishedDate = new Date(history.firstSeen[slug]).toISOString()
+    }
+
     decks.push({
       id: slug,
       title,
@@ -200,6 +212,7 @@ function parseDecks() {
       category,
       href: `/stories/decks/${file}`,
       isNew,
+      ...(publishedDate && { publishedDate }),
     })
   }
   
@@ -213,12 +226,13 @@ function generateTypeScript(decks) {
   const deckEntries = decks.map(d => {
     const desc = d.description.replace(/'/g, "\\'").replace(/\n/g, ' ')
     const isNewField = d.isNew ? `\n    isNew: true,` : ''
+    const dateField = d.publishedDate ? `\n    publishedDate: '${d.publishedDate}',` : ''
     return `  {
     id: '${d.id}',
     title: '${d.title.replace(/'/g, "\\'")}',
     description: '${desc}',
     category: '${d.category}',
-    href: '${d.href}',${isNewField}
+    href: '${d.href}',${isNewField}${dateField}
   }`
   }).join(',\n')
 

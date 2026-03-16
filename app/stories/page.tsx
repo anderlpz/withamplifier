@@ -19,9 +19,15 @@ const categoryFilters: { value: DeckCategory | 'all'; label: string }[] = [
 export default function StoriesPage() {
   const [activeFilter, setActiveFilter] = useState<DeckCategory | 'all'>('all')
 
-  const filteredDecks = activeFilter === 'all'
+  const filteredDecks = (activeFilter === 'all'
     ? decks.filter(deck => deck.category !== 'intro')
     : decks.filter(deck => deck.category === activeFilter)
+  ).sort((a, b) => {
+    // Most recent first; decks without dates sink to the bottom
+    const da = a.publishedDate ? new Date(a.publishedDate).getTime() : 0
+    const db = b.publishedDate ? new Date(b.publishedDate).getTime() : 0
+    return db - da
+  })
 
   return (
     <div className="pt-16">

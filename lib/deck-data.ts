@@ -13,6 +13,7 @@ export const decks: Deck[] = [
     description: 'The composition model that makes AI agents as simple as YAML and as powerful as your imagination',
     category: 'platform',
     href: '/stories/decks/14-lines-to-infinity.html',
+    publishedDate: '2026-03-16T20:04:11.853Z',
   },
   {
     id: '2026-02-20-amplifier-docs-automation',
@@ -20,6 +21,7 @@ export const decks: Deck[] = [
     description: '',
     category: 'platform',
     href: '/stories/decks/2026-02-20-amplifier-docs-automation.html',
+    publishedDate: '2026-02-20T00:00:00.000Z',
   },
   {
     id: '2026-02-24-agent-model-routing',
@@ -27,6 +29,7 @@ export const decks: Deck[] = [
     description: 'The right model for every agent, automatically.',
     category: 'platform',
     href: '/stories/decks/2026-02-24-agent-model-routing.html',
+    publishedDate: '2026-02-24T00:00:00.000Z',
   },
   {
     id: '20260130-amplifier-sdk',
@@ -34,6 +37,7 @@ export const decks: Deck[] = [
     description: 'Building on Amplifier just got a whole lot easier. TypeScript & Python.',
     category: 'platform',
     href: '/stories/decks/20260130-amplifier-sdk.html',
+    publishedDate: '2026-01-30T00:00:00.000Z',
   },
   {
     id: '20260130-source-driven-content-generation',
@@ -41,6 +45,7 @@ export const decks: Deck[] = [
     description: 'Building a system where website content is always accurate, always traceable, and always validated',
     category: 'platform',
     href: '/stories/decks/20260130-source-driven-content-generation.html',
+    publishedDate: '2026-01-30T00:00:00.000Z',
   },
   {
     id: '20260213-artifact-viewer-building-blind',
@@ -48,6 +53,7 @@ export const decks: Deck[] = [
     description: 'Building Blind at 1,538 Lines',
     category: 'showcase',
     href: '/stories/decks/20260213-artifact-viewer-building-blind.html',
+    publishedDate: '2026-02-13T00:00:00.000Z',
   },
   {
     id: '20260226-command-center',
@@ -55,6 +61,7 @@ export const decks: Deck[] = [
     description: 'Four devices. Dozens of broken&nbsp;projects. One hour to fix&nbsp;everything.',
     category: 'showcase',
     href: '/stories/decks/20260226-command-center.html',
+    publishedDate: '2026-02-26T00:00:00.000Z',
   },
   {
     id: '20260226-the-long-session',
@@ -62,6 +69,7 @@ export const decks: Deck[] = [
     description: 'One session. Four hours. Each problem solved revealed the&nbsp;next.',
     category: 'platform',
     href: '/stories/decks/20260226-the-long-session.html',
+    publishedDate: '2026-02-26T00:00:00.000Z',
   },
   {
     id: '20260227-amplifier-module-auto-title-terminal-clarity',
@@ -69,6 +77,7 @@ export const decks: Deck[] = [
     description: 'One printf. Zero runtime overhead. Infinite clarity across every AI session you run simultaneously.',
     category: 'platform',
     href: '/stories/decks/20260227-amplifier-module-auto-title-terminal-clarity.html',
+    publishedDate: '2026-02-27T00:00:00.000Z',
   },
   {
     id: '20260227-amplifier-qna-bundle-structured-requirements-gathering',
@@ -76,6 +85,7 @@ export const decks: Deck[] = [
     description: '',
     category: 'platform',
     href: '/stories/decks/20260227-amplifier-qna-bundle-structured-requirements-gathering.html',
+    publishedDate: '2026-02-27T00:00:00.000Z',
   },
   {
     id: '20260227-nano-banana-pro-visual-intelligence-for-ai-sessions',
@@ -83,6 +93,7 @@ export const decks: Deck[] = [
     description: 'You describe images with words. Your AI generates code it cannot see. The gap between mockup and implementation is pure guesswork.',
     category: 'platform',
     href: '/stories/decks/20260227-nano-banana-pro-visual-intelligence-for-ai-sessions.html',
+    publishedDate: '2026-02-27T00:00:00.000Z',
   },
   {
     id: '20260305-engram-lite-persistent-memory-for-ai-agents',
@@ -90,6 +101,7 @@ export const decks: Deck[] = [
     description: 'Persistent, vector-backed memory for Claude Code&nbsp;and&nbsp;Amplifier agents. Local SQLite. Dual-route retrieval. Silent by&nbsp;design.',
     category: 'platform',
     href: '/stories/decks/20260305-engram-lite-persistent-memory-for-ai-agents.html',
+    publishedDate: '2026-03-05T00:00:00.000Z',
   },
   {
     id: '400-tabs-to-100',
@@ -97,6 +109,7 @@ export const decks: Deck[] = [
     description: 'How Amplifier manages your browser &mdash; without anyone telling it how',
     category: 'intro',
     href: '/stories/decks/400-tabs-to-100.html',
+    publishedDate: '2026-03-16T20:04:11.853Z',
   },
   {
     id: 'a2a-bundle-deck',
@@ -104,6 +117,7 @@ export const decks: Deck[] = [
     description: 'Your Amplifier sessions can now talk to each other. Same machine. Same network. Real HTTP.',
     category: 'platform',
     href: '/stories/decks/a2a-bundle-deck.html',
+    publishedDate: '2026-02-24T20:32:11.513Z',
   },
   {
     id: 'a2a-context-management-story',
@@ -111,6 +125,7 @@ export const decks: Deck[] = [
     description: 'How Amplifier\'s directory-aware context and A2A (Agent-to-Agent — a protocol for autonomous inter-agent communication) combine to create focused, collaborative multi-agent workspaces. One project. Many agents. Each with the right context — and a way to talk to each other.',
     category: 'intro',
     href: '/stories/decks/a2a-context-management-story.html',
+    publishedDate: '2026-03-16T20:04:11.853Z',
   },
   {
     id: 'agents-behavior-capabilities',
@@ -118,6 +133,7 @@ export const decks: Deck[] = [
     description: 'From escape hatch to orchestration primitive. Delegation reimagined.',
     category: 'platform',
     href: '/stories/decks/agents-behavior-capabilities.html',
+    publishedDate: '2026-01-31T12:27:03.000Z',
   },
   {
     id: 'ai-as-a-document',
@@ -125,6 +141,7 @@ export const decks: Deck[] = [
     description: 'What happens when you put an AI agent framework inside a single HTML file',
     category: 'platform',
     href: '/stories/decks/ai-as-a-document.html',
+    publishedDate: '2026-03-16T20:04:11.853Z',
   },
   {
     id: 'ampbrowser-debugging-story',
@@ -132,6 +149,7 @@ export const decks: Deck[] = [
     description: 'How a "broken HTTPS" bug turned out to be a phantom DNS problem — and how Amplifier\'s multi-agent debugging traced it across three sessions, two machines, and a disconnected iPhone.',
     category: 'intro',
     href: '/stories/decks/ampbrowser-debugging-story.html',
+    publishedDate: '2026-03-16T20:04:11.853Z',
   },
   {
     id: 'amplifier-app-benchmarks-story',
@@ -139,6 +157,7 @@ export const decks: Deck[] = [
     description: 'The amplifier-app-benchmarks Story',
     category: 'showcase',
     href: '/stories/decks/amplifier-app-benchmarks-story.html',
+    publishedDate: '2026-02-02T22:52:33.361Z',
   },
   {
     id: 'amplifier-architecture-deck',
@@ -146,6 +165,7 @@ export const decks: Deck[] = [
     description: 'A Linux kernel-inspired, modular AI agent framework',
     category: 'platform',
     href: '/stories/decks/amplifier-architecture-deck.html',
+    publishedDate: '2026-02-13T00:50:15.791Z',
   },
   {
     id: 'amplifier-bundle-containers',
@@ -153,6 +173,7 @@ export const decks: Deck[] = [
     description: 'General-purpose container management for AI agents. Spin up isolated Docker/Podman environments complete with credential forwarding, smart language defaults, and dotfiles integration.',
     category: 'tool',
     href: '/stories/decks/amplifier-bundle-containers.html',
+    publishedDate: '2026-02-16T23:32:42.863Z',
   },
   {
     id: 'amplifier-chat',
@@ -160,6 +181,7 @@ export const decks: Deck[] = [
     description: 'Queue messages while your AI works.',
     category: 'platform',
     href: '/stories/decks/amplifier-chat.html',
+    publishedDate: '2026-03-16T20:04:11.853Z',
   },
   {
     id: 'amplifier-eval-results-story-20260208',
@@ -167,6 +189,7 @@ export const decks: Deck[] = [
     description: 'How a rigorous benchmarking infrastructure gave us the confidence to understand why Amplifier Foundation leads across 58 benchmark tasks.',
     category: 'platform',
     href: '/stories/decks/amplifier-eval-results-story-20260208.html',
+    publishedDate: '2026-03-16T20:04:11.853Z',
   },
   {
     id: 'amplifier-forge-deck',
@@ -174,6 +197,7 @@ export const decks: Deck[] = [
     description: 'Two parallel tracks of exploration: Restoration of a working form factor and Evolution toward what comes next.',
     category: 'platform',
     href: '/stories/decks/amplifier-forge-deck.html',
+    publishedDate: '2026-02-02T22:52:33.361Z',
   },
   {
     id: 'amplifier-full-stack-deployed-app',
@@ -181,6 +205,7 @@ export const decks: Deck[] = [
     description: 'How a single developer built a production-ready application with AI assistance',
     category: 'platform',
     href: '/stories/decks/amplifier-full-stack-deployed-app.html',
+    publishedDate: '2026-02-02T22:52:33.361Z',
   },
   {
     id: 'amplifier-in-action',
@@ -188,6 +213,7 @@ export const decks: Deck[] = [
     description: 'How cross-session memory and agent coordination turn fragments into finished work',
     category: 'platform',
     href: '/stories/decks/amplifier-in-action.html',
+    publishedDate: '2026-01-30T06:36:15.000Z',
   },
   {
     id: 'amplifier-meets-the-desktop',
@@ -195,6 +221,7 @@ export const decks: Deck[] = [
     description: 'From PyInstaller binaries to portable Python distributions',
     category: 'showcase',
     href: '/stories/decks/amplifier-meets-the-desktop.html',
+    publishedDate: '2026-03-16T20:04:11.853Z',
   },
   {
     id: 'amplifier-modes-deck',
@@ -202,6 +229,7 @@ export const decks: Deck[] = [
     description: 'Runtime behavior overlays that modify how the assistant operates &mdash; through context injection, tool moderation, and visual feedback',
     category: 'platform',
     href: '/stories/decks/amplifier-modes-deck.html',
+    publishedDate: '2026-01-28T23:04:56.000Z',
   },
   {
     id: 'amplifier-platform-evolution-story',
@@ -209,6 +237,7 @@ export const decks: Deck[] = [
     description: 'Infrastructure, Quality & Pragmatic Decisions',
     category: 'platform',
     href: '/stories/decks/amplifier-platform-evolution-story.html',
+    publishedDate: '2026-03-16T20:04:11.853Z',
   },
   {
     id: 'amplifier-swarm-deck',
@@ -216,6 +245,7 @@ export const decks: Deck[] = [
     description: 'Parallel task execution with real-time monitoring',
     category: 'platform',
     href: '/stories/decks/amplifier-swarm-deck.html',
+    publishedDate: '2026-01-30T06:36:15.000Z',
   },
   {
     id: 'amplifier-tui-showcase',
@@ -223,6 +253,7 @@ export const decks: Deck[] = [
     description: 'A terminal interface that makes AI agent work visible, navigable, and beautiful.',
     category: 'showcase',
     href: '/stories/decks/amplifier-tui-showcase.html',
+    publishedDate: '2026-02-10T17:51:20.322Z',
   },
   {
     id: 'amplifier-ux-analyzer',
@@ -230,6 +261,7 @@ export const decks: Deck[] = [
     description: 'Computer vision for UI understanding. Extracts colors, layout, elements, and text from screenshots so AI agents can see interfaces.',
     category: 'platform',
     href: '/stories/decks/amplifier-ux-analyzer.html',
+    publishedDate: '2026-02-02T22:52:33.361Z',
   },
   {
     id: 'amplifier-voice-deck',
@@ -237,6 +269,7 @@ export const decks: Deck[] = [
     description: 'A WebRTC voice assistant built on Amplifier. Three architectures. 30 commits. One developer.',
     category: 'platform',
     href: '/stories/decks/amplifier-voice-deck.html',
+    publishedDate: '2026-02-13T00:50:15.791Z',
   },
   {
     id: 'amplifier-vscode-extension',
@@ -244,6 +277,7 @@ export const decks: Deck[] = [
     description: 'Native AI assistance in your IDE, powered by the modular Amplifier agent framework',
     category: 'platform',
     href: '/stories/decks/amplifier-vscode-extension.html',
+    publishedDate: '2026-02-02T22:52:33.361Z',
   },
   {
     id: 'app-integration-guide-deck',
@@ -251,6 +285,7 @@ export const decks: Deck[] = [
     description: 'From "I understand bundles" to "I\'ve built a production app with Amplifier"',
     category: 'intro',
     href: '/stories/decks/app-integration-guide-deck.html',
+    publishedDate: '2026-03-16T20:04:11.853Z',
   },
   {
     id: 'architecture',
@@ -258,6 +293,7 @@ export const decks: Deck[] = [
     description: 'The design principles, technical architecture, and philosophical foundations that make Amplifier fundamentally different. For engineers who want to understand not just what, but why.',
     category: 'platform',
     href: '/stories/decks/architecture.html',
+    publishedDate: '2026-03-16T20:04:11.853Z',
   },
   {
     id: 'attention-firewall-deck',
@@ -265,6 +301,7 @@ export const decks: Deck[] = [
     description: 'Rule-based Windows notification filtering. Surfaces what matters. Blocks what doesn\'t.',
     category: 'platform',
     href: '/stories/decks/attention-firewall-deck.html',
+    publishedDate: '2026-01-28T23:04:56.000Z',
   },
   {
     id: 'attractor-nlspec-deck',
@@ -272,6 +309,7 @@ export const decks: Deck[] = [
     description: 'StrongDM published three natural language specifications for an AI workflow platform. They shipped zero code. Sam handed the specs to Amplifier and built the entire thing.',
     category: 'platform',
     href: '/stories/decks/attractor-nlspec-deck.html',
+    publishedDate: '2026-03-16T20:04:11.853Z',
   },
   {
     id: 'azure-zap-story',
@@ -279,6 +317,7 @@ export const decks: Deck[] = [
     description: 'Multi-Agent Deployment Orchestration',
     category: 'platform',
     href: '/stories/decks/azure-zap-story.html',
+    publishedDate: '2026-02-03T14:21:25.995Z',
   },
   {
     id: 'bbs-agent-collaboration',
@@ -286,6 +325,7 @@ export const decks: Deck[] = [
     description: 'What happens when you give AI agents a shared bulletin board and let them collaborate like it\'s 1989?',
     category: 'showcase',
     href: '/stories/decks/bbs-agent-collaboration.html',
+    publishedDate: '2026-01-30T06:36:15.000Z',
   },
   {
     id: 'best-practices-patterns',
@@ -293,6 +333,7 @@ export const decks: Deck[] = [
     description: 'Verified patterns from the Amplifier Foundation codebase',
     category: 'intro',
     href: '/stories/decks/best-practices-patterns.html',
+    publishedDate: '2026-01-28T23:04:56.000Z',
   },
   {
     id: 'browser-automation-deck',
@@ -300,6 +341,7 @@ export const decks: Deck[] = [
     description: '"When fetch isn\'t enough"',
     category: 'platform',
     href: '/stories/decks/browser-automation-deck.html',
+    publishedDate: '2026-02-02T22:52:33.361Z',
   },
   {
     id: 'browser-bundles-announcement',
@@ -307,6 +349,7 @@ export const decks: Deck[] = [
     description: 'Introducing webruntime and webllm bundles for fully serverless AI',
     category: 'intro',
     href: '/stories/decks/browser-bundles-announcement.html',
+    publishedDate: '2026-01-30T06:36:15.000Z',
   },
   {
     id: 'builder-coach-metacognitive-coaching',
@@ -314,6 +357,7 @@ export const decks: Deck[] = [
     description: 'Metacognitive coaching for AI builders &mdash; a system that evaluates the person who built it',
     category: 'platform',
     href: '/stories/decks/builder-coach-metacognitive-coaching.html',
+    publishedDate: '2026-03-16T20:04:11.853Z',
   },
   {
     id: 'bundle-orchestration-deck',
@@ -321,6 +365,7 @@ export const decks: Deck[] = [
     description: 'How Amplifier bundles compose, merge, and load — the engine that makes layered agent systems possible',
     category: 'intro',
     href: '/stories/decks/bundle-orchestration-deck.html',
+    publishedDate: '2026-02-02T22:52:33.361Z',
   },
   {
     id: 'bundles-and-agents',
@@ -328,6 +373,7 @@ export const decks: Deck[] = [
     description: 'How Amplifier\'s composition system works',
     category: 'intro',
     href: '/stories/decks/bundles-and-agents.html',
+    publishedDate: '2026-01-28T23:04:56.000Z',
   },
   {
     id: 'canvas-platform-trilogy-deck',
@@ -335,6 +381,7 @@ export const decks: Deck[] = [
     description: '3 Phases · 10 Sessions · 3 Crashes · Zero Work Lost A two-day architectural overhaul with Amplifier',
     category: 'platform',
     href: '/stories/decks/canvas-platform-trilogy-deck.html',
+    publishedDate: '2026-03-16T20:04:11.853Z',
   },
   {
     id: 'cli-quality-collaboration',
@@ -342,6 +389,7 @@ export const decks: Deck[] = [
     description: 'How Diego & Samuel used Amplifier to identify, debug, review, and fix CLI issues — improving the entire stack',
     category: 'platform',
     href: '/stories/decks/cli-quality-collaboration.html',
+    publishedDate: '2026-02-02T22:52:33.361Z',
   },
   {
     id: 'composition-all-the-way-down',
@@ -349,6 +397,7 @@ export const decks: Deck[] = [
     description: 'How markdown files become AI agent systems — the architecture of amplifier-foundation',
     category: 'platform',
     href: '/stories/decks/composition-all-the-way-down.html',
+    publishedDate: '2026-03-16T20:04:11.853Z',
   },
   {
     id: 'context-inheritance-deck',
@@ -356,6 +405,7 @@ export const decks: Deck[] = [
     description: 'Smarter agent delegation through two-parameter context control',
     category: 'platform',
     href: '/stories/decks/context-inheritance-deck.html',
+    publishedDate: '2026-01-28T23:04:56.000Z',
   },
   {
     id: 'context-intelligence-week-deck',
@@ -363,6 +413,7 @@ export const decks: Deck[] = [
     description: 'Building AI development infrastructure &mdash; and watching it start to build itself.',
     category: 'platform',
     href: '/stories/decks/context-intelligence-week-deck.html',
+    publishedDate: '2026-03-16T20:04:11.853Z',
   },
   {
     id: 'cortex-amplifier-presentation',
@@ -370,6 +421,7 @@ export const decks: Deck[] = [
     description: 'Personal AI assistant platform &mdash; manages attention, automates tasks, acts on your behalf across devices.',
     category: 'enterprise',
     href: '/stories/decks/cortex-amplifier-presentation.html',
+    publishedDate: '2026-01-28T23:04:56.000Z',
   },
   {
     id: 'cost-optimization-deck',
@@ -377,6 +429,7 @@ export const decks: Deck[] = [
     description: 'Prompt caching, per-step model selection, and loop architecture. Real infrastructure with measurable impact.',
     category: 'devex',
     href: '/stories/decks/cost-optimization-deck.html',
+    publishedDate: '2026-01-28T23:04:56.000Z',
   },
   {
     id: 'cross-session-intelligence-deck',
@@ -384,6 +437,7 @@ export const decks: Deck[] = [
     description: 'When Your TUI Remembers Everything',
     category: 'platform',
     href: '/stories/decks/cross-session-intelligence-deck.html',
+    publishedDate: '2026-02-13T00:50:15.791Z',
   },
   {
     id: 'database-tool-deck',
@@ -391,6 +445,7 @@ export const decks: Deck[] = [
     description: 'Safe SQL queries for AI agents. Enterprise-grade data access without the risk.',
     category: 'tool',
     href: '/stories/decks/database-tool-deck.html',
+    publishedDate: '2026-01-28T23:04:56.000Z',
   },
   {
     id: 'deliberate-development-deck',
@@ -398,6 +453,7 @@ export const decks: Deck[] = [
     description: 'A decomposition-first approach to building software with AI assistance',
     category: 'devex',
     href: '/stories/decks/deliberate-development-deck.html',
+    publishedDate: '2026-01-28T23:04:56.000Z',
   },
   {
     id: 'design-intelligence-enhanced-deck',
@@ -405,6 +461,7 @@ export const decks: Deck[] = [
     description: '7 specialized AI agents that transform raw design ideas into refined solutions meeting a 9.5/10 quality standard',
     category: 'platform',
     href: '/stories/decks/design-intelligence-enhanced-deck.html',
+    publishedDate: '2026-02-02T22:52:33.361Z',
   },
   {
     id: 'design-intelligence-feedback',
@@ -412,6 +469,7 @@ export const decks: Deck[] = [
     description: 'Adding expert observation to automated validation',
     category: 'platform',
     href: '/stories/decks/design-intelligence-feedback.html',
+    publishedDate: '2026-02-02T22:52:33.361Z',
   },
   {
     id: 'dev-machine-22-features-one-day',
@@ -419,6 +477,7 @@ export const decks: Deck[] = [
     description: '',
     category: 'platform',
     href: '/stories/decks/dev-machine-22-features-one-day.html',
+    publishedDate: '2026-03-16T20:04:11.853Z',
   },
   {
     id: 'diagrams-tool-deck',
@@ -426,6 +485,7 @@ export const decks: Deck[] = [
     description: 'Generate diagrams from natural language. Visual communication for AI agents.',
     category: 'tool',
     href: '/stories/decks/diagrams-tool-deck.html',
+    publishedDate: '2026-01-28T23:04:56.000Z',
   },
   {
     id: 'distributed-ai-network-deck',
@@ -433,6 +493,7 @@ export const decks: Deck[] = [
     description: 'While Gaming with My Kids',
     category: 'platform',
     href: '/stories/decks/distributed-ai-network-deck.html',
+    publishedDate: '2026-01-30T06:36:15.000Z',
   },
   {
     id: 'dot-graph-bundle-deck',
@@ -440,6 +501,7 @@ export const decks: Deck[] = [
     description: 'First-class DOT/Graphviz infrastructure for the Amplifier ecosystem',
     category: 'platform',
     href: '/stories/decks/dot-graph-bundle-deck.html',
+    publishedDate: '2026-03-16T20:04:11.853Z',
   },
   {
     id: 'ecosystem-audit-deck',
@@ -447,6 +509,7 @@ export const decks: Deck[] = [
     description: '67 repos. Microsoft OSS compliance. One command.',
     category: 'platform',
     href: '/stories/decks/ecosystem-audit-deck.html',
+    publishedDate: '2026-01-28T23:04:56.000Z',
   },
   {
     id: 'eval-recipes-v0.0.28-v0.0.31-release-deck',
@@ -454,6 +517,7 @@ export const decks: Deck[] = [
     description: 'Comparison benchmarking, streamlined interfaces, and enhanced debugging capabilities',
     category: 'platform',
     href: '/stories/decks/eval-recipes-v0.0.28-v0.0.31-release-deck.html',
+    publishedDate: '2026-02-02T22:52:33.361Z',
   },
   {
     id: 'exo-protocol-deck',
@@ -461,6 +525,7 @@ export const decks: Deck[] = [
     description: 'Expressed Ownership&mdash;reclaiming human expression in the age of AI.',
     category: 'platform',
     href: '/stories/decks/exo-protocol-deck.html',
+    publishedDate: '2026-02-02T22:52:33.361Z',
   },
   {
     id: 'four-prompts-to-serverless-ai',
@@ -468,6 +533,7 @@ export const decks: Deck[] = [
     description: 'How a casual question became a fully browser-based AI application',
     category: 'showcase',
     href: '/stories/decks/four-prompts-to-serverless-ai.html',
+    publishedDate: '2026-01-30T06:36:15.000Z',
   },
   {
     id: 'from-bland-to-brilliant.slides',
@@ -475,6 +541,7 @@ export const decks: Deck[] = [
     description: '',
     category: 'platform',
     href: '/stories/decks/from-bland-to-brilliant.slides.html',
+    publishedDate: '2026-03-16T20:04:11.853Z',
   },
   {
     id: 'getting-started-guide',
@@ -482,6 +549,7 @@ export const decks: Deck[] = [
     description: 'From install to productive in 5 minutes',
     category: 'intro',
     href: '/stories/decks/getting-started-guide.html',
+    publishedDate: '2026-01-28T23:04:56.000Z',
   },
   {
     id: 'getting-started',
@@ -489,6 +557,7 @@ export const decks: Deck[] = [
     description: 'New to Amplifier? Start here. Learn the basics, understand the concepts, and get productive quickly.',
     category: 'intro',
     href: '/stories/decks/getting-started.html',
+    publishedDate: '2026-02-12T18:49:09.213Z',
   },
   {
     id: 'github-actions-tool-deck',
@@ -496,6 +565,7 @@ export const decks: Deck[] = [
     description: 'CI/CD integration for AI agents. Turn agents into DevOps partners.',
     category: 'tool',
     href: '/stories/decks/github-actions-tool-deck.html',
+    publishedDate: '2026-01-28T23:04:56.000Z',
   },
   {
     id: 'gpt-5-4-ecosystem-support',
@@ -503,6 +573,7 @@ export const decks: Deck[] = [
     description: '',
     category: 'platform',
     href: '/stories/decks/gpt-5-4-ecosystem-support.html',
+    publishedDate: '2026-03-16T20:04:11.853Z',
   },
   {
     id: 'kepler-refactor-deck',
@@ -510,6 +581,7 @@ export const decks: Deck[] = [
     description: '606 lines of dead code removed. 104 new tests added. A disciplined, AI-assisted 5-phase migration.',
     category: 'platform',
     href: '/stories/decks/kepler-refactor-deck.html',
+    publishedDate: '2026-02-13T00:50:15.791Z',
   },
   {
     id: 'language-dev-bundles-deck',
@@ -517,6 +589,7 @@ export const decks: Deck[] = [
     description: 'Unified quality + LSP tooling for Python, Rust, and TypeScript. Agents don\'t just navigate code now — they check their own work as they go.',
     category: 'intro',
     href: '/stories/decks/language-dev-bundles-deck.html',
+    publishedDate: '2026-02-17T00:19:47.027Z',
   },
   {
     id: 'lazy-module-activation-deck',
@@ -524,6 +597,7 @@ export const decks: Deck[] = [
     description: 'Just-in-time tool provisioning for spawned agents',
     category: 'tool',
     href: '/stories/decks/lazy-module-activation-deck.html',
+    publishedDate: '2026-01-28T23:04:56.000Z',
   },
   {
     id: 'lessons-in-developing-multi-agent-orchestration',
@@ -531,6 +605,15 @@ export const decks: Deck[] = [
     description: 'How process discipline and design investment transformed AI development',
     category: 'platform',
     href: '/stories/decks/lessons-in-developing-multi-agent-orchestration.html',
+    publishedDate: '2026-03-16T20:04:11.853Z',
+  },
+  {
+    id: 'lifeos-architecture-diagram',
+    title: 'LifeOS Architecture',
+    description: 'How a personal knowledge vault processes life data, builds relationship intelligence, and keeps everything local-first.',
+    category: 'platform',
+    href: '/stories/decks/lifeos-architecture-diagram.html',
+    publishedDate: '2026-03-16T19:49:13.051Z',
   },
   {
     id: 'longbuilder-deck',
@@ -538,6 +621,7 @@ export const decks: Deck[] = [
     description: 'Phase-based orchestration for long-term projects',
     category: 'platform',
     href: '/stories/decks/longbuilder-deck.html',
+    publishedDate: '2026-01-30T06:36:15.000Z',
   },
   {
     id: 'm365-collaboration-journey',
@@ -545,6 +629,7 @@ export const decks: Deck[] = [
     description: 'From vision to working system &mdash; with Amplifier as my co-developer',
     category: 'enterprise',
     href: '/stories/decks/m365-collaboration-journey.html',
+    publishedDate: '2026-02-02T22:52:33.361Z',
   },
   {
     id: 'm365-enterprise-sandbox-deck',
@@ -552,6 +637,7 @@ export const decks: Deck[] = [
     description: 'The operational discipline for enterprise vibe coding. Like DevOps, but for AI-assisted development.',
     category: 'enterprise',
     href: '/stories/decks/m365-enterprise-sandbox-deck.html',
+    publishedDate: '2026-01-28T23:04:56.000Z',
   },
   {
     id: 'm365-hackathon-deck',
@@ -559,6 +645,7 @@ export const decks: Deck[] = [
     description: 'A story about discovery, surprise, and the future of human-AI collaboration',
     category: 'showcase',
     href: '/stories/decks/m365-hackathon-deck.html',
+    publishedDate: '2026-01-30T06:36:15.000Z',
   },
   {
     id: 'made-support-bundle-deck',
@@ -566,6 +653,7 @@ export const decks: Deck[] = [
     description: 'Team support intake and automatic status tracking',
     category: 'platform',
     href: '/stories/decks/made-support-bundle-deck.html',
+    publishedDate: '2026-02-13T00:50:15.791Z',
   },
   {
     id: 'marathon-session-deck',
@@ -573,6 +661,7 @@ export const decks: Deck[] = [
     description: 'How an Amplifier session built an entire TUI application autonomously',
     category: 'platform',
     href: '/stories/decks/marathon-session-deck.html',
+    publishedDate: '2026-02-09T19:36:02.798Z',
   },
   {
     id: 'meta-skill-story',
@@ -580,6 +669,7 @@ export const decks: Deck[] = [
     description: 'How to create template-based Amplifier skills &mdash; a methodology extracted from building scaffold-new-service',
     category: 'platform',
     href: '/stories/decks/meta-skill-story.html',
+    publishedDate: '2026-03-16T20:04:11.853Z',
   },
   {
     id: 'model-routing-provider-config',
@@ -587,6 +677,7 @@ export const decks: Deck[] = [
     description: 'Configure everything. Share what matters. Keep credentials personal.',
     category: 'platform',
     href: '/stories/decks/model-routing-provider-config.html',
+    publishedDate: '2026-03-16T20:04:11.853Z',
   },
   {
     id: 'modes-adherence-deck',
@@ -594,6 +685,7 @@ export const decks: Deck[] = [
     description: 'Structural enforcement of pipeline sequencing across multi-stage agentic workflows',
     category: 'platform',
     href: '/stories/decks/modes-adherence-deck.html',
+    publishedDate: '2026-03-16T20:04:11.853Z',
   },
   {
     id: 'multi-provider-swarm-deck',
@@ -601,6 +693,7 @@ export const decks: Deck[] = [
     description: 'Eliminate AI blind spots by dispatching parallel agents across providers — then let them cross-review until they converge.',
     category: 'platform',
     href: '/stories/decks/multi-provider-swarm-deck.html',
+    publishedDate: '2026-03-16T20:04:11.853Z',
   },
   {
     id: 'multi-provider-swarms-deck',
@@ -608,6 +701,7 @@ export const decks: Deck[] = [
     description: 'Cross-Validating AI with AI',
     category: 'platform',
     href: '/stories/decks/multi-provider-swarms-deck.html',
+    publishedDate: '2026-02-13T00:50:15.791Z',
   },
   {
     id: 'nexus-phase-0-story',
@@ -615,6 +709,7 @@ export const decks: Deck[] = [
     description: 'The planning that preceded the product',
     category: 'platform',
     href: '/stories/decks/nexus-phase-0-story.html',
+    publishedDate: '2026-02-03T14:21:25.995Z',
   },
   {
     id: 'notifications-deck',
@@ -622,6 +717,7 @@ export const decks: Deck[] = [
     description: 'Desktop and push notifications when Amplifier is ready for input.',
     category: 'tool',
     href: '/stories/decks/notifications-deck.html',
+    publishedDate: '2026-01-28T23:04:56.000Z',
   },
   {
     id: 'parallax-discovery',
@@ -629,6 +725,7 @@ export const decks: Deck[] = [
     description: 'Multi-Agent Deep Investigation for Complex Systems',
     category: 'platform',
     href: '/stories/decks/parallax-discovery.html',
+    publishedDate: '2026-03-16T20:04:11.853Z',
   },
   {
     id: 'polyglot-amplifier-deck',
@@ -636,6 +733,7 @@ export const decks: Deck[] = [
     description: 'How a language-agnostic LSP architecture turned a Python tool into a polyglot code intelligence platform.',
     category: 'tool',
     href: '/stories/decks/polyglot-amplifier-deck.html',
+    publishedDate: '2026-02-13T00:50:15.791Z',
   },
   {
     id: 'pr-review-recipes',
@@ -643,6 +741,7 @@ export const decks: Deck[] = [
     description: 'Automating code quality with deterministic workflows',
     category: 'platform',
     href: '/stories/decks/pr-review-recipes.html',
+    publishedDate: '2026-02-02T22:52:33.361Z',
   },
   {
     id: 'presentation-internet-archive',
@@ -650,6 +749,7 @@ export const decks: Deck[] = [
     description: 'How robotdad &amp; Amplifier built production-scale download infrastructure for 2.3 million historical documents',
     category: 'platform',
     href: '/stories/decks/presentation-internet-archive.html',
+    publishedDate: '2026-02-13T00:50:15.791Z',
   },
   {
     id: 'presentation-ocr-rust-performance',
@@ -657,6 +757,7 @@ export const decks: Deck[] = [
     description: 'OCR Cleanup at Scale with Rust',
     category: 'platform',
     href: '/stories/decks/presentation-ocr-rust-performance.html',
+    publishedDate: '2026-02-13T00:50:15.791Z',
   },
   {
     id: 'recipe-efficiency-week',
@@ -664,6 +765,7 @@ export const decks: Deck[] = [
     description: '51 commits across 2 repos in one week, making the recipe engine production-ready with provider resilience, convergence loops, and validation tooling',
     category: 'tool',
     href: '/stories/decks/recipe-efficiency-week.html',
+    publishedDate: '2026-02-01T01:23:08.000Z',
   },
   {
     id: 'recipe-runner-mode-story',
@@ -671,6 +773,7 @@ export const decks: Deck[] = [
     description: 'A Story of Human-AI Collaboration',
     category: 'showcase',
     href: '/stories/decks/recipe-runner-mode-story.html',
+    publishedDate: '2026-02-02T22:52:33.361Z',
   },
   {
     id: 'recipe-validation-pipeline-deck',
@@ -678,6 +781,7 @@ export const decks: Deck[] = [
     description: 'Catch broken recipes before they reach production. Three PRs. One session. Zero regressions.',
     category: 'platform',
     href: '/stories/decks/recipe-validation-pipeline-deck.html',
+    publishedDate: '2026-03-16T20:04:11.853Z',
   },
   {
     id: 'recipes-workflows',
@@ -685,6 +789,7 @@ export const decks: Deck[] = [
     description: 'Declarative multi-step agent coordination with approval gates, loops, and automatic checkpointing',
     category: 'platform',
     href: '/stories/decks/recipes-workflows.html',
+    publishedDate: '2026-01-28T23:04:56.000Z',
   },
   {
     id: 'routing-matrix-deck',
@@ -692,6 +797,7 @@ export const decks: Deck[] = [
     description: 'Stable names, shifting models. Declare intent — the matrix resolves the rest.',
     category: 'platform',
     href: '/stories/decks/routing-matrix-deck.html',
+    publishedDate: '2026-03-16T20:04:11.853Z',
   },
   {
     id: 'runtime-sdk-tui-journey',
@@ -699,6 +805,7 @@ export const decks: Deck[] = [
     description: 'Building IDE integration for Amplifier: ACP protocol, multiple transports, and a terminal interface &#8212; with AI-assisted visual testing',
     category: 'platform',
     href: '/stories/decks/runtime-sdk-tui-journey.html',
+    publishedDate: '2026-02-02T22:52:33.361Z',
   },
   {
     id: 'rust-code-intel-deck',
@@ -706,6 +813,7 @@ export const decks: Deck[] = [
     description: 'Full language intelligence for AI agents. 14 LSP operations. First-class Rust support. Zero external dependencies.',
     category: 'platform',
     href: '/stories/decks/rust-code-intel-deck.html',
+    publishedDate: '2026-02-13T05:06:04.606Z',
   },
   {
     id: 'rust-dev-bundle-deck',
@@ -713,6 +821,7 @@ export const decks: Deck[] = [
     description: 'cargo fmt, clippy, cargo check, and deep LSP analysis — in one composable package.',
     category: 'platform',
     href: '/stories/decks/rust-dev-bundle-deck.html',
+    publishedDate: '2026-02-17T00:19:47.027Z',
   },
   {
     id: 'self-improving-amplifier-deck',
@@ -720,6 +829,7 @@ export const decks: Deck[] = [
     description: 'An AI That Builds What It Needs',
     category: 'platform',
     href: '/stories/decks/self-improving-amplifier-deck.html',
+    publishedDate: '2026-02-13T00:50:15.791Z',
   },
   {
     id: 'session-forking-deck',
@@ -727,6 +837,7 @@ export const decks: Deck[] = [
     description: 'Branch your conversations at any point. Explore alternate approaches without losing your place.',
     category: 'platform',
     href: '/stories/decks/session-forking-deck.html',
+    publishedDate: '2026-01-28T23:04:56.000Z',
   },
   {
     id: 'shadow-environments-deck',
@@ -734,6 +845,7 @@ export const decks: Deck[] = [
     description: 'Isolated containers that snapshot your local repos. Test your changes before you push.',
     category: 'platform',
     href: '/stories/decks/shadow-environments-deck.html',
+    publishedDate: '2026-01-28T23:04:56.000Z',
   },
   {
     id: 'smoke-test-bundle-deck',
@@ -741,6 +853,7 @@ export const decks: Deck[] = [
     description: 'Objective validation for shadow environments. Pass means your changes work. Fail means stop and investigate.',
     category: 'platform',
     href: '/stories/decks/smoke-test-bundle-deck.html',
+    publishedDate: '2026-01-30T06:36:15.000Z',
   },
   {
     id: 'stories-bundle-overview',
@@ -748,6 +861,7 @@ export const decks: Deck[] = [
     description: 'Turn raw data into polished, multi-format content',
     category: 'platform',
     href: '/stories/decks/stories-bundle-overview.html',
+    publishedDate: '2026-01-30T06:36:15.000Z',
   },
   {
     id: 'story-50-percent-rule',
@@ -755,6 +869,7 @@ export const decks: Deck[] = [
     description: 'Building AI Validators That Actually Work',
     category: 'platform',
     href: '/stories/decks/story-50-percent-rule.html',
+    publishedDate: '2026-02-13T00:50:15.791Z',
   },
   {
     id: 'story-building-the-storyteller',
@@ -762,6 +877,7 @@ export const decks: Deck[] = [
     description: 'How to build an AI specialist that selects rather than summarizes &mdash; and why narrative cognition matters for knowledge work.',
     category: 'showcase',
     href: '/stories/decks/story-building-the-storyteller.html',
+    publishedDate: '2026-03-16T20:04:11.853Z',
   },
   {
     id: 'story-change-advisor-session',
@@ -769,6 +885,7 @@ export const decks: Deck[] = [
     description: 'A story about human judgment in the age of AI-generated pull requests',
     category: 'tool',
     href: '/stories/decks/story-change-advisor-session.html',
+    publishedDate: '2026-03-16T20:04:11.853Z',
   },
   {
     id: 'story-how-do-you-know',
@@ -776,6 +893,7 @@ export const decks: Deck[] = [
     description: 'Why one question was worth more than three rounds of blind testing',
     category: 'showcase',
     href: '/stories/decks/story-how-do-you-know.html',
+    publishedDate: '2026-03-16T20:04:11.853Z',
   },
   {
     id: 'story-making-llms-reliable',
@@ -783,6 +901,7 @@ export const decks: Deck[] = [
     description: 'A debugging journey: 5 recipe versions, 3 bugs found, 1 fundamental insight about AI-assisted development.',
     category: 'platform',
     href: '/stories/decks/story-making-llms-reliable.html',
+    publishedDate: '2026-02-02T17:07:37.463Z',
   },
   {
     id: 'story-observers-bundle',
@@ -790,6 +909,7 @@ export const decks: Deck[] = [
     description: 'Real-time AI-powered code review that watches while you work',
     category: 'platform',
     href: '/stories/decks/story-observers-bundle.html',
+    publishedDate: '2026-02-02T22:52:33.361Z',
   },
   {
     id: 'story-proving-parallel-execution',
@@ -797,6 +917,7 @@ export const decks: Deck[] = [
     description: 'How we verified concurrent agent execution through sub-second timestamp correlation in session data',
     category: 'platform',
     href: '/stories/decks/story-proving-parallel-execution.html',
+    publishedDate: '2026-02-02T17:15:42.205Z',
   },
   {
     id: 'story-spawn-events',
@@ -804,6 +925,7 @@ export const decks: Deck[] = [
     description: 'One unified primitive for all session spawning. Cross-session events. Reactive triggers. Background session management.',
     category: 'platform',
     href: '/stories/decks/story-spawn-events.html',
+    publishedDate: '2026-03-16T20:04:11.853Z',
   },
   {
     id: 'story-teaching-ai-to-follow-through',
@@ -811,6 +933,7 @@ export const decks: Deck[] = [
     description: 'How instruction design took specialist chain reliability from ~40% to &gt;90%&thinsp;&mdash;&thinsp;without writing a single line of code.',
     category: 'platform',
     href: '/stories/decks/story-teaching-ai-to-follow-through.html',
+    publishedDate: '2026-03-16T20:04:11.853Z',
   },
   {
     id: 'story-the-seventh-layer',
@@ -818,6 +941,7 @@ export const decks: Deck[] = [
     description: '',
     category: 'platform',
     href: '/stories/decks/story-the-seventh-layer.html',
+    publishedDate: '2026-03-16T20:04:11.853Z',
   },
   {
     id: 'story-three-branches-one-recipe',
@@ -825,6 +949,7 @@ export const decks: Deck[] = [
     description: 'Merging parallel development into a unified recipe system',
     category: 'platform',
     href: '/stories/decks/story-three-branches-one-recipe.html',
+    publishedDate: '2026-02-02T17:19:58.040Z',
   },
   {
     id: 'submit-pr-story-deck',
@@ -832,6 +957,7 @@ export const decks: Deck[] = [
     description: 'One command replaces the entire PR workflow. Come back to a merged PR or a clear escalation.',
     category: 'platform',
     href: '/stories/decks/submit-pr-story-deck.html',
+    publishedDate: '2026-02-02T22:52:33.361Z',
   },
   {
     id: 'superpowers-deck',
@@ -839,6 +965,7 @@ export const decks: Deck[] = [
     description: 'Structurally enforced disciplined development for AI coding agents',
     category: 'devex',
     href: '/stories/decks/superpowers-deck.html',
+    publishedDate: '2026-01-28T23:04:56.000Z',
   },
   {
     id: 'superpowers-v2-announcement',
@@ -846,6 +973,7 @@ export const decks: Deck[] = [
     description: 'Major Methodology Refresh',
     category: 'devex',
     href: '/stories/decks/superpowers-v2-announcement.html',
+    publishedDate: '2026-03-16T20:04:11.853Z',
   },
   {
     id: 'teaching-ai-taste-case-study',
@@ -853,6 +981,7 @@ export const decks: Deck[] = [
     description: 'How a brainstorm session turned a passive design archive into a self-improving intelligence system &mdash; in one afternoon.',
     category: 'platform',
     href: '/stories/decks/teaching-ai-taste-case-study.html',
+    publishedDate: '2026-03-16T20:04:11.853Z',
   },
   {
     id: 'team-tracking-story',
@@ -860,6 +989,7 @@ export const decks: Deck[] = [
     description: 'Recipe Engineering at Scale: Patterns for Reliable Bulk Processing',
     category: 'intro',
     href: '/stories/decks/team-tracking-story.html',
+    publishedDate: '2026-02-03T14:21:25.995Z',
   },
   {
     id: 'terminal-tester-announcement',
@@ -867,6 +997,7 @@ export const decks: Deck[] = [
     description: 'amplifier-bundle-terminal-tester Spawn, inspect, and interact with TUI applications — from inside an AI agent.',
     category: 'platform',
     href: '/stories/decks/terminal-tester-announcement.html',
+    publishedDate: '2026-03-16T20:04:11.853Z',
   },
   {
     id: 'the-garden',
@@ -874,6 +1005,7 @@ export const decks: Deck[] = [
     description: 'Plant a seed. Watch it grow.',
     category: 'platform',
     href: '/stories/decks/the-garden.html',
+    publishedDate: '2026-03-16T20:04:11.853Z',
   },
   {
     id: 'the-invisible-team',
@@ -881,6 +1013,7 @@ export const decks: Deck[] = [
     description: '40+ specialist agents. One conversation. Zero complexity.',
     category: 'platform',
     href: '/stories/decks/the-invisible-team.html',
+    publishedDate: '2026-03-16T20:04:11.853Z',
   },
   {
     id: 'the-kernel-that-does-less',
@@ -888,6 +1021,7 @@ export const decks: Deck[] = [
     description: 'An architectural deep-dive into the microkernel that runs AI agents in ~3,400 lines of Python',
     category: 'platform',
     href: '/stories/decks/the-kernel-that-does-less.html',
+    publishedDate: '2026-03-16T20:04:11.853Z',
   },
   {
     id: 'the-self-debugging-slack-loop',
@@ -895,6 +1029,7 @@ export const decks: Deck[] = [
     description: 'When Amplifier learned to test its own UI by talking to itself through Slack.',
     category: 'platform',
     href: '/stories/decks/the-self-debugging-slack-loop.html',
+    publishedDate: '2026-03-16T20:04:11.853Z',
   },
   {
     id: 'the-still-center',
@@ -902,6 +1037,7 @@ export const decks: Deck[] = [
     description: '',
     category: 'platform',
     href: '/stories/decks/the-still-center.html',
+    publishedDate: '2026-03-16T20:04:11.853Z',
   },
   {
     id: 'the-story-of-all-stories',
@@ -909,6 +1045,7 @@ export const decks: Deck[] = [
     description: '',
     category: 'showcase',
     href: '/stories/decks/the-story-of-all-stories.html',
+    publishedDate: '2026-03-16T20:04:11.853Z',
   },
   {
     id: 'tui-tester-innovation-story',
@@ -916,6 +1053,7 @@ export const decks: Deck[] = [
     description: 'How frustration with TUI debugging led to creating a bundle that enables Amplifier to see terminal interfaces — and fix its own TUI client.',
     category: 'showcase',
     href: '/stories/decks/tui-tester-innovation-story.html',
+    publishedDate: '2026-02-02T22:52:33.361Z',
   },
   {
     id: 'ui-vision-story',
@@ -923,6 +1061,7 @@ export const decks: Deck[] = [
     description: 'When an AI agent built a feature but couldn\'t see what it built, it created its own eyes.',
     category: 'showcase',
     href: '/stories/decks/ui-vision-story.html',
+    publishedDate: '2026-03-16T20:04:11.853Z',
   },
   {
     id: 'vibecoding-deck',
@@ -930,6 +1069,7 @@ export const decks: Deck[] = [
     description: 'Best practices for AI-assisted development. Extracted from practitioners who are building the future.',
     category: 'intro',
     href: '/stories/decks/vibecoding-deck.html',
+    publishedDate: '2026-01-28T23:04:56.000Z',
   },
   {
     id: 'video-editing-story',
@@ -937,6 +1077,7 @@ export const decks: Deck[] = [
     description: 'How Amplifier turned 15-20 minutes of manual video editing into a 2-minute conversation',
     category: 'intro',
     href: '/stories/decks/video-editing-story.html',
+    publishedDate: '2026-03-16T20:04:11.853Z',
   },
   {
     id: 'vision-roadmap',
@@ -944,6 +1085,7 @@ export const decks: Deck[] = [
     description: 'Where Amplifier is going &mdash; and what\'s already here',
     category: 'platform',
     href: '/stories/decks/vision-roadmap.html',
+    publishedDate: '2026-01-28T23:04:56.000Z',
   },
   {
     id: 'what-is-amplifier',
@@ -951,6 +1093,7 @@ export const decks: Deck[] = [
     description: 'A modular AI agent framework. Open. Flexible. Built on kernel principles.',
     category: 'intro',
     href: '/stories/decks/what-is-amplifier.html',
+    publishedDate: '2026-01-28T23:04:56.000Z',
   },
   {
     id: 'withamplifier-site-deck',
@@ -958,7 +1101,8 @@ export const decks: Deck[] = [
     description: 'Not just a website&mdash;the communication layer for everything built with Amplifier.',
     category: 'platform',
     href: '/stories/decks/withamplifier-site-deck.html',
+    publishedDate: '2026-02-02T22:52:33.361Z',
   }
 ]
 
-export const lastSynced = '2026-03-16T18:49:21.933Z'
+export const lastSynced = '2026-03-16T20:05:13.349Z'

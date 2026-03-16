@@ -42,6 +42,11 @@ const categoryStyles: Record<DeckCategory, string> = {
   philosophy: 'bg-[#F2EDFA] text-[#8B5FD9]', // Purple matching particles
 }
 
+function formatDate(iso: string): string {
+  const d = new Date(iso)
+  return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
+}
+
 export default function LearnCard({ deck }: { deck: Deck }) {
   return (
     <Link
@@ -54,6 +59,10 @@ export default function LearnCard({ deck }: { deck: Deck }) {
           <span className="community-card__badge community-card__badge--popular">
             New
           </span>
+        ) : deck.publishedDate ? (
+          <time dateTime={deck.publishedDate} className="text-micro text-ink-faint">
+            {formatDate(deck.publishedDate)}
+          </time>
         ) : (
           <span></span>
         )}
