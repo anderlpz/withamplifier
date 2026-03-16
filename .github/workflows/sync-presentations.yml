@@ -6,6 +6,10 @@ on:
     - cron: '0 9 * * 1'
   workflow_dispatch: # Allow manual trigger
 
+permissions:
+  contents: write
+  pull-requests: write
+
 jobs:
   check-and-sync:
     runs-on: ubuntu-latest
@@ -74,6 +78,10 @@ jobs:
           
           echo "" >> /tmp/pr-body.md
           echo "Synced from [amplifier-stories](https://github.com/ramparte/amplifier-stories)" >> /tmp/pr-body.md
+
+      - name: Clean up temp checkout
+        if: steps.check_diff.outputs.has_changes == 'true'
+        run: rm -rf amplifier-stories-temp
 
       - name: Create Pull Request
         if: steps.check_diff.outputs.has_changes == 'true'
