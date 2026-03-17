@@ -608,14 +608,6 @@ export const decks: Deck[] = [
     publishedDate: '2026-03-16T20:04:11.853Z',
   },
   {
-    id: 'lifeos-architecture-diagram',
-    title: 'LifeOS Architecture',
-    description: 'How a personal knowledge vault processes life data, builds relationship intelligence, and keeps everything local-first.',
-    category: 'platform',
-    href: '/stories/decks/lifeos-architecture-diagram.html',
-    publishedDate: '2026-03-16T19:49:13.051Z',
-  },
-  {
     id: 'longbuilder-deck',
     title: 'LongBuilder',
     description: 'Phase-based orchestration for long-term projects',
@@ -1105,4 +1097,4 @@ export const decks: Deck[] = [
   }
 ]
 
-export const lastSynced = '2026-03-16T20:05:13.349Z'
+export const lastSynced = '2026-03-17T01:15:02.068Z'
