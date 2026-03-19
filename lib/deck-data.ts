@@ -832,6 +832,14 @@ export const decks: Deck[] = [
     publishedDate: '2026-01-28T23:04:56.000Z',
   },
   {
+    id: 'session-repair-repaired',
+    title: 'Session Repair, Repaired — Amplifier Foundation',
+    description: 'Making the session-analyst agent reliable by removing its ability to break things',
+    category: 'platform',
+    href: '/stories/decks/session-repair-repaired.html',
+    publishedDate: '2026-03-19T04:28:34.136Z',
+  },
+  {
     id: 'shadow-environments-deck',
     title: 'Shadow Environments',
     description: 'Isolated containers that snapshot your local repos. Test your changes before you push.',
@@ -1097,4 +1105,4 @@ export const decks: Deck[] = [
   }
 ]
 
-export const lastSynced = '2026-03-19T01:18:20.724Z'
+export const lastSynced = '2026-03-19T04:28:34.237Z'
