@@ -384,6 +384,14 @@ export const decks: Deck[] = [
     publishedDate: '2026-03-16T20:04:11.853Z',
   },
   {
+    id: 'canvas-specialists-adversarial-quality',
+    title: 'Canvas Specialists: Adversarial Quality for AI Research',
+    description: 'Adversarial quality for AI research. Every claim sourced. Every inference challenged. Scores its own output.',
+    category: 'platform',
+    href: '/stories/decks/canvas-specialists-adversarial-quality.html',
+    publishedDate: '2026-03-20T22:20:17.558Z',
+  },
+  {
     id: 'cli-quality-collaboration',
     title: 'CLI Quality & Collaborative Debugging | Diego & Samuel',
     description: 'How Diego & Samuel used Amplifier to identify, debug, review, and fix CLI issues — improving the entire stack',
@@ -1110,7 +1118,15 @@ export const decks: Deck[] = [
     category: 'platform',
     href: '/stories/decks/withamplifier-site-deck.html',
     publishedDate: '2026-02-02T22:52:33.361Z',
+  },
+  {
+    id: 'writing-readmes-ai-can-explain',
+    title: 'READMEs Nobody Reads (And How to Fix Them)',
+    description: 'A reusable skill for writing project READMEs that humans and AI can actually explain.',
+    category: 'platform',
+    href: '/stories/decks/writing-readmes-ai-can-explain.html',
+    publishedDate: '2026-03-20T22:20:17.558Z',
   }
 ]
 
-export const lastSynced = '2026-03-20T22:17:00.348Z'
+export const lastSynced = '2026-03-20T22:20:17.660Z'
