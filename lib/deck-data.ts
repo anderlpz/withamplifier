@@ -576,6 +576,14 @@ export const decks: Deck[] = [
     publishedDate: '2026-03-16T20:04:11.853Z',
   },
   {
+    id: 'ios-app-in-a-day',
+    title: 'iOS App in a Day',
+    description: 'One developer. One AI session. A full native iOS app&mdash; auth, offline, CarPlay, sleep timer&mdash;from expo init to done.',
+    category: 'platform',
+    href: '/stories/decks/ios-app-in-a-day.html',
+    publishedDate: '2026-03-20T22:17:00.245Z',
+  },
+  {
     id: 'kepler-refactor-deck',
     title: 'The Kepler Refactor — 606 Lines of Dead Code & 104 New Tests',
     description: '606 lines of dead code removed. 104 new tests added. A disciplined, AI-assisted 5-phase migration.',
@@ -1105,4 +1113,4 @@ export const decks: Deck[] = [
   }
 ]
 
-export const lastSynced = '2026-03-20T18:34:25.789Z'
+export const lastSynced = '2026-03-20T22:17:00.348Z'
