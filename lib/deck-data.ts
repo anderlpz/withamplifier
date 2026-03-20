@@ -384,14 +384,6 @@ export const decks: Deck[] = [
     publishedDate: '2026-03-16T20:04:11.853Z',
   },
   {
-    id: 'canvas-specialists-adversarial-quality',
-    title: 'Canvas Specialists: Adversarial Quality for AI Research',
-    description: 'Adversarial quality for AI research. Every claim sourced. Every inference challenged. Scores its own output.',
-    category: 'platform',
-    href: '/stories/decks/canvas-specialists-adversarial-quality.html',
-    publishedDate: '2026-03-20T22:20:17.558Z',
-  },
-  {
     id: 'cli-quality-collaboration',
     title: 'CLI Quality & Collaborative Debugging | Diego & Samuel',
     description: 'How Diego & Samuel used Amplifier to identify, debug, review, and fix CLI issues — improving the entire stack',
@@ -800,6 +792,14 @@ export const decks: Deck[] = [
     publishedDate: '2026-01-28T23:04:56.000Z',
   },
   {
+    id: 'research-specialists-adversarial-quality',
+    title: 'Research Specialists: Adversarial Quality for AI Research',
+    description: 'Adversarial quality for AI research. Every claim sourced. Every inference challenged. Scores its own output.',
+    category: 'platform',
+    href: '/stories/decks/research-specialists-adversarial-quality.html',
+    publishedDate: '2026-03-20T22:50:26.423Z',
+  },
+  {
     id: 'routing-matrix-deck',
     title: 'Amplifier Routing Matrix v2 — Stable Names, Shifting Models',
     description: 'Stable names, shifting models. Declare intent — the matrix resolves the rest.',
@@ -1129,4 +1129,4 @@ export const decks: Deck[] = [
   }
 ]
 
-export const lastSynced = '2026-03-20T22:27:18.575Z'
+export const lastSynced = '2026-03-20T22:50:26.520Z'
