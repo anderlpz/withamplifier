@@ -32,6 +32,14 @@ export const decks: Deck[] = [
     publishedDate: '2026-02-24T00:00:00.000Z',
   },
   {
+    id: '2026-03-23-skills-system-upgrade',
+    title: 'Major Skills System Upgrade — Amplifier',
+    description: 'The biggest skills update since launch &mdash; extending the format to support the broader ecosystem while adding powerful new capabilities for Amplifier users.',
+    category: 'platform',
+    href: '/stories/decks/2026-03-23-skills-system-upgrade.html',
+    publishedDate: '2026-03-23T00:00:00.000Z',
+  },
+  {
     id: '20260130-amplifier-sdk',
     title: 'Amplifier SDK - Building Just Got Easier',
     description: 'Building on Amplifier just got a whole lot easier. TypeScript & Python.',
@@ -1129,4 +1137,4 @@ export const decks: Deck[] = [
   }
 ]
 
-export const lastSynced = '2026-03-23T12:42:50.982Z'
+export const lastSynced = '2026-03-23T14:56:00.302Z'
