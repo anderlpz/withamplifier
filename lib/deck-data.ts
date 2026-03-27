@@ -192,12 +192,28 @@ export const decks: Deck[] = [
     publishedDate: '2026-02-16T23:32:42.863Z',
   },
   {
+    id: 'amplifier-bundle-gitea-story',
+    title: 'amplifier-bundle-gitea — Ephemeral Git Servers for Fearless Experimentation',
+    description: 'Ephemeral Git servers for fearless experimentation. Mirror, work, promote &mdash; then throw it away.',
+    category: 'showcase',
+    href: '/stories/decks/amplifier-bundle-gitea-story.html',
+    publishedDate: '2026-03-27T17:51:08.332Z',
+  },
+  {
     id: 'amplifier-chat',
     title: 'Amplifier Chat — Product Launch',
     description: 'Queue messages while your AI works.',
     category: 'platform',
     href: '/stories/decks/amplifier-chat.html',
     publishedDate: '2026-03-16T20:04:11.853Z',
+  },
+  {
+    id: 'amplifier-digital-twin-universe-phase-1-story',
+    title: 'Amplifier Digital Twin Universe',
+    description: 'Phase 1: A complete, isolated environment stood up on demand that simulates the world your code will live in.',
+    category: 'platform',
+    href: '/stories/decks/amplifier-digital-twin-universe-phase-1-story.html',
+    publishedDate: '2026-03-27T17:51:08.332Z',
   },
   {
     id: 'amplifier-eval-results-story-20260208',
@@ -1153,4 +1169,4 @@ export const decks: Deck[] = [
   }
 ]
 
-export const lastSynced = '2026-03-27T12:40:36.517Z'
+export const lastSynced = '2026-03-27T17:51:08.433Z'
