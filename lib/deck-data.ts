@@ -824,6 +824,14 @@ export const decks: Deck[] = [
     publishedDate: '2026-03-16T20:04:11.853Z',
   },
   {
+    id: 'recipe-visual-documentation-announcement',
+    title: 'Recipe DOT Docs — Visual Documentation for Every Recipe',
+    description: 'Every recipe now tells its own story&thinsp;&mdash;&thinsp;visually. Automated flowchart documentation for the entire recipe ecosystem.',
+    category: 'showcase',
+    href: '/stories/decks/recipe-visual-documentation-announcement.html',
+    publishedDate: '2026-04-01T08:42:26.226Z',
+  },
+  {
     id: 'recipes-workflows',
     title: 'Recipes & Workflows',
     description: 'Declarative multi-step agent coordination with approval gates, loops, and automatic checkpointing',
@@ -1169,4 +1177,4 @@ export const decks: Deck[] = [
   }
 ]
 
-export const lastSynced = '2026-04-01T07:08:29.216Z'
+export const lastSynced = '2026-04-01T08:42:26.327Z'
