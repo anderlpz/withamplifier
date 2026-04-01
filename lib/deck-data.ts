@@ -312,6 +312,14 @@ export const decks: Deck[] = [
     publishedDate: '2026-02-02T22:52:33.361Z',
   },
   {
+    id: 'amplifier-workspace',
+    title: 'amplifier-workspace',
+    description: 'One command to a ready-to-work Amplifier environment. Repos cloned, templates in place, terminal arranged.',
+    category: 'platform',
+    href: '/stories/decks/amplifier-workspace.html',
+    publishedDate: '2026-04-01T20:56:56.655Z',
+  },
+  {
     id: 'app-integration-guide-deck',
     title: 'Amplifier Application Integration Guide',
     description: 'From "I understand bundles" to "I\'ve built a production app with Amplifier"',
@@ -1177,4 +1185,4 @@ export const decks: Deck[] = [
   }
 ]
 
-export const lastSynced = '2026-04-01T18:46:28.444Z'
+export const lastSynced = '2026-04-01T20:56:56.761Z'
