@@ -400,6 +400,14 @@ export const decks: Deck[] = [
     publishedDate: '2026-03-16T20:04:11.853Z',
   },
   {
+    id: 'bundle-dot-announcement',
+    title: 'bundle.dot — Visual Documentation for Bundle Repos',
+    description: 'Visual Documentation for Bundle Repos',
+    category: 'platform',
+    href: '/stories/decks/bundle-dot-announcement.html',
+    publishedDate: '2026-04-04T02:28:59.467Z',
+  },
+  {
     id: 'bundle-orchestration-deck',
     title: 'Bundle Orchestration — How Amplifier Bundles Compose and Load',
     description: 'How Amplifier bundles compose, merge, and load — the engine that makes layered agent systems possible',
@@ -1185,4 +1193,4 @@ export const decks: Deck[] = [
   }
 ]
 
-export const lastSynced = '2026-04-04T01:17:30.130Z'
+export const lastSynced = '2026-04-04T02:28:59.569Z'
