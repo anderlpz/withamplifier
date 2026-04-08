@@ -928,6 +928,14 @@ export const decks: Deck[] = [
     publishedDate: '2026-01-28T23:04:56.000Z',
   },
   {
+    id: 'skillify-adapt-skill-announcement',
+    title: 'New in amplifier-bundle-skills: /skillify and /adapt-skill',
+    description: 'Create skills from scratch. Port skills from anywhere.',
+    category: 'platform',
+    href: '/stories/decks/skillify-adapt-skill-announcement.html',
+    publishedDate: '2026-04-08T16:59:39.604Z',
+  },
+  {
     id: 'smoke-test-bundle-deck',
     title: 'Amplifier Smoke Test Agent - Shadow Environment Validation',
     description: 'Objective validation for shadow environments. Pass means your changes work. Fail means stop and investigate.',
@@ -1193,4 +1201,4 @@ export const decks: Deck[] = [
   }
 ]
 
-export const lastSynced = '2026-04-08T12:58:53.297Z'
+export const lastSynced = '2026-04-08T16:59:39.707Z'
