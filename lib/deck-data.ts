@@ -480,6 +480,14 @@ export const decks: Deck[] = [
     publishedDate: '2026-03-16T20:04:11.853Z',
   },
   {
+    id: 'context-rot-systems-architecture',
+    title: 'Context Rot is a Systems Problem — Amplifier Architecture',
+    description: 'How Amplifier\'s Architecture Keeps AI Sharp',
+    category: 'intro',
+    href: '/stories/decks/context-rot-systems-architecture.html',
+    publishedDate: '2026-04-10T00:07:42.710Z',
+  },
+  {
     id: 'cortex-amplifier-presentation',
     title: 'Cortex · Built with Amplifier',
     description: 'Personal AI assistant platform &mdash; manages attention, automates tasks, acts on your behalf across devices.',
@@ -1249,4 +1257,4 @@ export const decks: Deck[] = [
   }
 ]
 
-export const lastSynced = '2026-04-09T18:51:01.405Z'
+export const lastSynced = '2026-04-10T00:07:42.827Z'
