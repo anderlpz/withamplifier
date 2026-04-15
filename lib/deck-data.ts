@@ -280,6 +280,14 @@ export const decks: Deck[] = [
     publishedDate: '2026-03-16T20:04:11.853Z',
   },
   {
+    id: 'amplifier-provider-github-copilot',
+    title: 'Amplifier Builds Amplifier — The GitHub Copilot Provider Story',
+    description: 'The GitHub Copilot Provider Story',
+    category: 'showcase',
+    href: '/stories/decks/amplifier-provider-github-copilot.html',
+    publishedDate: '2026-04-15T19:51:44.500Z',
+  },
+  {
     id: 'amplifier-swarm-deck',
     title: 'Amplifier Swarm — Parallel Task Execution',
     description: 'Parallel task execution with real-time monitoring',
@@ -1257,4 +1265,4 @@ export const decks: Deck[] = [
   }
 ]
 
-export const lastSynced = '2026-04-15T19:01:05.800Z'
+export const lastSynced = '2026-04-15T19:51:44.604Z'
