@@ -448,6 +448,14 @@ export const decks: Deck[] = [
     publishedDate: '2026-03-16T20:04:11.853Z',
   },
   {
+    id: 'caveman-announcement',
+    title: 'Caveman Mode — Slash Output Tokens by ~75%',
+    description: 'Slash output tokens by ~75% while keeping full technical substance',
+    category: 'platform',
+    href: '/stories/decks/caveman-announcement.html',
+    publishedDate: '2026-04-16T15:01:16.082Z',
+  },
+  {
     id: 'cli-quality-collaboration',
     title: 'CLI Quality & Collaborative Debugging | Diego & Samuel',
     description: 'How Diego & Samuel used Amplifier to identify, debug, review, and fix CLI issues — improving the entire stack',
@@ -960,6 +968,14 @@ export const decks: Deck[] = [
     publishedDate: '2026-02-13T00:50:15.791Z',
   },
   {
+    id: 'session-configurator-announcement',
+    title: '/config — Live Session Configuration for Amplifier',
+    description: 'Live Session Configuration for Amplifier',
+    category: 'platform',
+    href: '/stories/decks/session-configurator-announcement.html',
+    publishedDate: '2026-04-16T15:01:16.082Z',
+  },
+  {
     id: 'session-forking-deck',
     title: 'Session Forking - Branch Your Thinking',
     description: 'Branch your conversations at any point. Explore alternate approaches without losing your place.',
@@ -1265,4 +1281,4 @@ export const decks: Deck[] = [
   }
 ]
 
-export const lastSynced = '2026-04-16T13:06:49.854Z'
+export const lastSynced = '2026-04-16T15:01:16.198Z'
