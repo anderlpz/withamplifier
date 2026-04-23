@@ -128,6 +128,14 @@ export const decks: Deck[] = [
     publishedDate: '2026-03-16T20:04:11.853Z',
   },
   {
+    id: 'Reality-Check-Update-2026-04-16-',
+    title: 'Reality Check &amp; Digital Twin Universe Update',
+    description: '',
+    category: 'platform',
+    href: '/stories/decks/Reality-Check-Update-2026-04-16-.html',
+    publishedDate: '2026-04-23T21:27:23.624Z',
+  },
+  {
     id: 'a2a-bundle-deck',
     title: 'amplifier-bundle-a2a — Agent-to-Agent Communication',
     description: 'Your Amplifier sessions can now talk to each other. Same machine. Same network. Real HTTP.',
@@ -464,6 +472,14 @@ export const decks: Deck[] = [
     publishedDate: '2026-02-02T22:52:33.361Z',
   },
   {
+    id: 'code-mode-write-a-program-not-a-prompt',
+    title: 'code-mode: write a program, not a prompt',
+    description: '',
+    category: 'platform',
+    href: '/stories/decks/code-mode-write-a-program-not-a-prompt.html',
+    publishedDate: '2026-04-23T21:27:23.624Z',
+  },
+  {
     id: 'communication-intelligence-story',
     title: 'Signal Over Noise — Amplifier as Communication Infrastructure',
     description: '',
@@ -600,12 +616,28 @@ export const decks: Deck[] = [
     publishedDate: '2026-04-08T23:30:35.865Z',
   },
   {
+    id: 'digital-twin-story-april-3-8',
+    title: 'Launch Once, Update in Place',
+    description: 'Isolated environments that evolve with your code, verify themselves end-to-end from the host, and stay out of your way.',
+    category: 'platform',
+    href: '/stories/decks/digital-twin-story-april-3-8.html',
+    publishedDate: '2026-04-23T21:27:23.624Z',
+  },
+  {
     id: 'digital-twin-universe-update',
     title: 'Digital Twin Universe — Amplifier',
     description: 'What we built this week: a CLI, declarative profiles, two agents, and an end-to-end pipeline that answers "does this actually work when deployed?"',
     category: 'platform',
     href: '/stories/decks/digital-twin-universe-update.html',
     publishedDate: '2026-04-08T23:30:35.865Z',
+  },
+  {
+    id: 'digital_twin_universe_universe_framing',
+    title: 'The Digital Twin Universe, Universe',
+    description: 'Evidence-based testing for anything you build — with an ecosystem of bundles that plug in on top.',
+    category: 'intro',
+    href: '/stories/decks/digital_twin_universe_universe_framing.html',
+    publishedDate: '2026-04-23T21:27:23.624Z',
   },
   {
     id: 'distributed-ai-network-deck',
@@ -888,6 +920,14 @@ export const decks: Deck[] = [
     publishedDate: '2026-02-13T00:50:15.791Z',
   },
   {
+    id: 'reality-check-story',
+    title: 'Reality Check - An Amplifier Story',
+    description: 'When AI says "done," is it actually done? A verification pipeline that closes the gap between "tests pass" and "this actually works."',
+    category: 'showcase',
+    href: '/stories/decks/reality-check-story.html',
+    publishedDate: '2026-04-23T21:27:23.624Z',
+  },
+  {
     id: 'recipe-efficiency-week',
     title: 'Recipe System Maturation - Week of Jan 25, 2026',
     description: '51 commits across 2 repos in one week, making the recipe engine production-ready with provider resilience, convergence loops, and validation tooling',
@@ -990,6 +1030,14 @@ export const decks: Deck[] = [
     category: 'platform',
     href: '/stories/decks/session-forking-deck.html',
     publishedDate: '2026-01-28T23:04:56.000Z',
+  },
+  {
+    id: 'session-insights-timing-analysis',
+    title: 'Where Did the Time Go? — An Amplifier Story',
+    description: 'How Session Insights turned 304 sessions into a performance report &mdash; without crashing a single context window.',
+    category: 'platform',
+    href: '/stories/decks/session-insights-timing-analysis.html',
+    publishedDate: '2026-04-23T21:27:23.624Z',
   },
   {
     id: 'session-repair-repaired',
@@ -1152,6 +1200,14 @@ export const decks: Deck[] = [
     publishedDate: '2026-03-16T20:04:11.853Z',
   },
   {
+    id: 'team-knowledge-brainstorming',
+    title: 'Your Teammates Already Solved Half Your Problem',
+    description: 'You just didn\'t know it yet.',
+    category: 'platform',
+    href: '/stories/decks/team-knowledge-brainstorming.html',
+    publishedDate: '2026-04-23T21:27:23.624Z',
+  },
+  {
     id: 'team-tracking-story',
     title: 'Team Tracking Bundle: Recipe Engineering at Scale',
     description: 'Recipe Engineering at Scale: Patterns for Reliable Bulk Processing',
@@ -1289,4 +1345,4 @@ export const decks: Deck[] = [
   }
 ]
 
-export const lastSynced = '2026-04-23T18:55:48.014Z'
+export const lastSynced = '2026-04-23T21:27:23.745Z'
