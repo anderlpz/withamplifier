@@ -896,6 +896,14 @@ export const decks: Deck[] = [
     publishedDate: '2026-05-21T02:27:12.448Z',
   },
   {
+    id: 'llm-wiki-bundle-deck',
+    title: 'LLM Wiki bundle for Amplifier',
+    description: 'Persistent knowledge that compounds — not RAG that re-derives.',
+    category: 'platform',
+    href: '/stories/decks/llm-wiki-bundle-deck.html',
+    publishedDate: '2026-05-29T09:35:08.953Z',
+  },
+  {
     id: 'longbuilder-deck',
     title: 'LongBuilder',
     description: 'Phase-based orchestration for long-term projects',
@@ -1593,4 +1601,4 @@ export const decks: Deck[] = [
   }
 ]
 
-export const lastSynced = '2026-05-29T02:11:17.600Z'
+export const lastSynced = '2026-05-29T09:35:09.087Z'
