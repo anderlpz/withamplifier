@@ -1496,6 +1496,14 @@ export const decks: Deck[] = [
     publishedDate: '2026-03-16T20:04:11.853Z',
   },
   {
+    id: 'the-foundry-and-the-machine',
+    title: 'The Foundry and the Machine — Leverage for Building Software That the Model Couldn\'t',
+    description: '',
+    category: 'platform',
+    href: '/stories/decks/the-foundry-and-the-machine.html',
+    publishedDate: '2026-06-30T02:28:32.791Z',
+  },
+  {
     id: 'the-garden',
     title: 'The Garden — Plant a Seed, Watch It Grow',
     description: 'Plant a seed. Watch it grow.',
@@ -1633,4 +1641,4 @@ export const decks: Deck[] = [
   }
 ]
 
-export const lastSynced = '2026-06-29T19:42:34.653Z'
+export const lastSynced = '2026-06-30T02:28:32.913Z'
