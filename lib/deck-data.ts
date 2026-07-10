@@ -128,6 +128,14 @@ export const decks: Deck[] = [
     publishedDate: '2026-04-30T00:00:00.000Z',
   },
   {
+    id: '20260709-context-compaction-performance-fix',
+    title: 'You\'re About to Become the Bottleneck Again',
+    description: 'Good news: this time, it\'s not the agent\'s fault.',
+    category: 'platform',
+    href: '/stories/decks/20260709-context-compaction-performance-fix.html',
+    publishedDate: '2026-07-09T00:00:00.000Z',
+  },
+  {
     id: '400-tabs-to-100',
     title: '400 Tabs to 100: How Amplifier Manages Your Browser',
     description: 'How Amplifier manages your browser &mdash; without anyone telling it how',
@@ -1641,4 +1649,4 @@ export const decks: Deck[] = [
   }
 ]
 
-export const lastSynced = '2026-07-10T01:57:18.316Z'
+export const lastSynced = '2026-07-10T09:18:16.766Z'
