@@ -378,8 +378,6 @@
   body.hover-left  #click-prev { opacity: 1; }
   body.hover-right #click-next { opacity: 1; }
 </style>
-    <link rel="stylesheet" href="shared-variables.css">
-    <link rel="stylesheet" href="withamplifier-overrides.css">
 </head>
 <body>
 
@@ -1230,9 +1228,7 @@ _deferred_configs: list[dict] = []
   <button class="nav-btn" id="next-btn" onclick="navigate(1)">Next →</button>
 </div>
 
-    <a href="/stories" class="more-stories">More Amplifier Stories</a>
-
-    <script>
+<script>
   const slides = document.querySelectorAll('.slide');
   const total = slides.length;
   let current = 0;
