@@ -136,6 +136,14 @@ export const decks: Deck[] = [
     publishedDate: '2026-07-09T00:00:00.000Z',
   },
   {
+    id: '20260728-monitor-skill',
+    title: '/monitor — Amplifier Skill',
+    description: 'A turn that doesn\'t end until the thing you\'re watching is actually done.',
+    category: 'platform',
+    href: '/stories/decks/20260728-monitor-skill.html',
+    publishedDate: '2026-07-28T00:00:00.000Z',
+  },
+  {
     id: '400-tabs-to-100',
     title: '400 Tabs to 100: How Amplifier Manages Your Browser',
     description: 'AI that found its own way in',
@@ -1312,6 +1320,14 @@ export const decks: Deck[] = [
     publishedDate: '2026-04-08T16:59:39.604Z',
   },
   {
+    id: 'skills-prefix-placement',
+    title: 'Skills Index, Now Riding the Cache — Amplifier',
+    description: 'Prefix placement for skills visibility — full, always-current skill discovery at a fraction of the cost.',
+    category: 'platform',
+    href: '/stories/decks/skills-prefix-placement.html',
+    publishedDate: '2026-07-29T01:42:45.005Z',
+  },
+  {
     id: 'smoke-test-bundle-deck',
     title: 'The Judge Isn\'t the Builder',
     description: 'Independent validation for Amplifier shadow environments',
@@ -1641,4 +1657,4 @@ export const decks: Deck[] = [
   }
 ]
 
-export const lastSynced = '2026-07-28T19:07:07.222Z'
+export const lastSynced = '2026-07-29T01:42:45.038Z'
