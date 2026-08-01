@@ -1689,4 +1689,4 @@ export const decks: Deck[] = [
   }
 ]
 
-export const lastSynced = '2026-08-01T12:56:28.585Z'
+export const lastSynced = '2026-08-01T18:54:14.940Z'
