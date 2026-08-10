@@ -200,6 +200,14 @@ export const decks: Deck[] = [
     publishedDate: '2026-08-09T00:00:00.000Z',
   },
   {
+    id: '20260810-work-tracker-announcement',
+    title: 'amplifier-work-tracker — a shared work queue for coding agents',
+    description: 'A shared work queue your coding-agent sessions pull from. One item, one agent. Nothing done twice, nothing dropped.',
+    category: 'platform',
+    href: '/stories/decks/20260810-work-tracker-announcement.html',
+    publishedDate: '2026-08-10T00:00:00.000Z',
+  },
+  {
     id: '400-tabs-to-100',
     title: '400 Tabs to 100: How Amplifier Manages Your Browser',
     description: 'AI that found its own way in',
@@ -1713,4 +1721,4 @@ export const decks: Deck[] = [
   }
 ]
 
-export const lastSynced = '2026-08-10T12:44:01.232Z'
+export const lastSynced = '2026-08-10T18:41:48.044Z'
