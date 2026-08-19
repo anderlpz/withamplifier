@@ -504,6 +504,14 @@ export const decks: Deck[] = [
     publishedDate: '2026-03-16T20:04:11.853Z',
   },
   {
+    id: 'attractor-story',
+    title: 'The graph is the workflow &mdash; a field report on convergence pipelines',
+    description: 'How we stopped writing recipes with a convergence tool: corrective back-edges, evidence gates, a pipeline pointed at its own repository, and the scars that produced each rule.',
+    category: 'platform',
+    href: '/stories/decks/attractor-story.html',
+    publishedDate: '2026-08-19T00:39:09.459Z',
+  },
+  {
     id: 'azure-zap-story',
     title: 'Fail Closed — Azure ZAP',
     description: 'A safety-gated pipeline for Azure deployment',
@@ -1721,4 +1729,4 @@ export const decks: Deck[] = [
   }
 ]
 
-export const lastSynced = '2026-08-18T18:21:57.212Z'
+export const lastSynced = '2026-08-19T00:39:09.502Z'
