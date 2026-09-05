@@ -1,23 +1,23 @@
 'use client'
 
 import { CopyButton } from '@/components/CopyButton'
+import SyntaxHighlight from '@/components/SyntaxHighlight'
 
 // === DocCodeBlock: Code block with header label ===
 interface DocCodeBlockProps {
   code: string
   label?: string
-  thread?: boolean  // progressive code thread indicator
   sourceUrl?: string
   className?: string
+  language?: string
 }
 
-export function DocCodeBlock({ code, label, thread, sourceUrl, className = '' }: DocCodeBlockProps) {
+export function DocCodeBlock({ code, label, sourceUrl, className = '', language }: DocCodeBlockProps) {
   return (
-    <div className={`doc-breakout doc-code-wrapper ${thread ? 'doc-code-thread' : ''} ${className}`}>
+    <div className={`doc-breakout doc-code-wrapper ${className}`}>
       {label && (
         <div className="doc-code-header">
           <span className="doc-code-label">
-            {thread && <span className="doc-thread-indicator">&#x25C6;</span>}
             {label}
           </span>
           <div className="flex items-center gap-2">
@@ -38,7 +38,7 @@ export function DocCodeBlock({ code, label, thread, sourceUrl, className = '' }:
           </div>
         </div>
       )}
-      <pre style={{ margin: 0 }}><code className="code-block pr-12 block">{code}</code></pre>
+      <pre style={{ margin: 0 }}><code className="code-block pr-12 block">{language ? <SyntaxHighlight code={code} language={language} /> : code}</code></pre>
     </div>
   )
 }
