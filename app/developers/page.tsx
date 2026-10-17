@@ -3,6 +3,7 @@
 import { useEffect } from 'react'
 import { useViewportHeight } from '@/hooks/useViewportHeight'
 import { CodeBlock } from '@/components/CopyButton'
+import AmplifierWebChat from '@/components/AmplifierWebChat'
 
 export default function DevelopersPage() {
   useViewportHeight()
@@ -55,6 +56,7 @@ export default function DevelopersPage() {
           </p>
           <div className="reveal mt-10" style={{ transitionDelay: '0.15s' }}>
             <CodeBlock
+              language="bash"
               code="uv tool install git+https://github.com/microsoft/amplifier"
               className="max-w-2xl mx-auto"
             />
@@ -134,17 +136,18 @@ export default function DevelopersPage() {
                 Your entire module stack &mdash; each one swappable
               </p>
               <CodeBlock
+                language="yaml"
                 code={`providers:
   - module: provider-anthropic        # or provider-openai
     config: { model: claude-sonnet-4-5 }
 
 orchestrators:
-  - module: orchestrator-streaming    # or orchestrator-batch
+  - module: loop-streaming            # or loop-events
 
 tools:
   - module: tool-filesystem
   - module: tool-bash
-  - module: tool-web-search
+  - module: tool-web
 
 context:
   - module: context-persistent        # or context-simple
@@ -214,8 +217,9 @@ hooks:
                 A hook that teaches the agent conventions
               </p>
               <CodeBlock
+                language="python"
                 code={`async def __call__(self, event, data):
-    if event != "tool_call":
+    if event != "tool:pre":
         return HookResult(action="continue")
 
     command = data.get("input", {}).get("command", "")
@@ -291,6 +295,7 @@ hooks:
                 Your teammate extends your setup
               </p>
               <CodeBlock
+                language="yaml"
                 code={`includes:
   - my-team-platform             # everything inherited
 
@@ -366,7 +371,7 @@ tools:
 
               <div className="grid sm:grid-cols-3 gap-x-8 gap-y-5">
                 {[
-                  { name: 'Coordinator + Session', desc: 'The kernel is a session with a coordinator that holds your modules in typed slots. Four-step lifecycle: create, initialize, execute, cleanup.' },
+                  { name: 'Session + Coordinator', desc: 'The kernel is a session with a coordinator that holds your modules in typed slots. Four-step lifecycle: create, initialize, execute, cleanup.' },
                   { name: 'Protocol Contracts', desc: 'Each slot defines a Python Protocol\u2009\u2014\u2009the methods a module must have. No base class, no inheritance. If your object has the right shape, it fits.' },
                   { name: 'Zero Policy', desc: 'The kernel doesn\'t choose your LLM, your tools, your output format, or your persistence strategy. It provides mechanisms. Your app provides policy.' },
                 ].map((mech, i) => (
@@ -539,8 +544,8 @@ tools:
                 The Core
               </h4>
               <p className="text-body text-ink-slate">
-                A session, a coordinator, and 5 module types.
-                ~2,600 lines total. The entire kernel.
+                A session, a coordinator, and five module types.
+                ~4,000 lines of runtime.
               </p>
               <span className="inline-flex items-center gap-1 text-caption text-signal mt-4 font-medium">
                 Read more
@@ -564,8 +569,7 @@ tools:
                 The Modules
               </h4>
               <p className="text-body text-ink-slate">
-                5 types. Protocol-based. No inheritance required.
-                Swap any module without touching the rest.
+                No inheritance. Protocol-based. Swap any module without touching the rest.
               </p>
               <span className="inline-flex items-center gap-1 text-caption text-signal mt-4 font-medium">
                 Read more
@@ -590,7 +594,7 @@ tools:
               </h4>
               <p className="text-body text-ink-slate">
                 An optional convenience layer. Handles module downloading,
-                dependency installation, and config composition.
+                dependencies, and more.
               </p>
               <span className="inline-flex items-center gap-1 text-caption text-signal mt-4 font-medium">
                 Read more
@@ -601,27 +605,9 @@ tools:
             </a>
           </div>
 
-          {/* Protocol code sample */}
+          {/* Ask the expert — live chat */}
           <div className="reveal max-w-5xl mt-12">
-            <p className="text-caption text-ink-fog mb-3">
-              The Provider contract &mdash; implement three things
-            </p>
-            <CodeBlock
-              code={`class Provider(Protocol):
-    @property
-    def name(self) -> str: ...
-
-    @property
-    def model(self) -> str: ...
-
-    async def complete(
-        self, request: CompletionRequest
-    ) -> CompletionResponse: ...
-
-# Implement these three things and the kernel
-# treats your module identically to any official provider.`}
-              className="max-w-2xl"
-            />
+            <AmplifierWebChat />
           </div>
         </div>
       </section>
@@ -783,19 +769,7 @@ tools:
                 Wire them together with a few lines of Python.
               </p>
               <CodeBlock
-                code={`from amplifier_core import AmplifierSession
-
-session = AmplifierSession(
-    providers=[MyProvider()],
-    orchestrator=MyOrchestrator(),
-    tools=[filesystem, bash, web_search],
-    hooks=[approval, redaction],
-    context=PersistentContext(),
-)
-
-result = await session.run(
-    "Build the auth module"
-)`}
+                code={`Under Construction`}
                 className="max-w-xl"
               />
             </div>
@@ -810,6 +784,7 @@ result = await session.run(
                 context accumulation, and resumability.
               </p>
               <CodeBlock
+                language="yaml"
                 code={`name: pr-review
 stages:
   review:
@@ -856,6 +831,7 @@ stages:
             </p>
             <div className="py-4">
               <CodeBlock
+                language="bash"
                 code="uv tool install git+https://github.com/microsoft/amplifier"
                 className="max-w-2xl mx-auto"
               />
